@@ -12,20 +12,20 @@
 
 <div class="stats-grid">
   <div class="stat-card">
-    <div class="stat-value">18</div>
     <div class="stat-label">Documents</div>
+    <div class="stat-value">18</div>
   </div>
   <div class="stat-card">
-    <div class="stat-value">71</div>
     <div class="stat-label">Evidence Items</div>
+    <div class="stat-value">71</div>
   </div>
   <div class="stat-card">
-    <div class="stat-value">15</div>
     <div class="stat-label">Contradictions</div>
+    <div class="stat-value">15</div>
   </div>
   <div class="stat-card">
-    <div class="stat-value">82</div>
     <div class="stat-label">Timeline Events</div>
+    <div class="stat-value">82</div>
   </div>
 </div>
 
