@@ -1,23 +1,21 @@
-# fly.toml app configuration file generated for el-paso-santa-teresa-project-jupiter on 2026-01-22T19:36:40Z
-#
-# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
-#
-
-app = 'el-paso-santa-teresa-project-jupiter'
-primary_region = 'ams'
+# Fly.io config for Project Jupiter analytics collector
+# Replace app name with your Fly app name.
+app = "project-jupiter-analytics"
 
 [build]
+  dockerfile = "Dockerfile"
+
+[env]
+  PORT = "8787"
+  DATA_FILE = "/data/analytics-store.json"
 
 [http_service]
-  internal_port = 8080
+  internal_port = 8787
   force_https = true
-  auto_stop_machines = 'stop'
+  auto_stop_machines = "stop"
   auto_start_machines = true
   min_machines_running = 0
-  processes = ['app']
 
-[[vm]]
-  memory = '1gb'
-  cpu_kind = 'shared'
-  cpus = 1
-  memory_mb = 256
+[mounts]
+  source = "analytics_data"
+  destination = "/data"

@@ -177,6 +177,18 @@ The collector exposes:
 
 If you’re hosting the Docsify site on GitHub Pages, deploy the collector separately (any Node host works), then point `PJ_ANALYTICS_ENDPOINT` to it.
 
+### Fly.io quick start
+
+This repo includes `Dockerfile` and `fly.toml` for Fly.io.
+
+1. Install and authenticate: `fly auth login`
+2. Create the app (replace name): `fly launch --name project-jupiter-analytics --no-deploy`
+3. Create a volume for persistence:
+   - `fly volumes create analytics_data --size 1`
+4. (Optional) Set API key: `fly secrets set ANALYTICS_API_KEY=your-secret`
+5. Deploy: `fly deploy`
+
+
 
 ## ️ The Legal Case
 
