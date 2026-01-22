@@ -1,6 +1,9 @@
 #!/usr/bin/env node
 /* Lightweight analytics collector for Project Jupiter */
 
+// IMPORTANT: Load Sentry before any other imports.
+require('./instrument.js');
+
 const http = require('http');
 const fs = require('fs');
 const path = require('path');
