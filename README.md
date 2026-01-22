@@ -17,7 +17,7 @@
   </div>
   <div class="stat-card">
     <div class="stat-label">Evidence Items: 71</div>
-    >
+    
   </div>
   <div class="stat-card">
     <div class="stat-label">Contradictions: 15</div>
