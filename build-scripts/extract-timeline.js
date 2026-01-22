@@ -160,8 +160,8 @@ function extractTimelineEvents() {
     
     fs.writeFileSync(outputPath, JSON.stringify(uniqueEvents, null, 2));
     
-    console.log(`✓ Extracted ${uniqueEvents.length} timeline events`);
-    console.log(`✓ Output: ${outputPath}\n`);
+    console.log(` Extracted ${uniqueEvents.length} timeline events`);
+    console.log(` Output: ${outputPath}\n`);
     
     // Print summary by category
     const categoryCounts = {};

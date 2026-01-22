@@ -4,13 +4,13 @@ A clean, minimal static web application for presenting Project Jupiter evidence 
 
 ## Features
 
-✅ **Zero Dependencies** - Pure HTML, CSS, and vanilla JavaScript  
-✅ **Fast & Lightweight** - No build process, no frameworks  
-✅ **Bilingual** - Full English/Spanish support  
-✅ **Mobile Responsive** - Works on all devices  
-✅ **Accessible** - WCAG 2.1 AA compliant  
-✅ **Print-Friendly** - Optimized for PDF export  
-✅ **Offline Capable** - Works after first load  
+ **Zero Dependencies** - Pure HTML, CSS, and vanilla JavaScript  
+ **Fast & Lightweight** - No build process, no frameworks  
+ **Bilingual** - Full English/Spanish support  
+ **Mobile Responsive** - Works on all devices  
+ **Accessible** - WCAG 2.1 AA compliant  
+ **Print-Friendly** - Optimized for PDF export  
+ **Offline Capable** - Works after first load  
 
 ### Core Features
 
@@ -155,10 +155,10 @@ Upload all files to:
 
 ## Browser Support
 
-- ✅ Chrome/Edge (latest 2 versions)
-- ✅ Firefox (latest 2 versions)
-- ✅ Safari (latest 2 versions)
-- ✅ Mobile browsers (iOS Safari, Chrome Mobile)
+-  Chrome/Edge (latest 2 versions)
+-  Firefox (latest 2 versions)
+-  Safari (latest 2 versions)
+-  Mobile browsers (iOS Safari, Chrome Mobile)
 
 ## Performance
 

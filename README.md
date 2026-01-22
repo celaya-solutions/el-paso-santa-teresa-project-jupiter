@@ -31,7 +31,7 @@
 
 ---
 
-## 🚀 START HERE
+##  START HERE
 
 <div class="alert alert-info">
 <strong>New to this project?</strong> Begin with the <a href="#/CONSOLIDATED_PUBLIC_REPORT">Consolidated Public Report</a> - a complete 94-page analysis ready for distribution to community, media, and legal teams.
@@ -39,7 +39,7 @@
 
 ---
 
-## 📚 What's Inside
+##  What's Inside
 
 ### Core Deliverables (Public Release Ready)
 
@@ -48,46 +48,46 @@
    - Executive summary + findings + action items
    - Ready for distribution
 
-2. **[Evidence Matrix](evidence_matrix.csv)** 📊
+2. **[Evidence Matrix](evidence_matrix.csv)** 
    - 71 evidence rows with atomic facts
    - Sources, dates, verification status
    - Foundation for all other deliverables
 
-3. **[Contradictions Analysis](contradictions.md)** ⚠️
+3. **[Contradictions Analysis](contradictions.md)** ️
    - 15 documented contradictions between sources
    - Legal and political implications
    - Citations to conflicting sources
 
-4. **[Accountability Map](accountability_map.md)** 🗺️
+4. **[Accountability Map](accountability_map.md)** ️
    - Legal exposure (state officials, county commissioners)
    - Political accountability (electoral targets)
    - Enforcement pathways with statutory references
 
 ### Action Tools
 
-5. **[30-Day Messaging Campaign](public_messaging_30_days.md)** 📣
+5. **[30-Day Messaging Campaign](public_messaging_30_days.md)** 
    - Bilingual (English/Spanish) social media posts
    - Daily messages with source citations
    - Ready for immediate deployment
 
-6. **[Public Comment Scripts](public_comment_scripts.md)** 🎤
+6. **[Public Comment Scripts](public_comment_scripts.md)** 
    - 6 time-bounded scripts (~2 minutes each)
    - Fact-checked with citations
    - Follow-up questions to expose evasions
 
-7. **[Opposition Research Profiles](opposition_research_profiles.md)** 🔍
+7. **[Opposition Research Profiles](opposition_research_profiles.md)** 
    - Research framework for commissioners who voted YES
    - Voting records and campaign finance priorities
    - Documented contradictions
 
-8. **[Decision Network Timeline](decision_network_timeline.md)** 📅
+8. **[Decision Network Timeline](decision_network_timeline.md)** 
    - Chronological: Feb 2025 - Dec 2025
    - Network analysis of communications
    - Pattern identification and IPRA requests
 
 ---
 
-## 🎯 Usage Guide
+##  Usage Guide
 
 ### For Community Organizers
 
@@ -121,7 +121,7 @@
 
 ---
 
-## 📖 Methodology
+##  Methodology
 
 All deliverables follow strict accountability standards:
 
@@ -138,7 +138,7 @@ All deliverables follow strict accountability standards:
 
 ---
 
-## 📊 Source Documentation
+##  Source Documentation
 
 ### Primary Sources Analyzed
 
@@ -159,7 +159,7 @@ All deliverables follow strict accountability standards:
 
 ---
 
-## ⚖️ The Legal Case
+## ️ The Legal Case
 
 **Filed**: October 17, 2025  
 **Court**: Third Judicial District Court, Doña Ana County, NM  
@@ -175,7 +175,7 @@ All deliverables follow strict accountability standards:
 
 ---
 
-## 🌊 The Water Crisis
+##  The Water Crisis
 
 > "How can we live without water? Water is life."  
 > — José Saldaña Jr., Sunland Park resident
@@ -192,7 +192,7 @@ All deliverables follow strict accountability standards:
 
 ---
 
-## 🏆 Community Opposition
+##  Community Opposition
 
 **September 19, 2025 Vote**: 4-1 approval despite massive community protest
 
@@ -212,7 +212,7 @@ All deliverables follow strict accountability standards:
 
 ---
 
-## 📞 Contact Information
+##  Contact Information
 
 ### Community Leaders
 - **Daisy Maldonado**, Empowerment Congress: daisy@empowernm.org | (575) 642-5683
@@ -227,7 +227,7 @@ Full contact list: [CONTACTS.md](CONTACTS.md)
 
 ---
 
-## 🔄 Next Steps
+##  Next Steps
 
 ### Immediate (Week 1)
 1. Distribute [Consolidated Report](CONSOLIDATED_PUBLIC_REPORT.md) to community
@@ -247,7 +247,7 @@ Full contact list: [CONTACTS.md](CONTACTS.md)
 
 ---
 
-## 📜 License
+##  License
 
 **Public Domain for Community Use**
 
@@ -263,7 +263,7 @@ One request: If you find errors, report them so we can correct the record.
 
 ---
 
-## 🙏 Acknowledgments
+##  Acknowledgments
 
 **Sources of Evidence**:
 - Community members who attended meetings and documented the process

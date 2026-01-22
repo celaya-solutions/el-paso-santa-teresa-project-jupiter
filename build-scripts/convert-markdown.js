@@ -112,9 +112,9 @@ function convertMarkdownFiles() {
       const outputPath = path.join(htmlDir, outputName);
       
       fs.writeFileSync(outputPath, fullHTML);
-      console.log(`✓ ${file} → ${outputName}`);
+      console.log(` ${file} → ${outputName}`);
     } catch (error) {
-      console.error(`✗ Error converting ${file}:`, error.message);
+      console.error(` Error converting ${file}:`, error.message);
     }
   });
   

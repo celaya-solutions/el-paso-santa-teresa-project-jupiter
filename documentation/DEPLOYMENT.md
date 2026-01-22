@@ -222,14 +222,14 @@ Add before `</head>` in `index.html`:
 
 ## Security Considerations
 
-✅ **What's Safe:**
+ **What's Safe:**
 - All files are static (HTML/CSS/JS)
 - No server-side code
 - No database
 - No user accounts
 - No forms submission
 
-⚠️ **Recommendations:**
+️ **Recommendations:**
 - Enable HTTPS (automatic on GitHub Pages)
 - No sensitive data in repository
 - Review evidence_matrix.csv for PII before publishing

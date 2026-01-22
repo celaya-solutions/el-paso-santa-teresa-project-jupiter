@@ -1,6 +1,6 @@
 # Quick Start Guide
 
-## ⚡ Get Your Site Running in 5 Minutes
+##  Get Your Site Running in 5 Minutes
 
 ### Step 1: Test Locally (1 minute)
 
@@ -14,8 +14,8 @@ python3 -m http.server 8000
 # Open in browser: http://localhost:8000
 ```
 
-✅ **If it works:** You'll see the home page with featured documents  
-❌ **If it doesn't:** Check browser console (F12) for errors
+ **If it works:** You'll see the home page with featured documents  
+ **If it doesn't:** Check browser console (F12) for errors
 
 ---
 
@@ -67,11 +67,11 @@ Wait 2-5 minutes, then visit:
 https://YOUR_USERNAME.github.io/project-jupiter/
 ```
 
-**Done! 🎉** Your site is now live!
+**Done! ** Your site is now live!
 
 ---
 
-## 🔍 Verify Everything Works
+##  Verify Everything Works
 
 Test these features:
 
@@ -94,7 +94,7 @@ Test these features:
 
 ---
 
-## 🛠️ Common Issues
+## ️ Common Issues
 
 ### "Failed to fetch"
 - **Cause:** Trying to open index.html directly
@@ -114,7 +114,7 @@ Test these features:
 
 ---
 
-## 📝 Make Your First Update
+##  Make Your First Update
 
 ### Update a Document
 
@@ -143,12 +143,12 @@ Test these features:
 
 ---
 
-## 🚀 Next Steps
+##  Next Steps
 
 ### Recommended Order
 
-1. ✅ **Test locally** (you're here!)
-2. ✅ **Deploy to GitHub Pages** (above)
+1.  **Test locally** (you're here!)
+2.  **Deploy to GitHub Pages** (above)
 3. ⏭️ **Review all documents** - Click through each one
 4. ⏭️ **Test on mobile** - Open on your phone
 5. ⏭️ **Share with team** - Send them the URL
@@ -165,7 +165,7 @@ Test these features:
 
 ---
 
-## 📚 Learn More
+##  Learn More
 
 - **Full documentation:** WEB_APP_README.md
 - **Deployment guide:** DEPLOYMENT.md
@@ -173,7 +173,7 @@ Test these features:
 
 ---
 
-## 💬 Need Help?
+##  Need Help?
 
 1. Check browser console (F12)
 2. Read error messages
@@ -183,7 +183,7 @@ Test these features:
 
 ---
 
-**You're all set! 🎉**
+**You're all set! **
 
 Your Project Jupiter Evidence Portal is ready to serve your community.
 
@@ -193,4 +193,4 @@ Your Project Jupiter Evidence Portal is ready to serve your community.
 
 **Pro Tip:** Bookmark your site and test all features before sharing widely. Make sure everything works as expected on desktop and mobile.
 
-**Good luck! 🚀**
+**Good luck! **

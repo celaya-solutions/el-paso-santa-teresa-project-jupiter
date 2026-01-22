@@ -212,8 +212,8 @@ function createDocumentIndex() {
     
     fs.writeFileSync(outputPath, JSON.stringify(index, null, 2));
     
-    console.log(`✓ Indexed ${documents.length} documents`);
-    console.log(`✓ Output: ${outputPath}\n`);
+    console.log(` Indexed ${documents.length} documents`);
+    console.log(` Output: ${outputPath}\n`);
     
     console.log('Documents by Category:');
     Object.entries(index.categories).forEach(([cat, docs]) => {

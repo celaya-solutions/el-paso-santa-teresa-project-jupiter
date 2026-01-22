@@ -74,8 +74,8 @@ function convertCSVToJSON() {
     
     fs.writeFileSync(outputPath, JSON.stringify(data, null, 2));
     
-    console.log(`✓ Successfully converted ${data.length} rows`);
-    console.log(`✓ Output: ${outputPath}\n`);
+    console.log(` Successfully converted ${data.length} rows`);
+    console.log(` Output: ${outputPath}\n`);
     
     // Print summary statistics
     const categories = {};

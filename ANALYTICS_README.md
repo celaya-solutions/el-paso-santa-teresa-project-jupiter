@@ -1,4 +1,4 @@
-# 📊 Analytics System
+#  Analytics System
 
 ## Overview
 
@@ -6,30 +6,30 @@ A lightweight, privacy-focused analytics system with **zero external dependencie
 
 ---
 
-## ✨ Features
+##  Features
 
 ### Tracking Capabilities
-✅ **Page Views** - Every page visited  
-✅ **Click Tracking** - All user clicks with element details  
-✅ **Downloads** - CSV and document downloads  
-✅ **Navigation** - Internal link clicks  
-✅ **Time Tracking** - Time spent on each page  
-✅ **Scroll Depth** - How far users scroll (25%, 50%, 75%, 100%)  
-✅ **Device Detection** - Desktop, mobile, tablet  
-✅ **Session Management** - Groups events into sessions  
+ **Page Views** - Every page visited  
+ **Click Tracking** - All user clicks with element details  
+ **Downloads** - CSV and document downloads  
+ **Navigation** - Internal link clicks  
+ **Time Tracking** - Time spent on each page  
+ **Scroll Depth** - How far users scroll (25%, 50%, 75%, 100%)  
+ **Device Detection** - Desktop, mobile, tablet  
+ **Session Management** - Groups events into sessions  
 
 ### Dashboard Features
-✅ **Real-time Stats** - Sessions, page views, events  
-✅ **Top Pages Chart** - Most visited pages  
-✅ **Device Breakdown** - Desktop vs mobile vs tablet  
-✅ **Recent Events** - Live event stream  
-✅ **Event Filtering** - Filter by type  
-✅ **Data Export** - Download all data as JSON  
-✅ **Password Protected** - Simple authentication  
+ **Real-time Stats** - Sessions, page views, events  
+ **Top Pages Chart** - Most visited pages  
+ **Device Breakdown** - Desktop vs mobile vs tablet  
+ **Recent Events** - Live event stream  
+ **Event Filtering** - Filter by type  
+ **Data Export** - Download all data as JSON  
+ **Password Protected** - Simple authentication  
 
 ---
 
-## 🚀 Quick Start
+##  Quick Start
 
 ### 1. Analytics is Already Integrated!
 
@@ -54,11 +54,11 @@ https://YOUR_USERNAME.github.io/project-jupiter/analytics-dashboard.html
 
 **Default Password:** `jupiter2026`
 
-⚠️ **Important:** Change this password before deploying!
+️ **Important:** Change this password before deploying!
 
 ---
 
-## 🔐 Security
+##  Security
 
 ### Change Dashboard Password
 
@@ -83,7 +83,7 @@ const PASSWORD = 'your_secure_password_here';
 
 ---
 
-## 📈 What Gets Tracked
+##  What Gets Tracked
 
 ### Page Views
 ```javascript
@@ -138,7 +138,7 @@ const PASSWORD = 'your_secure_password_here';
 
 ---
 
-## 📊 Dashboard Metrics
+##  Dashboard Metrics
 
 ### Summary Stats
 
@@ -176,7 +176,7 @@ const PASSWORD = 'your_secure_password_here';
 
 ---
 
-## 🔧 Advanced Configuration
+##  Advanced Configuration
 
 ### Tracking Configuration
 
@@ -219,11 +219,11 @@ sessionTimeout: 15 * 60 * 1000,  // 15 minutes
 
 ---
 
-## 📤 Exporting Data
+##  Exporting Data
 
 ### From Dashboard
 
-1. Click **"💾 Export"** button
+1. Click **" Export"** button
 2. Downloads `analytics-[timestamp].json`
 3. Contains all sessions and events
 
@@ -266,7 +266,7 @@ copy(localStorage.getItem('pj_analytics'));
 
 ---
 
-## 🔍 Analyzing Patterns
+##  Analyzing Patterns
 
 ### Find Popular Content
 
@@ -300,7 +300,7 @@ Monitor:
 
 ---
 
-## 🧹 Data Management
+##  Data Management
 
 ### Clear All Data
 
@@ -337,7 +337,7 @@ window.PJAnalytics.clearData();
 
 ---
 
-## 🔗 API Reference
+##  API Reference
 
 ### Exposed Functions
 
@@ -384,7 +384,7 @@ PJAnalytics.trackEvent('video_play', {
 
 ---
 
-## 🐛 Troubleshooting
+##  Troubleshooting
 
 ### Dashboard not loading
 - Check `analytics-dashboard.html` exists
@@ -408,7 +408,7 @@ PJAnalytics.trackEvent('video_play', {
 
 ---
 
-## 🚀 Deployment
+##  Deployment
 
 ### GitHub Pages
 
@@ -447,7 +447,7 @@ https://YOUR_USERNAME.github.io/project-jupiter/analytics-dashboard.html
 
 ---
 
-## 📊 Example Insights
+##  Example Insights
 
 ### Traffic Patterns
 
@@ -473,7 +473,7 @@ https://YOUR_USERNAME.github.io/project-jupiter/analytics-dashboard.html
 
 ---
 
-## 🔮 Future Enhancements
+##  Future Enhancements
 
 Potential additions (not included):
 
@@ -487,7 +487,7 @@ Potential additions (not included):
 
 ---
 
-## 💡 Pro Tips
+##  Pro Tips
 
 1. **Check weekly** - Regular dashboard reviews
 2. **Export data** - Backup before clearing
@@ -498,7 +498,7 @@ Potential additions (not included):
 
 ---
 
-## 📚 Resources
+##  Resources
 
 - **localStorage docs:** https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
 - **Privacy by design:** https://www.smashingmagazine.com/2019/04/privacy-concerns-ux-web-forms/
@@ -506,7 +506,7 @@ Potential additions (not included):
 
 ---
 
-## ✅ Checklist
+##  Checklist
 
 Before going live:
 
@@ -520,14 +520,14 @@ Before going live:
 
 ---
 
-## 🎉 You're All Set!
+##  You're All Set!
 
 Your analytics system is:
-- ✅ Fully functional
-- ✅ Privacy-focused
-- ✅ Zero dependencies
-- ✅ Easy to maintain
-- ✅ Ready to deploy!
+-  Fully functional
+-  Privacy-focused
+-  Zero dependencies
+-  Easy to maintain
+-  Ready to deploy!
 
 **Start tracking:** Visit your site  
 **View insights:** Open dashboard  
@@ -537,4 +537,4 @@ Your analytics system is:
 
 **Questions?** Check the dashboard or open browser console for debug info.
 
-**Good luck understanding your audience! 📊**
+**Good luck understanding your audience! **

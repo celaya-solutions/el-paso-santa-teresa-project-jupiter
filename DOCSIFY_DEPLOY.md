@@ -1,23 +1,23 @@
 # Docsify Deployment Guide
 
-## 🎉 Your Docsify Site is Ready!
+##  Your Docsify Site is Ready!
 
 This project is now configured to use **Docsify** - a magical documentation site generator that reads your markdown files directly, with no build process required!
 
 ---
 
-## ✅ What's Configured
+##  What's Configured
 
-- ✅ **index.html** - Docsify configuration with El Paso theme
-- ✅ **custom.css** - Custom styling matching El Paso city colors
-- ✅ **_sidebar.md** - Navigation sidebar
-- ✅ **README.md** - Beautiful homepage
-- ✅ **.nojekyll** - Required for GitHub Pages
-- ✅ **All markdown files** - Ready to be displayed
+-  **index.html** - Docsify configuration with El Paso theme
+-  **custom.css** - Custom styling matching El Paso city colors
+-  **_sidebar.md** - Navigation sidebar
+-  **README.md** - Beautiful homepage
+-  **.nojekyll** - Required for GitHub Pages
+-  **All markdown files** - Ready to be displayed
 
 ---
 
-## 🚀 Quick Deploy to GitHub Pages (5 minutes)
+##  Quick Deploy to GitHub Pages (5 minutes)
 
 ### Step 1: Test Locally (Optional)
 
@@ -77,37 +77,37 @@ Wait 2-5 minutes, then visit:
 https://YOUR_USERNAME.github.io/project-jupiter/
 ```
 
-**Done! 🎉**
+**Done! **
 
 ---
 
-## 🎨 Features Included
+##  Features Included
 
 ### Built-in Plugins
 
-✅ **Full-text search** - Search across all documents  
-✅ **Pagination** - Previous/Next navigation  
-✅ **Copy code** - Copy button on code blocks  
-✅ **Zoom images** - Click to zoom images  
-✅ **External links** - Open in new tab  
+ **Full-text search** - Search across all documents  
+ **Pagination** - Previous/Next navigation  
+ **Copy code** - Copy button on code blocks  
+ **Zoom images** - Click to zoom images  
+ **External links** - Open in new tab  
 
 ### Custom Styling
 
-✅ **El Paso theme** - Navy #1d2754 + Orange #da532c  
-✅ **Responsive design** - Works on mobile  
-✅ **Print-friendly** - Clean print layouts  
-✅ **Badges & alerts** - Visual highlights  
+ **El Paso theme** - Navy #1d2754 + Orange #da532c  
+ **Responsive design** - Works on mobile  
+ **Print-friendly** - Clean print layouts  
+ **Badges & alerts** - Visual highlights  
 
 ### Navigation
 
-✅ **Sidebar** - Organized by category  
-✅ **Search bar** - Find documents instantly  
-✅ **Auto-linking** - Markdown links work automatically  
-✅ **Sub-levels** - Up to 3 heading levels in TOC  
+ **Sidebar** - Organized by category  
+ **Search bar** - Find documents instantly  
+ **Auto-linking** - Markdown links work automatically  
+ **Sub-levels** - Up to 3 heading levels in TOC  
 
 ---
 
-## 📁 File Structure
+##  File Structure
 
 ```
 project-jupiter/
@@ -124,7 +124,7 @@ project-jupiter/
 
 ---
 
-## ✏️ Editing Content
+## ️ Editing Content
 
 ### Update Documents
 
@@ -143,7 +143,7 @@ project-jupiter/
 1. **Create new .md file** in root directory
 2. **Add to _sidebar.md:**
    ```markdown
-   * [📄 New Document](new-document.md)
+   * [ New Document](new-document.md)
    ```
 3. **Commit & push** as above
 
@@ -162,13 +162,13 @@ Edit `custom.css`:
 Edit `_sidebar.md` - use markdown list format:
 ```markdown
 * **Section Name**
-  * [📄 Document Name](document.md)
-  * [📊 Another Doc](another.md)
+  * [ Document Name](document.md)
+  * [ Another Doc](another.md)
 ```
 
 ---
 
-## 🎨 Docsify Features You Can Use
+##  Docsify Features You Can Use
 
 ### Embedded Content
 
@@ -213,7 +213,7 @@ Contenido en español
 
 ---
 
-## 🔧 Customization Options
+##  Customization Options
 
 ### Change Theme
 
@@ -251,7 +251,7 @@ search: {
 
 ---
 
-## 📊 Adding the Evidence Matrix
+##  Adding the Evidence Matrix
 
 Since the evidence matrix is a CSV file, you have options:
 
@@ -291,7 +291,7 @@ fetch('evidence_matrix.csv')
 
 ---
 
-## 🌐 Custom Domain (Optional)
+##  Custom Domain (Optional)
 
 ### GitHub Pages
 
@@ -313,7 +313,7 @@ fetch('evidence_matrix.csv')
 
 ---
 
-## 🔍 SEO & Social Sharing
+##  SEO & Social Sharing
 
 Add to `index.html` in `<head>`:
 
@@ -336,7 +336,7 @@ Add to `index.html` in `<head>`:
 
 ---
 
-## 📱 Mobile-Friendly
+##  Mobile-Friendly
 
 Docsify is automatically mobile-responsive! Test on:
 - iPhone/iPad (Safari)
@@ -347,7 +347,7 @@ The sidebar becomes a collapsible menu on mobile.
 
 ---
 
-## 🖨️ Print Support
+## ️ Print Support
 
 **To print a page:**
 1. Click on the page you want to print
@@ -360,7 +360,7 @@ The sidebar becomes a collapsible menu on mobile.
 
 ---
 
-## 📈 Analytics (Optional)
+##  Analytics (Optional)
 
 ### Google Analytics
 
@@ -391,7 +391,7 @@ Add to `index.html` before closing `</head>`:
 
 ---
 
-## 🐛 Troubleshooting
+##  Troubleshooting
 
 ### Site shows "404 Not Found"
 - Check that `.nojekyll` file exists
@@ -420,7 +420,7 @@ Add to `index.html` before closing `</head>`:
 
 ---
 
-## ⚡ Performance Tips
+##  Performance Tips
 
 1. **Keep images optimized** - Compress before adding
 2. **Use CDN links** - Docsify plugins load from CDN
@@ -429,7 +429,7 @@ Add to `index.html` before closing `</head>`:
 
 ---
 
-## 🎓 Learn More
+##  Learn More
 
 - **Docsify Documentation**: https://docsify.js.org
 - **GitHub Pages Docs**: https://docs.github.com/pages
@@ -437,7 +437,7 @@ Add to `index.html` before closing `</head>`:
 
 ---
 
-## ✅ Final Checklist
+##  Final Checklist
 
 Before going live:
 
@@ -452,7 +452,7 @@ Before going live:
 
 ---
 
-## 🎉 You're Done!
+##  You're Done!
 
 Your Docsify documentation site is fully configured and ready to deploy!
 
@@ -471,4 +471,4 @@ https://YOUR_USERNAME.github.io/project-jupiter/
 
 ---
 
-**Built with ❤️ using Docsify** - The magical documentation site generator
+**Built with ️ using Docsify** - The magical documentation site generator
