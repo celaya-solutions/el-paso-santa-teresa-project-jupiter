@@ -570,7 +570,7 @@ Letter to NMED demanding:
 ## EVIDENCE LOCATION REFERENCE
 
 All evidence documented in this briefing is located in:
-**Directory:** `/Volumes/C-Cell SSD/CODE/provizual-demo-main/datacenter_research/`
+**Directory:** (redacted)
 
 **Subdirectories:**
 - `documents/` - PDF documents, news coverage, meeting records
