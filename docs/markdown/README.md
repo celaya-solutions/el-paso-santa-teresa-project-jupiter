@@ -18,7 +18,7 @@
    - 94 pages of evidence-backed analysis
    - Ready for distribution to community, media, and legal teams
 
-2. **evidence_matrix.csv**
+2. **docs/markdown/evidence_matrix.csv**
    - 71 evidence rows with atomic facts
    - Columns: document source, date, speaker/signer, claim/action, category, verification status, cross-references
    - Foundation for all other deliverables
@@ -106,7 +106,7 @@ All deliverables follow strict accountability standards:
 
 ### For Legal Teams
 
-**Start with**: evidence_matrix.csv + accountability_map.md  
+**Start with**: docs/markdown/evidence_matrix.csv + docs/markdown/accountability_map.md  
 **Focus on**:
 - Open Meetings Act violations (contradictions.md)
 - Incomplete IRB application (CONSOLIDATED_PUBLIC_REPORT.md Part III)

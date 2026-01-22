@@ -48,7 +48,7 @@
    - Executive summary + findings + action items
    - Ready for distribution
 
-2. **[Evidence Matrix](evidence_matrix.csv)** 
+2. **[Evidence Matrix](docs/markdown/evidence_matrix.csv)** 
    - 71 evidence rows with atomic facts
    - Sources, dates, verification status
    - Foundation for all other deliverables
@@ -101,7 +101,7 @@
 
 ### For Legal Teams
 
-**Start with**: [Evidence Matrix](evidence_matrix.csv) + [Accountability Map](accountability_map.md)  
+**Start with**: [Evidence Matrix](docs/markdown/evidence_matrix.csv) + [Accountability Map](docs/markdown/accountability_map.md)  
 **Focus on**:
 - Open Meetings Act violations
 - Incomplete IRB application
