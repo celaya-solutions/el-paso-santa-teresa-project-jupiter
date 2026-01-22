@@ -1,6 +1,6 @@
 # Fly.io config for Project Jupiter analytics collector
 # Replace app name with your Fly app name.
-app = "project-jupiter-analytics"
+app = "el-paso-santa-teresa-project-jupiter"
 
 [build]
   dockerfile = "Dockerfile"
