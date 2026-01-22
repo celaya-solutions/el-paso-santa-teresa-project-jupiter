@@ -43,7 +43,7 @@
 
 ### Core Deliverables (Public Release Ready)
 
-1. **[Consolidated Public Report](CONSOLIDATED_PUBLIC_REPORT.md)** ⭐
+1. **[Consolidated Public Report](CONSOLIDATED_PUBLIC_REPORT.md)**
    - Complete public-facing accountability report
    - Executive summary + findings + action items
    - Ready for distribution
