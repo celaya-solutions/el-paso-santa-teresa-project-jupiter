@@ -4,6 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Analytics Dashboard - Project Jupiter</title>
+  <script>
+    window.PJ_ANALYTICS_ENDPOINT = window.PJ_ANALYTICS_ENDPOINT || '';
+    window.PJ_ANALYTICS_KEY = window.PJ_ANALYTICS_KEY || '';
+  </script>
   <style>
     :root {
       --primary: #1d2754;
@@ -404,6 +408,16 @@
           <div class="bar-chart" id="device-chart"></div>
         </div>
       </div>
+
+      <!-- Event Types -->
+      <div class="chart-card">
+        <div class="chart-header">
+          <h2> Event Types</h2>
+        </div>
+        <div class="chart-container">
+          <div class="bar-chart" id="event-type-chart"></div>
+        </div>
+      </div>
       
       <!-- Recent Events -->
       <div class="chart-card">
@@ -411,10 +425,6 @@
           <h2> Recent Events</h2>
           <select id="event-type-filter" onchange="updateEventsList()">
             <option value="all">All Events</option>
-            <option value="pageview">Page Views</option>
-            <option value="click">Clicks</option>
-            <option value="download">Downloads</option>
-            <option value="navigation">Navigation</option>
           </select>
         </div>
         <div class="event-list" id="events-list"></div>
@@ -426,6 +436,9 @@
   <script>
     // Simple authentication (password stored in code)
     const PASSWORD = 'jupiter2026'; // Change this!
+    const ANALYTICS_ENDPOINT = window.PJ_ANALYTICS_ENDPOINT || '';
+    const ANALYTICS_API_KEY = window.PJ_ANALYTICS_KEY || '';
+    let currentAnalyticsData = null;
     
     function authenticate() {
       const input = document.getElementById('password');
@@ -463,8 +476,9 @@
     });
     
     // Load analytics data
-    function loadDashboard() {
-      const data = JSON.parse(localStorage.getItem('pj_analytics') || '{"sessions":[],"events":[]}');
+    async function loadDashboard() {
+      const data = await getAnalyticsData();
+      currentAnalyticsData = data;
       
       // Update stats
       document.getElementById('total-sessions').textContent = data.sessions?.length || 0;
@@ -485,7 +499,39 @@
       // Update charts
       updateTopPagesChart(data.events);
       updateDeviceChart(data.events);
+      updateEventTypeChart(data.events);
+      updateEventTypeFilter(data.events);
       updateEventsList(data.events);
+    }
+
+    async function getAnalyticsData() {
+      const remote = await fetchRemoteData();
+      if (remote) return remote;
+      return JSON.parse(localStorage.getItem('pj_analytics') || '{"sessions":[],"events":[]}');
+    }
+
+    function resolveRemoteUrl(pathSuffix) {
+      if (!ANALYTICS_ENDPOINT) return '';
+      if (ANALYTICS_ENDPOINT.endsWith('/collect') || ANALYTICS_ENDPOINT.endsWith('/analytics')) {
+        return ANALYTICS_ENDPOINT.replace(/\/(collect|analytics)$/, pathSuffix);
+      }
+      return ANALYTICS_ENDPOINT.replace(/\/$/, '') + pathSuffix;
+    }
+
+    async function fetchRemoteData() {
+      const url = resolveRemoteUrl('/analytics');
+      if (!url) return null;
+
+      try {
+        const headers = {};
+        if (ANALYTICS_API_KEY) headers['x-analytics-key'] = ANALYTICS_API_KEY;
+        const response = await fetch(url, { headers });
+        if (!response.ok) throw new Error(`Remote analytics error: ${response.status}`);
+        return await response.json();
+      } catch (error) {
+        console.warn('Remote analytics unavailable, falling back to localStorage.');
+        return null;
+      }
     }
     
     function updateTopPagesChart(events) {
@@ -558,6 +604,56 @@
         chart.appendChild(bar);
       });
     }
+
+    function updateEventTypeChart(events) {
+      const typeCounts = {};
+      events.forEach(e => {
+        typeCounts[e.type] = (typeCounts[e.type] || 0) + 1;
+      });
+
+      const sorted = Object.entries(typeCounts).sort((a, b) => b[1] - a[1]).slice(0, 12);
+      const max = sorted[0]?.[1] || 1;
+      const chart = document.getElementById('event-type-chart');
+      chart.innerHTML = '';
+
+      sorted.forEach(([type, count]) => {
+        const height = (count / max) * 100;
+        const bar = document.createElement('div');
+        bar.className = 'bar';
+        bar.style.height = height + '%';
+        bar.title = `${type}: ${count}`;
+
+        const label = document.createElement('div');
+        label.className = 'bar-label';
+        label.textContent = type;
+        bar.appendChild(label);
+
+        const value = document.createElement('div');
+        value.className = 'bar-value';
+        value.textContent = count;
+        bar.appendChild(value);
+
+        chart.appendChild(bar);
+      });
+    }
+
+    function updateEventTypeFilter(events) {
+      const select = document.getElementById('event-type-filter');
+      if (!select) return;
+
+      const current = select.value || 'all';
+      const types = Array.from(new Set((events || []).map(e => e.type))).sort();
+      select.innerHTML = '<option value="all">All Events</option>';
+
+      types.forEach((type) => {
+        const option = document.createElement('option');
+        option.value = type;
+        option.textContent = type.replace(/_/g, ' ');
+        select.appendChild(option);
+      });
+
+      select.value = types.includes(current) ? current : 'all';
+    }
     
     function updateEventsList(events = null) {
       const data = events || JSON.parse(localStorage.getItem('pj_analytics') || '{"events":[]}');
@@ -602,6 +698,19 @@
           return `Downloaded: <strong>${event.filename}</strong>`;
         case 'navigation':
           return `Navigated to: <strong>${event.destination}</strong>`;
+        case 'form_submit':
+          return `Form submitted: <strong>${event.id || event.element || 'form'}</strong><br>Fields: ${event.fieldCount || 0}`;
+        case 'input':
+        case 'change':
+          return `Input: <strong>${event.id || event.name || event.element || 'field'}</strong>${event.inputType ? `<br>Type: ${event.inputType}` : ''}`;
+        case 'keydown':
+          return `Keydown: <strong>${event.key || event.code || 'key'}</strong>${event.isInput ? '<br>In input' : ''}`;
+        case 'error':
+          return `Error: <strong>${event.message || 'unknown'}</strong>`;
+        case 'unhandled_rejection':
+          return `Unhandled rejection: <strong>${event.message || 'unknown'}</strong>`;
+        case 'resize':
+          return `Resize: <strong>${event.viewport?.width || 0}×${event.viewport?.height || 0}</strong>`;
         default:
           return JSON.stringify(event).substring(0, 100);
       }
@@ -612,7 +721,7 @@
     }
     
     function exportData() {
-      const data = localStorage.getItem('pj_analytics');
+      const data = JSON.stringify(currentAnalyticsData || JSON.parse(localStorage.getItem('pj_analytics') || '{"sessions":[],"events":[]}'));
       const blob = new Blob([data], { type: 'application/json' });
       const url = URL.createObjectURL(blob);
       const a = document.createElement('a');

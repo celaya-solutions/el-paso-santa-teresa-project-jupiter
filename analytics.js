@@ -24,7 +24,13 @@
       trackResize: true,
       trackFocus: true,
       trackPointer: true,
-      trackKeyboard: true
+      trackKeyboard: true,
+      remoteEndpoint: (typeof window !== 'undefined' && window.PJ_ANALYTICS_ENDPOINT) ? window.PJ_ANALYTICS_ENDPOINT : '',
+      remoteApiKey: (typeof window !== 'undefined' && window.PJ_ANALYTICS_KEY) ? window.PJ_ANALYTICS_KEY : '',
+      remoteEnabled: true,
+      remoteBatchSize: 25,
+      remoteFlushInterval: 15000,
+      remoteMaxQueued: 2000
     },
     
     // Session data
@@ -34,13 +40,19 @@
       pageViews: 0,
       events: []
     },
+
+    clientId: null,
+    remoteQueue: [],
+    remoteInFlight: false,
     
     // Initialize analytics
     init() {
+      this.ensureClientId();
       this.getOrCreateSession();
       this.trackPageView();
       this.setupEventListeners();
       this.startTimeTracking();
+      this.startRemoteFlush();
       
       // Save data periodically
       setInterval(() => this.saveData(), 30000); // Every 30 seconds
@@ -49,6 +61,23 @@
       window.addEventListener('beforeunload', () => this.saveData());
       
       console.log('Analytics initialized:', this.session.id);
+    },
+
+    // Ensure stable client id
+    ensureClientId() {
+      try {
+        const key = 'pj_client_id';
+        const existing = localStorage.getItem(key);
+        if (existing) {
+          this.clientId = existing;
+          return;
+        }
+        const id = this.generateId();
+        localStorage.setItem(key, id);
+        this.clientId = id;
+      } catch (error) {
+        this.clientId = this.generateId();
+      }
     },
     
     // Get or create session
@@ -367,6 +396,103 @@
         href
       };
     },
+
+    // Resolve remote endpoint for collect or analytics
+    resolveRemoteUrl(pathSuffix) {
+      if (!this.config.remoteEndpoint || !this.config.remoteEnabled) return '';
+      const base = String(this.config.remoteEndpoint).trim();
+      if (!base) return '';
+      if (base.endsWith('/collect') || base.endsWith('/analytics')) {
+        return base.replace(/\/(collect|analytics)$/, pathSuffix);
+      }
+      return base.replace(/\/$/, '') + pathSuffix;
+    },
+
+    // Queue event for remote collection
+    enqueueRemote(event) {
+      if (!this.config.remoteEnabled) return;
+      const url = this.resolveRemoteUrl('/collect');
+      if (!url) return;
+
+      const enriched = {
+        ...event,
+        sessionId: this.session.id,
+        clientId: this.clientId
+      };
+
+      this.remoteQueue.push(enriched);
+
+      if (this.remoteQueue.length > this.config.remoteMaxQueued) {
+        this.remoteQueue = this.remoteQueue.slice(-this.config.remoteMaxQueued);
+      }
+
+      if (this.remoteQueue.length >= this.config.remoteBatchSize) {
+        this.flushRemote();
+      }
+    },
+
+    // Start periodic remote flush
+    startRemoteFlush() {
+      if (!this.config.remoteEnabled) return;
+      const url = this.resolveRemoteUrl('/collect');
+      if (!url) return;
+      setInterval(() => this.flushRemote(), this.config.remoteFlushInterval);
+      window.addEventListener('beforeunload', () => this.flushRemote(true));
+      window.addEventListener('pagehide', () => this.flushRemote(true));
+    },
+
+    // Flush events to remote server
+    async flushRemote(useBeacon = false) {
+      if (this.remoteInFlight) return;
+      const url = this.resolveRemoteUrl('/collect');
+      if (!url || this.remoteQueue.length === 0) return;
+
+      const batch = this.remoteQueue.splice(0, this.config.remoteBatchSize);
+      if (batch.length === 0) return;
+
+      const payload = {
+        clientId: this.clientId,
+        session: {
+          id: this.session.id,
+          startTime: this.session.startTime,
+          lastActivity: this.session.lastActivity,
+          pageViews: this.session.pageViews
+        },
+        events: batch,
+        sentAt: Date.now()
+      };
+
+      const body = JSON.stringify(payload);
+
+      try {
+        if (useBeacon && navigator.sendBeacon) {
+          const blob = new Blob([body], { type: 'application/json' });
+          navigator.sendBeacon(url, blob);
+          return;
+        }
+
+        this.remoteInFlight = true;
+        const headers = { 'Content-Type': 'application/json' };
+        if (this.config.remoteApiKey) {
+          headers['x-analytics-key'] = this.config.remoteApiKey;
+        }
+
+        const response = await fetch(url, {
+          method: 'POST',
+          headers,
+          body,
+          keepalive: true
+        });
+
+        if (!response.ok) {
+          throw new Error(`Remote analytics error: ${response.status}`);
+        }
+      } catch (error) {
+        this.remoteQueue = batch.concat(this.remoteQueue);
+      } finally {
+        this.remoteInFlight = false;
+      }
+    },
     
     // Track custom event
     trackEvent(type, data = {}) {
@@ -383,6 +509,7 @@
     addEvent(event) {
       this.session.events.push(event);
       this.session.lastActivity = Date.now();
+      this.enqueueRemote(event);
       
       // Limit events in memory
       if (this.session.events.length > 100) {
@@ -456,6 +583,7 @@
         
         // Clear session events after saving
         this.session.events = [];
+        this.flushRemote();
         
       } catch (error) {
         console.error('Failed to save analytics data:', error);
