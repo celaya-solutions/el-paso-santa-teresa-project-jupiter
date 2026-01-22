@@ -16,7 +16,15 @@
       trackClicks: true,
       trackTime: true,
       trackScrollDepth: true,
-      trackDownloads: true
+      trackDownloads: true,
+      trackInputs: true,
+      trackForms: true,
+      trackClipboard: true,
+      trackErrors: true,
+      trackResize: true,
+      trackFocus: true,
+      trackPointer: true,
+      trackKeyboard: true
     },
     
     // Session data
@@ -100,6 +108,13 @@
       if (this.config.trackClicks) {
         document.addEventListener('click', (e) => this.trackClick(e), true);
       }
+
+      if (this.config.trackPointer) {
+        document.addEventListener('dblclick', (e) => this.trackPointerEvent('dblclick', e), true);
+        document.addEventListener('contextmenu', (e) => this.trackPointerEvent('contextmenu', e), true);
+        document.addEventListener('pointerdown', (e) => this.trackPointerEvent('pointerdown', e), true);
+        document.addEventListener('pointerup', (e) => this.trackPointerEvent('pointerup', e), true);
+      }
       
       // Track hash changes (SPA navigation)
       window.addEventListener('hashchange', () => this.trackPageView());
@@ -128,6 +143,68 @@
           this.trackEvent('page_show');
         }
       });
+
+      // Track focus/blur
+      if (this.config.trackFocus) {
+        window.addEventListener('focus', () => this.trackEvent('window_focus'));
+        window.addEventListener('blur', () => this.trackEvent('window_blur'));
+        document.addEventListener('focusin', (e) => this.trackFocusEvent('focusin', e), true);
+        document.addEventListener('focusout', (e) => this.trackFocusEvent('focusout', e), true);
+      }
+
+      // Track input changes
+      if (this.config.trackInputs) {
+        document.addEventListener('input', (e) => this.trackInputEvent('input', e), true);
+        document.addEventListener('change', (e) => this.trackInputEvent('change', e), true);
+      }
+
+      // Track form submissions
+      if (this.config.trackForms) {
+        document.addEventListener('submit', (e) => this.trackFormEvent(e), true);
+      }
+
+      // Track clipboard events
+      if (this.config.trackClipboard) {
+        document.addEventListener('copy', (e) => this.trackClipboardEvent('copy', e), true);
+        document.addEventListener('cut', (e) => this.trackClipboardEvent('cut', e), true);
+        document.addEventListener('paste', (e) => this.trackClipboardEvent('paste', e), true);
+      }
+
+      // Track keyboard events (avoid capturing actual typed content)
+      if (this.config.trackKeyboard) {
+        document.addEventListener('keydown', (e) => this.trackKeyboardEvent(e), true);
+      }
+
+      // Track window resize/orientation
+      if (this.config.trackResize) {
+        window.addEventListener('resize', () => {
+          this.trackEvent('resize', {
+            viewport: { width: window.innerWidth, height: window.innerHeight }
+          });
+        });
+        window.addEventListener('orientationchange', () => {
+          this.trackEvent('orientation_change', {
+            orientation: screen.orientation?.type || 'unknown'
+          });
+        });
+      }
+
+      // Track JS errors and promise rejections
+      if (this.config.trackErrors) {
+        window.addEventListener('error', (e) => {
+          this.trackEvent('error', {
+            message: e.message,
+            filename: e.filename,
+            lineno: e.lineno,
+            colno: e.colno
+          });
+        });
+        window.addEventListener('unhandledrejection', (e) => {
+          this.trackEvent('unhandled_rejection', {
+            message: e.reason?.message || String(e.reason || 'unknown')
+          });
+        });
+      }
     },
     
     // Track click events
@@ -136,11 +213,7 @@
       const event = {
         type: 'click',
         timestamp: Date.now(),
-        element: target.tagName.toLowerCase(),
-        id: target.id || null,
-        className: target.className || null,
-        text: target.innerText?.substring(0, 100) || null,
-        href: target.href || target.closest('a')?.href || null,
+        ...this.getElementContext(target),
         position: {
           x: e.clientX,
           y: e.clientY
@@ -161,11 +234,138 @@
       
       this.addEvent(event);
     },
+
+    // Track pointer events
+    trackPointerEvent(type, e) {
+      const target = e.target;
+      const event = {
+        type,
+        timestamp: Date.now(),
+        ...this.getElementContext(target),
+        position: {
+          x: e.clientX,
+          y: e.clientY
+        }
+      };
+
+      this.addEvent(event);
+    },
+
+    // Track focus events
+    trackFocusEvent(type, e) {
+      const target = e.target;
+      const event = {
+        type,
+        timestamp: Date.now(),
+        ...this.getElementContext(target)
+      };
+
+      this.addEvent(event);
+    },
+
+    // Track input/change events without storing sensitive values
+    trackInputEvent(type, e) {
+      const target = e.target;
+      if (!target || !(target instanceof HTMLElement)) return;
+
+      const inputType = target.getAttribute?.('type') || target.type || null;
+      const isTextLike = ['text', 'email', 'password', 'search', 'url', 'tel', 'number'].includes(String(inputType).toLowerCase());
+      const valueLength = typeof target.value === 'string' ? target.value.length : null;
+
+      const event = {
+        type,
+        timestamp: Date.now(),
+        ...this.getElementContext(target),
+        inputType,
+        valueLength: isTextLike ? valueLength : null,
+        checked: typeof target.checked === 'boolean' ? target.checked : null
+      };
+
+      this.addEvent(event);
+    },
+
+    // Track form submits
+    trackFormEvent(e) {
+      const target = e.target;
+      if (!target || !(target instanceof HTMLFormElement)) return;
+
+      const fields = Array.from(target.elements || []).map((el) => {
+        const fieldType = el.getAttribute?.('type') || el.type || null;
+        return {
+          name: el.name || null,
+          id: el.id || null,
+          type: fieldType || el.tagName?.toLowerCase() || null
+        };
+      });
+
+      const event = {
+        type: 'form_submit',
+        timestamp: Date.now(),
+        ...this.getElementContext(target),
+        fieldCount: fields.length,
+        fields
+      };
+
+      this.addEvent(event);
+    },
+
+    // Track clipboard events
+    trackClipboardEvent(type, e) {
+      const target = e.target;
+      const event = {
+        type,
+        timestamp: Date.now(),
+        ...this.getElementContext(target)
+      };
+
+      this.addEvent(event);
+    },
+
+    // Track keyboard events without content
+    trackKeyboardEvent(e) {
+      const target = e.target;
+      const isInput = target && (target.tagName === 'INPUT' || target.tagName === 'TEXTAREA' || target.isContentEditable);
+      const isShortcut = e.ctrlKey || e.metaKey || e.altKey;
+      const keyLabel = isShortcut || !isInput ? e.key : null;
+
+      const event = {
+        type: 'keydown',
+        timestamp: Date.now(),
+        ...this.getElementContext(target),
+        key: keyLabel,
+        code: e.code || null,
+        ctrlKey: e.ctrlKey,
+        metaKey: e.metaKey,
+        altKey: e.altKey,
+        shiftKey: e.shiftKey,
+        isInput
+      };
+
+      this.addEvent(event);
+    },
     
     // Check if link is a download
     isDownloadLink(url) {
       const downloadExtensions = ['.pdf', '.csv', '.zip', '.doc', '.docx', '.xls', '.xlsx'];
       return downloadExtensions.some(ext => url.toLowerCase().endsWith(ext));
+    },
+
+    // Standardized element metadata
+    getElementContext(target) {
+      if (!target || !(target instanceof HTMLElement)) {
+        return { element: null, id: null, className: null, text: null, href: null };
+      }
+
+      const text = target.innerText?.substring(0, 100) || null;
+      const href = target.href || target.closest?.('a')?.href || null;
+
+      return {
+        element: target.tagName.toLowerCase(),
+        id: target.id || null,
+        className: target.className || null,
+        text,
+        href
+      };
     },
     
     // Track custom event
