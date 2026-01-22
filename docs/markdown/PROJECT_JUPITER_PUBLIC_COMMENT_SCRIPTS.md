@@ -1,0 +1,426 @@
+# PUBLIC COMMENT SCRIPTS FOR DOÑA ANA COUNTY COMMISSIONERS MEETING
+## PROJECT JUPITER OPPOSITION
+
+---
+
+## MEETING LOGISTICS
+
+**When:** 2nd and 4th Tuesday of each month, 9:00 AM  
+**Where:** Commission Chambers, Doña Ana County Government Center, 845 N Motel Blvd, Las Cruces, NM  
+**Public Comment Period:** Typically early in agenda  
+**Time Limit:** Usually 3 minutes per speaker (confirm with clerk)  
+**Sign-Up:** Arrive 15-20 minutes early to sign up for public comment  
+**Written Comments:** Can also submit to BoCC@dona-ana.state.nm.us  
+
+---
+
+## GENERAL TIPS FOR PUBLIC COMMENT
+
+1. **State your name and address clearly** (establishes you as constituent)
+2. **Address commissioners as "Chair" and "Commissioners"**
+3. **Speak slowly and clearly** (they may be taking notes; it's being recorded)
+4. **Stick to your time limit** (brings credibility)
+5. **Make eye contact** with each commissioner
+6. **Stay calm and factual** (emotion is fine, but anger can be dismissed)
+7. **End with specific demand/question** requiring response
+8. **Bring written copy** to submit for official record
+9. **Record on your phone** (if allowed) for your own documentation
+10. **Coordinate with others** so multiple people cover different angles
+
+---
+
+## SCRIPT #1: INCOMPLETE APPLICATION (3 minutes)
+
+**Best for:** Residents who value procedural fairness, rule of law
+
+"Good morning, Chair and Commissioners. My name is [NAME] and I live at [ADDRESS in Sunland Park/Santa Teresa/Las Cruces].
+
+I'm here about Project Jupiter. I've read the lawsuit filed on October 17th, and I'm deeply troubled by what I learned.
+
+According to the legal complaint, the application you relied on to approve $165 billion dollars contained—and I quote—'blank and missing pages' and 'lacked critical information necessary to make a fully informed decision.'
+
+Commissioners, how can you approve the largest economic development project in our county's history based on an incomplete application?
+
+When my daughter applied for her business license, she had to fill out EVERY line. When I applied for my building permit, they sent it back because I missed ONE signature. But a $165 billion project gets approved with BLANK PAGES?
+
+This sets a dangerous precedent. It tells every business owner in this county that the rules don't apply equally. It tells every resident that this commission values corporate interests over procedural integrity.
+
+I have three questions that I expect answered, either today or in writing within 30 days:
+
+One: Who reviewed the application and determined it was complete enough for consideration?
+
+Two: What specific information was missing from those blank pages?
+
+Three: Will you commit TODAY to rescinding these ordinances until a complete application is submitted and properly reviewed?
+
+The law applies to everyone, or it applies to no one. I'm watching how you answer these questions, and so are my neighbors. Thank you."
+
+**Key Evidence:** Legal complaint (Petition part001); KFOX14 lawsuit article line 15  
+**Strengths:** Appeals to fairness, procedural integrity; asks specific answerable questions  
+**Follow-up:** Submit written version with request for written response per Open Meetings Act
+
+---
+
+## SCRIPT #2: SECRET MEETINGS & NDA (3 minutes)
+
+**Best for:** Residents who value transparency, open government
+
+"Good morning. My name is [NAME], I live at [ADDRESS], and I vote in District [X].
+
+I'm here because I feel betrayed by this commission.
+
+The lawsuit reveals that you held private meetings with BorderPlex Digital developers MONTHS before the public hearings. You signed a non-disclosure agreement EARLIER THIS YEAR.
+
+Let me be clear about what that means: While we were living our lives—going to work, raising our kids, paying our taxes—you were in secret meetings making decisions about OUR water, OUR energy, and OUR economic future.
+
+By the time you held public hearings in September and October, the deal was already done. The Governor had already signed an MOU in February promising state support. You had already committed privately.
+
+The public comment period was THEATER. You weren't listening—you were performing.
+
+This is a textbook violation of the Open Meetings Act. The law requires government business to be conducted in public FOR A REASON. Because sunlight is the best disinfectant. Because democracy dies in darkness.
+
+Mayor Perea of Sunland Park said it himself—he was finding out information at the same time as press releases. If you didn't even consult with a neighboring municipality, why would we believe you consulted with ordinary residents?
+
+Commissioner Reynolds made it worse by posting names and addresses of residents who opposed Jupiter on her Facebook page. That's not engagement—that's intimidation. That's retaliation for exercising our First Amendment rights.
+
+My demand is simple: Until you can conduct this process in FULL PUBLIC VIEW, with NO secret meetings and NO NDAs, these ordinances must be rescinded. Transparency isn't optional—it's the law.
+
+Will you commit today to releasing the NDA you signed? Yes or no? Thank you."
+
+**Key Evidence:** Legal complaint line 16; KFOX14 lawsuit article line 16; Doxxing incident 9/5/2025; Mayor Perea quote  
+**Strengths:** Emotional appeal balanced with legal argument; direct yes/no question creates uncomfortable moment  
+**Follow-up:** Request copy of NDA under IPRA (Inspection of Public Records Act)
+
+---
+
+## SCRIPT #3: WATER CRISIS (3 minutes)
+
+**Best for:** Long-time residents, agricultural community, parents worried about children's future
+
+"Good morning, Commissioners. My name is [NAME] and I've lived in [Sunland Park/Santa Teresa] for [X] years. I'm here because Project Jupiter threatens our water.
+
+You cannot drink data. You cannot irrigate crops with data. You cannot give your children a bath with data.
+
+This commission approved a massive data center WITHOUT requiring disclosure of how much water it will use. The county is now seeking $25 MILLION in taxpayer dollars for a desalination plant to support this project.
+
+Let me repeat that: YOU are asking US to pay $25 million so THEY can have water.
+
+And we still don't know how much water Jupiter will consume annually. Is it 1 million gallons? 10 million? 100 million? You approved this project without that basic information.
+
+The state MOU from February mentions developing brackish water in the Mesilla Basin. That's OUR aquifer. That's the water our grandchildren will need.
+
+On August 19th, community members held signs at the Legislative Finance Committee that said 'You Can't Drink Data.' You ignored us.
+
+We live in a DESERT, Commissioners. We are in a 20-year DROUGHT. The Rio Grande is dying. Our wells are dropping. And you just approved a project that will accelerate the water crisis.
+
+I want to know: Did you conduct a water impact study? Yes or no?
+
+Did you consult with the Office of the State Engineer about water rights? Yes or no?
+
+Did you calculate how much water Santa Teresa and Sunland Park will have LEFT after Jupiter takes its share? Yes or no?
+
+If you can't answer these questions, you had no business approving this project. Our water is not for sale. Rescind these ordinances. Thank you."
+
+**Key Evidence:** $25M desalination request (KFOX14 article); State MOU re: brackish water (2.25.25 MOU lines 59-69); Community protests 8/19 (NMELC article)  
+**Strengths:** Visceral, focuses on survival resource; series of yes/no questions exposes lack of due diligence  
+**Follow-up:** IPRA request for any water impact studies or OSE correspondence
+
+---
+
+## SCRIPT #4: ECONOMIC CLAIMS VS. REALITY (3 minutes)
+
+**Best for:** Business owners, economists, workers concerned about job quality
+
+"Good morning, Chair and Commissioners. My name is [NAME], I live at [ADDRESS], and I [own a business/work in/am looking for work in] this community.
+
+You promised us thousands of jobs. Let's talk about that.
+
+First, data centers are HIGHLY AUTOMATED. The 'thousands of construction jobs' are TEMPORARY—maybe 2-3 years. Then those workers leave.
+
+The 'hundreds of permanent jobs' you mentioned? You never specified how many. Is it 200? Or 900? That's a big difference. You never required the developers to commit to a specific number.
+
+And what will those jobs pay? Are they union jobs? Do they include benefits? Can a single mother working at that data center afford RENT in Santa Teresa? You didn't answer any of this.
+
+Meanwhile, you're giving away $165 BILLION in property tax breaks through the IRB, PLUS Gross Receipts Tax sharing, PLUS building permit fee waivers.
+
+The lawsuit argues that this project doesn't even legally qualify for LEDA funding because state law requires LEDA money to go to projects that create 'new jobs'—and data centers don't qualify under that definition.
+
+So let me get this straight: You're giving away billions in tax revenue—money that could fund our schools, our roads, our public safety—for jobs that are temporary, unspecified, and possibly illegal under state law?
+
+That's not economic development. That's corporate welfare.
+
+The community asked for an economic impact analysis. You didn't provide one. Why not? What are you hiding?
+
+I've seen economic development done right—I've seen projects that require local hiring commitments, living wage guarantees, and community benefit agreements. This isn't that.
+
+My question: Will you require Jupiter to sign a Community Benefits Agreement guaranteeing specific numbers of jobs at specific wages for residents of Doña Ana County? Yes or no? Thank you."
+
+**Key Evidence:** KFOX14 Sept 19 article lines 12-13 (vague job claims); Legal complaint re: LEDA qualifications; Missing economic analysis (KFOX Sept 19 line 21); Ordinances 367, 368, 369  
+**Strengths:** Exposes vague promises; connects to pocketbook issues; appeals to business community  
+**Follow-up:** Request any job creation commitments in writing; economic impact analysis
+
+---
+
+## SCRIPT #5: ENVIRONMENTAL JUSTICE (3 minutes)
+
+**Best for:** Environmental advocates, Spanish-speaking communities, EJ organizers
+
+"Buenos días. Good morning, Commissioners. My name is [NAME] and I live in [community].
+
+Project Jupiter is environmental racism.
+
+You are placing a massive industrial facility that will consume enormous amounts of water and energy in Santa Teresa and Sunland Park—communities that are predominantly Latino, lower-income, and already underserved.
+
+You didn't do an environmental impact analysis. None. You approved this without knowing:
+- How much air pollution it will generate
+- How much water it will consume  
+- How much noise it will create
+- How it will impact our quality of life
+
+The New Mexico Environmental Law Center had to send TWO letters in December demanding that the Environment Department provide public notice—in BOTH English and Spanish—for air pollution permits related to Acoma LLC, which is connected to Jupiter.
+
+Why did advocates have to DEMAND bilingual notice? Because you don't see us as equal stakeholders. Because you don't value our participation.
+
+Environmental justice means that ALL communities—regardless of race or income—have the right to clean air, clean water, and a say in decisions that affect us.
+
+Frontline communities have borne the burden of pollution for decades. We already live with asthma rates higher than the rest of the county. We already struggle with contaminated water. And now you want to add a massive data center?
+
+The Jemez Principles for Democratic Organizing say: 'Let the people who are most affected by decisions make the decisions.' You violated that principle.
+
+Title VI of the Civil Rights Act prohibits discrimination in programs receiving federal funds. If Doña Ana County received ANY federal money, this approval may violate federal civil rights law.
+
+Commissioners, will you conduct a full Environmental Justice screening analysis using EPA guidance? Will you commit to bilingual engagement for ALL future decisions? Yes or no? Thank you."
+
+**Key Evidence:** NMELC letters 12/12 and 12/15/2025 re: air permits & bilingual notice; Demographics of Santa Teresa/Sunland Park; Title VI of Civil Rights Act; Jemez Principles (NMELC PDF)  
+**Strengths:** Legal + moral argument; invokes federal law; appeals to Latino community; demands equity  
+**Follow-up:** File Title VI complaint with EPA if county received federal funds; demand EJ screening
+
+---
+
+## SCRIPT #6: COMMISSIONER ACCOUNTABILITY (3 minutes)
+
+**Best for:** Angry residents ready to name names; accountability-focused organizers
+
+"Good morning, Commissioners. My name is [NAME], I live at [ADDRESS] in District [X], and I'm here to talk about accountability.
+
+On September 19th and October 14th, this commission voted TWICE to approve Project Jupiter. Both votes were 4-1.
+
+Commissioner Susana Chaparro voted NO both times. She listened to us. She stood with the community.
+
+But FOUR of you voted YES. Twice.
+
+I know one of you is Commissioner Shannon Reynolds—because she made headlines by posting the names and home addresses of residents who opposed Jupiter on her Facebook page on September 5th. That was an act of intimidation and retaliation that the New Mexico Environmental Law Center formally condemned.
+
+But who are the other THREE? District 1? District 2? District 5?
+
+I've read the news coverage. I've watched the videos. And I've noticed something disturbing: The media won't name you. You're hiding behind anonymity while making decisions about OUR future.
+
+So let's do this right now. Let's go on the record.
+
+I'm asking each commissioner who voted YES on September 19th to raise your hand right now and identify yourself.
+
+[PAUSE - wait for response]
+
+If you're proud of your vote, you should be willing to own it publicly. If you believe Jupiter is good for this community, you should be willing to defend that position to your constituents.
+
+Silence is complicity. Anonymity is cowardice.
+
+We deserve to know who you are so we can hold you accountable at the ballot box. Because here's what I know: Elections have consequences. And commissioners who ignore their constituents face those consequences.
+
+I'm watching. My neighbors are watching. Empowerment Congress is watching. And we will remember every commissioner who chose corporate profits over community welfare.
+
+So I'll ask one more time: Which of you voted YES? Identify yourselves. Thank you."
+
+**Key Evidence:** Vote record 4-1 (Legal complaint lines 66-67, KFOX lawsuit article line 13); Doxxing incident 9/5/2025 (NMELC article); Pattern of unnamed commissioners in news coverage  
+**Strengths:** Confrontational; creates uncomfortable moment; forces commissioners to own their votes or look weak  
+**Caution:** May generate backlash; best delivered by someone willing to be vocal opposition leader  
+**Follow-up:** Publicize which commissioners identify themselves (or refuse to); create voter education materials
+
+---
+
+## SCRIPT #7: STATE MOU & RIGGED PROCESS (3 minutes)
+
+**Best for:** Government transparency advocates, anti-corruption organizers
+
+"Good morning. My name is [NAME] and I'm here to expose how this process was rigged from the start.
+
+On February 25th, 2025—SEVEN MONTHS before your September vote—the Governor of New Mexico signed a Memorandum of Understanding with BorderPlex Digital Assets.
+
+In that MOU, the STATE committed to:
+- Fast-track all permits and approvals
+- Support legislation to classify natural gas as 'zero carbon'  
+- Provide subsidies for brackish water development
+- Dedicate staff to 'timely process' all applications
+
+And here's the kicker: The state agreed to all of this BEFORE the county even voted. Before the public knew. Before ANY environmental review.
+
+So when you held public hearings in September, the fix was already in. The Governor had promised state support. You had signed your NDA. The developers had their financing lined up.
+
+We weren't participating in a decision-making process. We were extras in political theater.
+
+This is corruption, plain and simple. Not the illegal kind—the LEGAL kind, which makes it even worse. Because it means the system is designed to exclude us.
+
+The MOU also reveals that this isn't just about Doña Ana County. It's about 'multiple sites' and 'several tenants.' Jupiter is part of something much bigger—possibly the $500 billion 'Stargate' AI initiative that's been in the news, possibly connected to OpenAI.
+
+But you never disclosed that, did you? You let us think this was a local economic development project, when really it's a piece of a national infrastructure plan orchestrated by tech billionaires and state power brokers.
+
+We're not stupid, Commissioners. We see what's happening. And we're not going to tolerate it.
+
+The lawsuit filed on October 17th is just the beginning. If the courts don't stop Jupiter, we will organize, we will mobilize, and we will vote you out.
+
+My question: Will you release the FULL text of every MOU, NDA, and private agreement related to Jupiter? Will you hold a NEW public hearing now that we know the truth? Yes or no? Thank you."
+
+**Key Evidence:** State MOU 2.25.25 (full document); Timeline showing MOU preceded county votes; Stargate/OpenAI connection (NMELC article, KFOX Stargate article)  
+**Strengths:** Exposes systemic corruption; connects local issue to national narrative; demonstrates pattern of deception  
+**Follow-up:** IPRA requests for ALL communications between county, state, and BorderPlex; demand independent investigation
+
+---
+
+## SCRIPT #8: LEDA ILLEGAL APPROVAL (3 minutes) - LEGAL/TECHNICAL
+
+**Best for:** Lawyers, policy wonks, residents comfortable with legal arguments
+
+"Good morning, Commissioners. My name is [NAME], I live at [ADDRESS], and I'm here to discuss the legal deficiencies in Ordinances 368 and 369—your LEDA ordinances for Project Jupiter.
+
+The Local Economic Development Act, NMSA 1978 Section 5-10-1 et seq., specifies when counties may provide economic development assistance.
+
+Section 5-10-3(F) defines a qualifying entity as one that will result in 'new jobs' in New Mexico.
+
+The lawsuit filed by Empowerment Congress argues—and I agree—that Project Jupiter does NOT meet this definition.
+
+Data centers are among the most highly automated industrial facilities in existence. After the construction phase, they require minimal staffing. The 'hundreds of permanent jobs' you promised are likely fewer than 100 full-time positions for a $165 BILLION project.
+
+More importantly, the statute requires 'new' jobs. If BorderPlex is simply relocating existing positions from another state, those aren't new jobs—they're transferred jobs.
+
+You approved $165 billion in economic development assistance without verifying that the project legally qualifies. That's not just bad policy—it's potentially illegal.
+
+Furthermore, LEDA requires a finding that the project will provide 'significant economic development benefits' to the county. Where is that finding? Where is the cost-benefit analysis showing that giving away billions in tax revenue will be offset by economic gains?
+
+You approved Ordinance 368 authorizing Gross Receipts Tax sharing. But GRT is a revenue source that funds county services—roads, public safety, health programs. You're giving that away without knowing what you'll get in return.
+
+You approved Ordinance 369 waiving building permit fees. Those fees exist to cover the county's costs of inspection and enforcement. Now taxpayers will subsidize the county's oversight of a $165 billion private project.
+
+This is fiscal malpractice. And it may be illegal under state law.
+
+My demand: Rescind Ordinances 368 and 369 immediately. If you believe Jupiter qualifies for LEDA, prove it—conduct a proper legal analysis and release it publicly. Otherwise, you're inviting a court to strike down these ordinances. Save us all the time and do the right thing now. Thank you."
+
+**Key Evidence:** LEDA statute NMSA 1978 § 5-10-1 et seq.; Legal complaint multiple sections arguing LEDA violations; Ordinances 368 and 369  
+**Strengths:** Precise legal argument; difficult to refute without county attorney responding; establishes record for litigation  
+**Follow-up:** Request county attorney's legal opinion on LEDA qualification; cite in subsequent legal briefs
+
+---
+
+## ADDITIONAL SHORT COMMENTS (90 seconds each)
+
+### Short Comment A: Direct Question Format
+"My name is [NAME], [ADDRESS]. Simple question for each commissioner: Did you read the complete application before voting yes on Jupiter? Please answer individually. Thank you."
+
+### Short Comment B: Personal Impact
+"My name is [NAME]. I've lived in Santa Teresa for 20 years. My kids drink this water. They breathe this air. Project Jupiter threatens both. You work for us, not for tech billionaires. Vote no. Thank you."
+
+### Short Comment C: Moral Appeal
+"My name is [NAME]. In Doña Ana County, we value honesty, transparency, and fairness. Secret meetings, blank applications, and billion-dollar giveaways violate all three. Do the right thing. Rescind these ordinances. Thank you."
+
+### Short Comment D: Election Warning
+"My name is [NAME], District [X] voter. Commissioner [NAME], I voted for you last election. I will campaign against you next election if you don't fix this. That's not a threat—it's information. Thank you."
+
+---
+
+## BILINGUAL SCRIPT (Español/English - 3 minutes)
+
+**Best for:** Spanish-speaking communities; demonstrates inclusivity
+
+"Buenos días, Comisionados. Good morning, Commissioners. Mi nombre es [NAME] y vivo en [ADDRESS].
+
+Estoy aquí porque Project Jupiter no sirve a nuestra comunidad. I'm here because Project Jupiter does not serve our community.
+
+Ustedes aprobaron $165 mil millones sin análisis económico, sin análisis ambiental, y sin escuchar a la gente. You approved $165 billion without economic analysis, without environmental review, and without listening to the people.
+
+La aplicación tenía páginas en blanco. The application had blank pages.
+
+Tuvieron reuniones secretas. You held secret meetings.
+
+La Comisionada Reynolds publicó las direcciones de residentes que se oponen. Commissioner Reynolds posted the addresses of residents who oppose.
+
+Esto no es democracia. This is not democracy. Esto es corrupción. This is corruption.
+
+Nuestro agua es sagrada. Our water is sacred. Nuestros niños merecen un futuro limpio. Our children deserve a clean future.
+
+Les exijo que rescinded estas ordenanzas—número 367, 368, y 369. I demand that you rescind these ordinances—numbers 367, 368, and 369.
+
+Si no lo hacen, nosotros vamos a organizar, movilizar, y votar. If you don't, we will organize, mobilize, and vote.
+
+El pueblo unido jamás será vencido. The people united will never be defeated. Gracias. Thank you."
+
+**Key Evidence:** All major points from other scripts  
+**Strengths:** Accessible to Spanish-speakers; demonstrates community diversity; memorable closing  
+**Follow-up:** Demand all future meetings provide Spanish interpretation
+
+---
+
+## ORGANIZING STRATEGY FOR COMMISSION MEETINGS
+
+### Before the Meeting:
+1. **Recruit 10-15 speakers** covering different angles (water, economics, legal, EJ, etc.)
+2. **Coordinate messaging** so you're not redundant but build on each other
+3. **Assign roles**: 
+   - 2-3 people do legal/technical arguments
+   - 2-3 people do emotional/moral arguments  
+   - 2-3 people ask direct yes/no questions
+   - 1-2 people name commissioners and demand accountability
+   - 1-2 Spanish speakers
+4. **Create visual presence**: Matching t-shirts, signs ("You Can't Drink Data," "No Secret Deals," "Rescind Jupiter")
+5. **Invite media**: Contact KFOX14, Las Cruces Sun-News, NM Political Report
+6. **Live stream**: Have someone Facebook Live the meeting
+7. **Prepare written comments**: Submit same day or email in advance
+
+### During the Meeting:
+1. **Sit together** in visible location
+2. **Silent solidarity**: Stand when each speaker goes to podium, sit when they finish
+3. **Applause/snap**: Show support without disrupting (check rules)
+4. **Take notes**: Document commissioner responses (or non-responses)
+5. **Record everything**: Phones, audio recorders (if allowed)
+
+### After the Meeting:
+1. **Immediate debrief**: Did any commissioners commit to anything? Document it
+2. **Media availability**: Have 2-3 spokespeople ready for press interviews outside
+3. **Social media blitz**: Post clips, quotes, photos within 1 hour while people are watching
+4. **Thank speakers**: Build community, celebrate small wins
+5. **Plan next action**: IPRA requests, lawsuit support, voter registration drive, etc.
+6. **Follow up in writing**: Send formal letters referencing oral comments, demanding written responses
+
+---
+
+## LEGAL NOTES
+
+- **First Amendment protects public comment** (even critical comments)
+- **Cannot be removed for content** (only for disruption, time violations)
+- **Comments become public record** (good—you want documentation)
+- **Commissioners may not respond** (annoying but they often don't have to)
+- **Can request written response** (cite Open Meetings Act requirement for public access)
+- **Can cite comments in lawsuit** (creates legislative record)
+
+---
+
+## FINAL TIPS
+
+**DO:**
+ Speak from personal experience  
+ Use specific facts and citations  
+ Ask questions requiring yes/no answers  
+ End with clear demand  
+ Stay calm even if you're angry  
+ Bring supporters who clap/snap  
+ Wear camera (body cam if you feel unsafe)  
+
+**DON'T:**
+ Make personal attacks (stick to actions, not character)  
+ Use profanity (gives them excuse to dismiss you)  
+ Go over time (they'll cut you off)  
+ Get pulled into debate (you're making a statement, not negotiating)  
+ Expect immediate results (this is a long fight)  
+ Go alone (bring community)  
+
+---
+
+**Remember: You are powerful. Your voice matters. This is YOUR government. Make them listen.**

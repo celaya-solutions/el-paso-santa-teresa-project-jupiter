@@ -1,0 +1,528 @@
+{
+  "generated": "2026-01-22T18:03:18.859Z",
+  "totalDocuments": 18,
+  "documents": [
+    {
+      "id": "CONSOLIDATED_PUBLIC_REPORT",
+      "filename": "CONSOLIDATED_PUBLIC_REPORT.html",
+      "title": "Consolidated Public Report",
+      "category": "core",
+      "priority": 1,
+      "description": "Complete public-facing accountability report with executive summary, findings, and action items",
+      "icon": "document",
+      "featured": true,
+      "wordCount": 2902,
+      "lastModified": "2026-01-22T18:01:40.696Z"
+    },
+    {
+      "id": "contradictions",
+      "filename": "contradictions.html",
+      "title": "Contradictions Analysis",
+      "category": "core",
+      "priority": 3,
+      "description": "15 documented contradictions between sources with legal implications",
+      "icon": "alert",
+      "featured": true,
+      "wordCount": 1493,
+      "lastModified": "2026-01-22T18:01:40.697Z"
+    },
+    {
+      "id": "accountability_map",
+      "filename": "accountability_map.html",
+      "title": "Accountability Map",
+      "category": "core",
+      "priority": 4,
+      "description": "Legal exposure, political accountability, and enforcement pathways",
+      "icon": "map",
+      "featured": true,
+      "wordCount": 2148,
+      "lastModified": "2026-01-22T18:01:40.694Z"
+    },
+    {
+      "id": "public_messaging_30_days",
+      "filename": "public_messaging_30_days.html",
+      "title": "30-Day Messaging Campaign",
+      "category": "action",
+      "priority": 5,
+      "description": "Bilingual social media campaign with daily messages and citations",
+      "icon": "megaphone",
+      "featured": true,
+      "wordCount": 3106,
+      "lastModified": "2026-01-22T18:01:40.707Z"
+    },
+    {
+      "id": "public_comment_scripts",
+      "filename": "public_comment_scripts.html",
+      "title": "Public Comment Scripts",
+      "category": "action",
+      "priority": 6,
+      "description": "Time-bounded scripts for commission meetings with follow-up questions",
+      "icon": "microphone",
+      "featured": true,
+      "wordCount": 2264,
+      "lastModified": "2026-01-22T18:01:40.707Z"
+    },
+    {
+      "id": "opposition_research_profiles",
+      "filename": "opposition_research_profiles.html",
+      "title": "Opposition Research Profiles",
+      "category": "research",
+      "priority": 7,
+      "description": "Research framework for commissioners who voted YES",
+      "icon": "users",
+      "featured": false,
+      "wordCount": 1903,
+      "lastModified": "2026-01-22T18:01:40.700Z"
+    },
+    {
+      "id": "decision_network_timeline",
+      "filename": "decision_network_timeline.html",
+      "title": "Decision Network Timeline",
+      "category": "research",
+      "priority": 8,
+      "description": "Chronological timeline with network analysis and pattern identification",
+      "icon": "timeline",
+      "featured": true,
+      "wordCount": 2255,
+      "lastModified": "2026-01-22T18:01:40.698Z"
+    },
+    {
+      "id": "PROJECT_JUPITER_EXECUTIVE_SUMMARY",
+      "filename": "PROJECT_JUPITER_EXECUTIVE_SUMMARY.html",
+      "title": "Executive Summary",
+      "category": "overview",
+      "priority": 9,
+      "description": "Executive summary for officials and media",
+      "icon": "file",
+      "featured": false,
+      "wordCount": 1825,
+      "lastModified": "2026-01-22T18:01:40.704Z"
+    },
+    {
+      "id": "PROJECT_JUPITER_FACT_SHEET",
+      "filename": "PROJECT_JUPITER_FACT_SHEET.html",
+      "title": "Fact Sheet",
+      "category": "overview",
+      "priority": 10,
+      "description": "Quick reference fact sheet",
+      "icon": "list",
+      "featured": false,
+      "wordCount": 837,
+      "lastModified": "2026-01-22T18:01:40.704Z"
+    },
+    {
+      "id": "PROJECT_JUPITER_EVIDENCE_BRIEFING",
+      "filename": "PROJECT_JUPITER_EVIDENCE_BRIEFING.html",
+      "title": "Evidence Briefing",
+      "category": "legal",
+      "priority": 11,
+      "description": "Detailed evidence briefing",
+      "icon": "briefcase",
+      "featured": false,
+      "wordCount": 2884,
+      "lastModified": "2026-01-22T18:01:40.703Z"
+    },
+    {
+      "id": "PROJECT_JUPITER_TALKING_POINTS",
+      "filename": "PROJECT_JUPITER_TALKING_POINTS.html",
+      "title": "Talking Points",
+      "category": "action",
+      "priority": 12,
+      "description": "Key talking points for advocacy",
+      "icon": "chat",
+      "featured": false,
+      "wordCount": 2118,
+      "lastModified": "2026-01-22T18:01:40.706Z"
+    },
+    {
+      "id": "PROJECT_JUPITER_QUOTES_COMPILATION",
+      "filename": "PROJECT_JUPITER_QUOTES_COMPILATION.html",
+      "title": "Quotes Compilation",
+      "category": "reference",
+      "priority": 13,
+      "description": "Compilation of key quotes",
+      "icon": "quote",
+      "featured": false,
+      "wordCount": 1666,
+      "lastModified": "2026-01-22T18:01:40.706Z"
+    },
+    {
+      "id": "PROJECT_JUPITER_PUBLIC_COMMENT_SCRIPTS",
+      "filename": "PROJECT_JUPITER_PUBLIC_COMMENT_SCRIPTS.html",
+      "title": "Public Comment Scripts (Full)",
+      "category": "action",
+      "priority": 14,
+      "description": "Full collection of public comment scripts",
+      "icon": "microphone",
+      "featured": false,
+      "wordCount": 3881,
+      "lastModified": "2026-01-22T18:01:40.705Z"
+    },
+    {
+      "id": "PROJECT_JUPITER_COMMISSIONER_OPPOSITION_RESEARCH",
+      "filename": "PROJECT_JUPITER_COMMISSIONER_OPPOSITION_RESEARCH.html",
+      "title": "Commissioner Research",
+      "category": "research",
+      "priority": 15,
+      "description": "Opposition research on commissioners",
+      "icon": "search",
+      "featured": false,
+      "wordCount": 3185,
+      "lastModified": "2026-01-22T18:01:40.702Z"
+    },
+    {
+      "id": "PROJECT_JUPITER_ACCOUNTABILITY_MATRIX",
+      "filename": "PROJECT_JUPITER_ACCOUNTABILITY_MATRIX.html",
+      "title": "Accountability Matrix (Original)",
+      "category": "reference",
+      "priority": 16,
+      "description": "Original accountability matrix",
+      "icon": "table",
+      "featured": false,
+      "wordCount": 2210,
+      "lastModified": "2026-01-22T18:01:40.701Z"
+    },
+    {
+      "id": "CONTACTS",
+      "filename": "CONTACTS.html",
+      "title": "Contact Information",
+      "category": "reference",
+      "priority": 17,
+      "description": "Key contacts for community leaders and legal teams",
+      "icon": "phone",
+      "featured": false,
+      "wordCount": 682,
+      "lastModified": "2026-01-22T18:01:40.696Z"
+    },
+    {
+      "id": "README",
+      "filename": "README.html",
+      "title": "Documentation",
+      "category": "reference",
+      "priority": 18,
+      "description": "Project documentation and usage guide",
+      "icon": "info",
+      "featured": false,
+      "wordCount": 1215,
+      "lastModified": "2026-01-22T18:01:40.708Z"
+    },
+    {
+      "id": "OLD_PROJECT_JUPITER_WHATSAPP_MESSAGES_30_DAYS",
+      "filename": "OLD_PROJECT_JUPITER_WHATSAPP_MESSAGES_30_DAYS.html",
+      "title": "OLD PROJECT JUPITER WHATSAPP MESSAGES 30 DAYS",
+      "category": "other",
+      "priority": 99,
+      "description": "",
+      "icon": "document",
+      "featured": false,
+      "wordCount": 1818,
+      "lastModified": "2026-01-22T18:01:40.699Z"
+    }
+  ],
+  "categories": {
+    "core": [
+      {
+        "id": "CONSOLIDATED_PUBLIC_REPORT",
+        "filename": "CONSOLIDATED_PUBLIC_REPORT.html",
+        "title": "Consolidated Public Report",
+        "category": "core",
+        "priority": 1,
+        "description": "Complete public-facing accountability report with executive summary, findings, and action items",
+        "icon": "document",
+        "featured": true,
+        "wordCount": 2902,
+        "lastModified": "2026-01-22T18:01:40.696Z"
+      },
+      {
+        "id": "contradictions",
+        "filename": "contradictions.html",
+        "title": "Contradictions Analysis",
+        "category": "core",
+        "priority": 3,
+        "description": "15 documented contradictions between sources with legal implications",
+        "icon": "alert",
+        "featured": true,
+        "wordCount": 1493,
+        "lastModified": "2026-01-22T18:01:40.697Z"
+      },
+      {
+        "id": "accountability_map",
+        "filename": "accountability_map.html",
+        "title": "Accountability Map",
+        "category": "core",
+        "priority": 4,
+        "description": "Legal exposure, political accountability, and enforcement pathways",
+        "icon": "map",
+        "featured": true,
+        "wordCount": 2148,
+        "lastModified": "2026-01-22T18:01:40.694Z"
+      }
+    ],
+    "action": [
+      {
+        "id": "public_messaging_30_days",
+        "filename": "public_messaging_30_days.html",
+        "title": "30-Day Messaging Campaign",
+        "category": "action",
+        "priority": 5,
+        "description": "Bilingual social media campaign with daily messages and citations",
+        "icon": "megaphone",
+        "featured": true,
+        "wordCount": 3106,
+        "lastModified": "2026-01-22T18:01:40.707Z"
+      },
+      {
+        "id": "public_comment_scripts",
+        "filename": "public_comment_scripts.html",
+        "title": "Public Comment Scripts",
+        "category": "action",
+        "priority": 6,
+        "description": "Time-bounded scripts for commission meetings with follow-up questions",
+        "icon": "microphone",
+        "featured": true,
+        "wordCount": 2264,
+        "lastModified": "2026-01-22T18:01:40.707Z"
+      },
+      {
+        "id": "PROJECT_JUPITER_TALKING_POINTS",
+        "filename": "PROJECT_JUPITER_TALKING_POINTS.html",
+        "title": "Talking Points",
+        "category": "action",
+        "priority": 12,
+        "description": "Key talking points for advocacy",
+        "icon": "chat",
+        "featured": false,
+        "wordCount": 2118,
+        "lastModified": "2026-01-22T18:01:40.706Z"
+      },
+      {
+        "id": "PROJECT_JUPITER_PUBLIC_COMMENT_SCRIPTS",
+        "filename": "PROJECT_JUPITER_PUBLIC_COMMENT_SCRIPTS.html",
+        "title": "Public Comment Scripts (Full)",
+        "category": "action",
+        "priority": 14,
+        "description": "Full collection of public comment scripts",
+        "icon": "microphone",
+        "featured": false,
+        "wordCount": 3881,
+        "lastModified": "2026-01-22T18:01:40.705Z"
+      }
+    ],
+    "research": [
+      {
+        "id": "opposition_research_profiles",
+        "filename": "opposition_research_profiles.html",
+        "title": "Opposition Research Profiles",
+        "category": "research",
+        "priority": 7,
+        "description": "Research framework for commissioners who voted YES",
+        "icon": "users",
+        "featured": false,
+        "wordCount": 1903,
+        "lastModified": "2026-01-22T18:01:40.700Z"
+      },
+      {
+        "id": "decision_network_timeline",
+        "filename": "decision_network_timeline.html",
+        "title": "Decision Network Timeline",
+        "category": "research",
+        "priority": 8,
+        "description": "Chronological timeline with network analysis and pattern identification",
+        "icon": "timeline",
+        "featured": true,
+        "wordCount": 2255,
+        "lastModified": "2026-01-22T18:01:40.698Z"
+      },
+      {
+        "id": "PROJECT_JUPITER_COMMISSIONER_OPPOSITION_RESEARCH",
+        "filename": "PROJECT_JUPITER_COMMISSIONER_OPPOSITION_RESEARCH.html",
+        "title": "Commissioner Research",
+        "category": "research",
+        "priority": 15,
+        "description": "Opposition research on commissioners",
+        "icon": "search",
+        "featured": false,
+        "wordCount": 3185,
+        "lastModified": "2026-01-22T18:01:40.702Z"
+      }
+    ],
+    "legal": [
+      {
+        "id": "PROJECT_JUPITER_EVIDENCE_BRIEFING",
+        "filename": "PROJECT_JUPITER_EVIDENCE_BRIEFING.html",
+        "title": "Evidence Briefing",
+        "category": "legal",
+        "priority": 11,
+        "description": "Detailed evidence briefing",
+        "icon": "briefcase",
+        "featured": false,
+        "wordCount": 2884,
+        "lastModified": "2026-01-22T18:01:40.703Z"
+      }
+    ],
+    "overview": [
+      {
+        "id": "PROJECT_JUPITER_EXECUTIVE_SUMMARY",
+        "filename": "PROJECT_JUPITER_EXECUTIVE_SUMMARY.html",
+        "title": "Executive Summary",
+        "category": "overview",
+        "priority": 9,
+        "description": "Executive summary for officials and media",
+        "icon": "file",
+        "featured": false,
+        "wordCount": 1825,
+        "lastModified": "2026-01-22T18:01:40.704Z"
+      },
+      {
+        "id": "PROJECT_JUPITER_FACT_SHEET",
+        "filename": "PROJECT_JUPITER_FACT_SHEET.html",
+        "title": "Fact Sheet",
+        "category": "overview",
+        "priority": 10,
+        "description": "Quick reference fact sheet",
+        "icon": "list",
+        "featured": false,
+        "wordCount": 837,
+        "lastModified": "2026-01-22T18:01:40.704Z"
+      }
+    ],
+    "reference": [
+      {
+        "id": "PROJECT_JUPITER_QUOTES_COMPILATION",
+        "filename": "PROJECT_JUPITER_QUOTES_COMPILATION.html",
+        "title": "Quotes Compilation",
+        "category": "reference",
+        "priority": 13,
+        "description": "Compilation of key quotes",
+        "icon": "quote",
+        "featured": false,
+        "wordCount": 1666,
+        "lastModified": "2026-01-22T18:01:40.706Z"
+      },
+      {
+        "id": "PROJECT_JUPITER_ACCOUNTABILITY_MATRIX",
+        "filename": "PROJECT_JUPITER_ACCOUNTABILITY_MATRIX.html",
+        "title": "Accountability Matrix (Original)",
+        "category": "reference",
+        "priority": 16,
+        "description": "Original accountability matrix",
+        "icon": "table",
+        "featured": false,
+        "wordCount": 2210,
+        "lastModified": "2026-01-22T18:01:40.701Z"
+      },
+      {
+        "id": "CONTACTS",
+        "filename": "CONTACTS.html",
+        "title": "Contact Information",
+        "category": "reference",
+        "priority": 17,
+        "description": "Key contacts for community leaders and legal teams",
+        "icon": "phone",
+        "featured": false,
+        "wordCount": 682,
+        "lastModified": "2026-01-22T18:01:40.696Z"
+      },
+      {
+        "id": "README",
+        "filename": "README.html",
+        "title": "Documentation",
+        "category": "reference",
+        "priority": 18,
+        "description": "Project documentation and usage guide",
+        "icon": "info",
+        "featured": false,
+        "wordCount": 1215,
+        "lastModified": "2026-01-22T18:01:40.708Z"
+      }
+    ],
+    "other": [
+      {
+        "id": "OLD_PROJECT_JUPITER_WHATSAPP_MESSAGES_30_DAYS",
+        "filename": "OLD_PROJECT_JUPITER_WHATSAPP_MESSAGES_30_DAYS.html",
+        "title": "OLD PROJECT JUPITER WHATSAPP MESSAGES 30 DAYS",
+        "category": "other",
+        "priority": 99,
+        "description": "",
+        "icon": "document",
+        "featured": false,
+        "wordCount": 1818,
+        "lastModified": "2026-01-22T18:01:40.699Z"
+      }
+    ]
+  },
+  "featured": [
+    {
+      "id": "CONSOLIDATED_PUBLIC_REPORT",
+      "filename": "CONSOLIDATED_PUBLIC_REPORT.html",
+      "title": "Consolidated Public Report",
+      "category": "core",
+      "priority": 1,
+      "description": "Complete public-facing accountability report with executive summary, findings, and action items",
+      "icon": "document",
+      "featured": true,
+      "wordCount": 2902,
+      "lastModified": "2026-01-22T18:01:40.696Z"
+    },
+    {
+      "id": "contradictions",
+      "filename": "contradictions.html",
+      "title": "Contradictions Analysis",
+      "category": "core",
+      "priority": 3,
+      "description": "15 documented contradictions between sources with legal implications",
+      "icon": "alert",
+      "featured": true,
+      "wordCount": 1493,
+      "lastModified": "2026-01-22T18:01:40.697Z"
+    },
+    {
+      "id": "accountability_map",
+      "filename": "accountability_map.html",
+      "title": "Accountability Map",
+      "category": "core",
+      "priority": 4,
+      "description": "Legal exposure, political accountability, and enforcement pathways",
+      "icon": "map",
+      "featured": true,
+      "wordCount": 2148,
+      "lastModified": "2026-01-22T18:01:40.694Z"
+    },
+    {
+      "id": "public_messaging_30_days",
+      "filename": "public_messaging_30_days.html",
+      "title": "30-Day Messaging Campaign",
+      "category": "action",
+      "priority": 5,
+      "description": "Bilingual social media campaign with daily messages and citations",
+      "icon": "megaphone",
+      "featured": true,
+      "wordCount": 3106,
+      "lastModified": "2026-01-22T18:01:40.707Z"
+    },
+    {
+      "id": "public_comment_scripts",
+      "filename": "public_comment_scripts.html",
+      "title": "Public Comment Scripts",
+      "category": "action",
+      "priority": 6,
+      "description": "Time-bounded scripts for commission meetings with follow-up questions",
+      "icon": "microphone",
+      "featured": true,
+      "wordCount": 2264,
+      "lastModified": "2026-01-22T18:01:40.707Z"
+    },
+    {
+      "id": "decision_network_timeline",
+      "filename": "decision_network_timeline.html",
+      "title": "Decision Network Timeline",
+      "category": "research",
+      "priority": 8,
+      "description": "Chronological timeline with network analysis and pattern identification",
+      "icon": "timeline",
+      "featured": true,
+      "wordCount": 2255,
+      "lastModified": "2026-01-22T18:01:40.698Z"
+    }
+  ]
+}

@@ -1,0 +1,259 @@
+/**
+ * Print Stylesheet
+ * Optimized styles for printing and PDF export
+ */
+
+@media print {
+  /* Hide UI elements */
+  .header,
+  .sidebar,
+  .menu-toggle,
+  .search-box,
+  .btn,
+  .footer,
+  .lang-toggle,
+  .breadcrumbs,
+  .page-meta {
+    display: none !important;
+  }
+  
+  /* Reset layout */
+  .app,
+  .main,
+  .content {
+    display: block;
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* Typography optimizations */
+  body {
+    font-size: 11pt;
+    line-height: 1.5;
+    color: #000;
+    background: #fff;
+  }
+  
+  h1 { font-size: 24pt; page-break-after: avoid; }
+  h2 { font-size: 18pt; page-break-after: avoid; }
+  h3 { font-size: 14pt; page-break-after: avoid; }
+  h4 { font-size: 12pt; page-break-after: avoid; }
+  h5, h6 { font-size: 11pt; page-break-after: avoid; }
+  
+  /* Prevent breaks inside elements */
+  p, blockquote {
+    orphans: 3;
+    widows: 3;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    page-break-after: avoid;
+  }
+  
+  /* Show link URLs */
+  a[href^="http"]:after {
+    content: " (" attr(href) ")";
+    font-size: 9pt;
+    font-weight: normal;
+    color: #666;
+  }
+  
+  /* Don't show URLs for internal links */
+  a[href^="#"]:after {
+    content: "";
+  }
+  
+  /* Tables */
+  table {
+    page-break-inside: avoid;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  thead {
+    display: table-header-group;
+    background-color: #f0f0f0 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  
+  tr {
+    page-break-inside: avoid;
+  }
+  
+  th, td {
+    border: 1px solid #000;
+    padding: 8pt;
+  }
+  
+  /* Images */
+  img {
+    max-width: 100%;
+    page-break-inside: avoid;
+  }
+  
+  /* Code blocks */
+  pre, code {
+    border: 1px solid #ccc;
+    background-color: #f5f5f5;
+    padding: 4pt;
+    font-family: "Courier New", monospace;
+    font-size: 9pt;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  
+  pre {
+    page-break-inside: avoid;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+  
+  /* Blockquotes */
+  blockquote {
+    border-left: 4pt solid #000;
+    padding-left: 12pt;
+    font-style: italic;
+    page-break-inside: avoid;
+  }
+  
+  /* Page header/footer */
+  @page {
+    margin: 2cm;
+    
+    @top-right {
+      content: "Project Jupiter Evidence Portal";
+      font-size: 9pt;
+      color: #666;
+    }
+    
+    @bottom-right {
+      content: "Page " counter(page) " of " counter(pages);
+      font-size: 9pt;
+      color: #666;
+    }
+    
+    @bottom-left {
+      content: "Printed: " string(date);
+      font-size: 9pt;
+      color: #666;
+    }
+  }
+  
+  /* First page header */
+  @page :first {
+    @top-right {
+      content: "";
+    }
+  }
+  
+  /* Card styling for print */
+  .card {
+    border: 1pt solid #000;
+    padding: 12pt;
+    margin-bottom: 12pt;
+    page-break-inside: avoid;
+  }
+  
+  /* Badges */
+  .badge {
+    border: 1pt solid #000;
+    padding: 2pt 4pt;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  
+  /* Evidence matrix */
+  .evidence-matrix-table {
+    font-size: 9pt;
+  }
+  
+  .evidence-matrix-table th {
+    font-weight: bold;
+    background-color: #e0e0e0 !important;
+  }
+  
+  /* Timeline (simplify for print) */
+  .timeline {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .timeline-event {
+    margin-bottom: 8pt;
+    padding-bottom: 8pt;
+    border-bottom: 1pt solid #ccc;
+    page-break-inside: avoid;
+  }
+  
+  .timeline-date {
+    font-weight: bold;
+  }
+  
+  /* Ensure colors print correctly */
+  * {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  
+  /* Hide decorative elements */
+  .shadow,
+  .box-shadow,
+  .text-shadow {
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+  
+  /* Citation highlight */
+  .citation {
+    font-style: italic;
+    color: #333;
+  }
+  
+  /* Document title page */
+  .page-header {
+    text-align: center;
+    border-bottom: 2pt solid #000;
+    padding-bottom: 12pt;
+    margin-bottom: 24pt;
+  }
+  
+  .page-title {
+    font-size: 28pt;
+    font-weight: bold;
+    color: #000;
+  }
+}
+
+/* Print button (show only on screen) */
+@media screen {
+  .print-button {
+    position: fixed;
+    bottom: var(--spacing-lg);
+    right: var(--spacing-lg);
+    z-index: var(--z-fixed);
+    background-color: var(--color-accent);
+    color: var(--color-white);
+    padding: var(--spacing-sm) var(--spacing-lg);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-lg);
+    cursor: pointer;
+    border: none;
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-semibold);
+    transition: all var(--transition-fast);
+  }
+  
+  .print-button:hover {
+    background-color: var(--color-accent-dark);
+    box-shadow: var(--shadow-xl);
+    transform: translateY(-2px);
+  }
+}
+
+@media print {
+  .print-button {
+    display: none;
+  }
+}

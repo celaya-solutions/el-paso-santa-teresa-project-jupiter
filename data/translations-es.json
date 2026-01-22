@@ -1,0 +1,94 @@
+{
+  "site": {
+    "title": "Portal de Evidencia de Proyecto Júpiter"
+  },
+  "header": {
+    "lastUpdated": "Última Actualización:"
+  },
+  "nav": {
+    "startHere": "★ EMPIEZA AQUÍ",
+    "coreDeliverables": "Documentos Principales",
+    "actionCenter": "Centro de Acción",
+    "research": "Investigación y Análisis",
+    "reference": "Referencia",
+    "evidenceMatrix": "Matriz de Evidencia"
+  },
+  "docs": {
+    "consolidatedReport": "Informe Público Consolidado",
+    "evidenceMatrix": "Matriz de Evidencia",
+    "contradictions": "Análisis de Contradicciones",
+    "accountabilityMap": "Mapa de Responsabilidad",
+    "messagingCampaign": "Campaña de Mensajes de 30 Días",
+    "publicComments": "Guiones de Comentarios Públicos",
+    "talkingPoints": "Puntos de Conversación",
+    "timeline": "Cronología de Decisiones",
+    "oppositionResearch": "Investigación de Oposición",
+    "evidenceBriefing": "Resumen de Evidencia",
+    "executiveSummary": "Resumen Ejecutivo",
+    "factSheet": "Hoja de Datos",
+    "contacts": "Información de Contacto",
+    "readme": "Documentación"
+  },
+  "search": {
+    "placeholder": "Buscar documentos...",
+    "searching": "Buscando...",
+    "results": "Resultados de Búsqueda",
+    "noResults": "No se encontraron resultados",
+    "resultsCount": "{count} resultados encontrados"
+  },
+  "actions": {
+    "print": "Imprimir",
+    "share": "Compartir",
+    "download": "Descargar",
+    "export": "Exportar",
+    "filter": "Filtrar",
+    "sort": "Ordenar",
+    "search": "Buscar",
+    "clear": "Limpiar"
+  },
+  "evidence": {
+    "title": "Matriz de Evidencia",
+    "filters": "Filtros",
+    "showAll": "Mostrar Todo",
+    "category": "Categoría",
+    "status": "Estado de Verificación",
+    "searchTable": "Buscar en la tabla...",
+    "rowsPerPage": "Filas por página:",
+    "showing": "Mostrando {start}-{end} de {total}",
+    "columns": {
+      "id": "ID",
+      "type": "Tipo",
+      "date": "Fecha",
+      "actor": "Actor",
+      "statement": "Declaración/Acción",
+      "source": "Fuente",
+      "status": "Estado"
+    }
+  },
+  "timeline": {
+    "title": "Cronología de Decisiones",
+    "controls": "Controles de Cronología",
+    "zoomIn": "Acercar",
+    "zoomOut": "Alejar",
+    "reset": "Restablecer Vista",
+    "legend": "Leyenda",
+    "categories": {
+      "vote": "Votos",
+      "meeting": "Reuniones",
+      "legal": "Acciones Legales",
+      "agreement": "Acuerdos",
+      "community": "Acciones Comunitarias",
+      "violation": "Violaciones",
+      "other": "Otros Eventos"
+    }
+  },
+  "footer": {
+    "about": "Acerca de Este Proyecto",
+    "aboutText": "El Portal de Evidencia de Proyecto Júpiter proporciona documentación integral y herramientas de responsabilidad para organizadores comunitarios, equipos legales, periodistas y residentes que se oponen a la aprobación ilegal de un complejo de centro de datos de $165 mil millones en Santa Teresa, Nuevo México.",
+    "quickLinks": "Enlaces Rápidos",
+    "resources": "Recursos",
+    "license": "Dominio Público para Uso Comunitario",
+    "updated": "Última Actualización:",
+    "documentation": "Documentación"
+  }
+}

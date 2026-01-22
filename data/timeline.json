@@ -1,0 +1,576 @@
+[
+  {
+    "date": "2025-01-12",
+    "title": "Feb-Aug 2025",
+    "category": "other",
+    "section": "TIMELINE TABLE",
+    "source": "decision_network_timeline.md"
+  },
+  {
+    "date": "2025-12-15",
+    "title": "State Level",
+    "category": "other",
+    "section": "**GOVERNMENT ACTORS**",
+    "source": "decision_network_timeline.md"
+  },
+  {
+    "date": "2025-12-15",
+    "title": "NM Governor's Office → BorderPlex Digital (State MOU signed Feb 25)",
+    "category": "agreement",
+    "section": "**GOVERNMENT ACTORS**",
+    "source": "decision_network_timeline.md"
+  },
+  {
+    "date": "2025-12-15",
+    "title": "NM Governor's Office",
+    "category": "other",
+    "section": "**GOVERNMENT ACTORS**",
+    "source": "decision_network_timeline.md"
+  },
+  {
+    "date": "2025-12-15",
+    "title": "NM Environment Department → BorderPlex (expedited permitting commitment)",
+    "category": "other",
+    "section": "**GOVERNMENT ACTORS**",
+    "source": "decision_network_timeline.md"
+  },
+  {
+    "date": "2025-12-15",
+    "title": "NM Environment Department",
+    "category": "other",
+    "section": "**GOVERNMENT ACTORS**",
+    "source": "decision_network_timeline.md"
+  },
+  {
+    "date": "2025-12-15",
+    "title": "NM State Engineer → BorderPlex (water rights commitment)",
+    "category": "other",
+    "section": "**GOVERNMENT ACTORS**",
+    "source": "decision_network_timeline.md"
+  },
+  {
+    "date": "2025-12-15",
+    "title": "NM State Engineer",
+    "category": "other",
+    "section": "**GOVERNMENT ACTORS**",
+    "source": "decision_network_timeline.md"
+  },
+  {
+    "date": "2025-12-15",
+    "title": "NM Economic Development Dept → BorderPlex (LEDA support commitment)",
+    "category": "other",
+    "section": "**GOVERNMENT ACTORS**",
+    "source": "decision_network_timeline.md"
+  },
+  {
+    "date": "2025-12-15",
+    "title": "NM Economic Development Dept",
+    "category": "other",
+    "section": "**GOVERNMENT ACTORS**",
+    "source": "decision_network_timeline.md"
+  },
+  {
+    "date": "2025-12-15",
+    "title": "County Level",
+    "category": "other",
+    "section": "**GOVERNMENT ACTORS**",
+    "source": "decision_network_timeline.md"
+  },
+  {
+    "date": "2025-12-15",
+    "title": "County Commission (4-member bloc) → BorderPlex (NDA, private meetings, 3 YES votes)",
+    "category": "vote",
+    "section": "**GOVERNMENT ACTORS**",
+    "source": "decision_network_timeline.md"
+  },
+  {
+    "date": "2025-12-15",
+    "title": "County Commission (4-member bloc)",
+    "category": "other",
+    "section": "**GOVERNMENT ACTORS**",
+    "source": "decision_network_timeline.md"
+  },
+  {
+    "date": "2025-12-15",
+    "title": "County Manager/Staff → BorderPlex (negotiations, document preparation)",
+    "category": "other",
+    "section": "**GOVERNMENT ACTORS**",
+    "source": "decision_network_timeline.md"
+  },
+  {
+    "date": "2025-12-15",
+    "title": "County Manager/Staff",
+    "category": "other",
+    "section": "**GOVERNMENT ACTORS**",
+    "source": "decision_network_timeline.md"
+  },
+  {
+    "date": "2025-12-15",
+    "title": "County Counsel → Commissioners (legal advice on incomplete application)",
+    "category": "legal",
+    "section": "**GOVERNMENT ACTORS**",
+    "source": "decision_network_timeline.md"
+  },
+  {
+    "date": "2025-12-15",
+    "title": "County Counsel",
+    "category": "other",
+    "section": "**GOVERNMENT ACTORS**",
+    "source": "decision_network_timeline.md"
+  },
+  {
+    "date": "2025-12-15",
+    "title": "BorderPlex Digital Assets LLC (primary developer, MOU signatory)",
+    "category": "agreement",
+    "section": "**CORPORATE ACTORS**",
+    "source": "decision_network_timeline.md"
+  },
+  {
+    "date": "2025-12-15",
+    "title": "BorderPlex Digital Assets LLC",
+    "category": "other",
+    "section": "**CORPORATE ACTORS**",
+    "source": "decision_network_timeline.md"
+  },
+  {
+    "date": "2025-12-15",
+    "title": "Lanham Napier (BorderPlex CEO, testified to legislature Aug 19)",
+    "category": "other",
+    "section": "**CORPORATE ACTORS**",
+    "source": "decision_network_timeline.md"
+  },
+  {
+    "date": "2025-12-15",
+    "title": "Lanham Napier",
+    "category": "other",
+    "section": "**CORPORATE ACTORS**",
+    "source": "decision_network_timeline.md"
+  },
+  {
+    "date": "2025-12-15",
+    "title": "Series 2025A/B/C Entities",
+    "category": "other",
+    "section": "**CORPORATE ACTORS**",
+    "source": "decision_network_timeline.md"
+  },
+  {
+    "date": "2025-12-15",
+    "title": "Yucca Growth Infrastructure, LLC",
+    "category": "other",
+    "section": "**CORPORATE ACTORS**",
+    "source": "decision_network_timeline.md"
+  },
+  {
+    "date": "2025-12-15",
+    "title": "Red Chiles [A/B/C/D], LLC",
+    "category": "other",
+    "section": "**CORPORATE ACTORS**",
+    "source": "decision_network_timeline.md"
+  },
+  {
+    "date": "2025-12-15",
+    "title": "Green Chile Ventures LLC",
+    "category": "other",
+    "section": "**CORPORATE ACTORS**",
+    "source": "decision_network_timeline.md"
+  },
+  {
+    "date": "2025-12-15",
+    "title": "[Additional entities TBD from lease documents]",
+    "category": "other",
+    "section": "**CORPORATE ACTORS**",
+    "source": "decision_network_timeline.md"
+  },
+  {
+    "date": "2025-12-15",
+    "title": "Community Organizations",
+    "category": "community",
+    "section": "**OPPOSITION ACTORS**",
+    "source": "decision_network_timeline.md"
+  },
+  {
+    "date": "2025-12-15",
+    "title": "Empowerment Congress of Doña Ana County (protests, lawsuit)",
+    "category": "legal",
+    "section": "**OPPOSITION ACTORS**",
+    "source": "decision_network_timeline.md"
+  },
+  {
+    "date": "2025-12-15",
+    "title": "Empowerment Congress of Doña Ana County",
+    "category": "other",
+    "section": "**OPPOSITION ACTORS**",
+    "source": "decision_network_timeline.md"
+  },
+  {
+    "date": "2025-12-15",
+    "title": "NM Environmental Law Center (legal support, regulatory advocacy)",
+    "category": "legal",
+    "section": "**OPPOSITION ACTORS**",
+    "source": "decision_network_timeline.md"
+  },
+  {
+    "date": "2025-12-15",
+    "title": "NM Environmental Law Center",
+    "category": "other",
+    "section": "**OPPOSITION ACTORS**",
+    "source": "decision_network_timeline.md"
+  },
+  {
+    "date": "2025-12-15",
+    "title": "Empower NM (protests, community organizing)",
+    "category": "community",
+    "section": "**OPPOSITION ACTORS**",
+    "source": "decision_network_timeline.md"
+  },
+  {
+    "date": "2025-12-15",
+    "title": "Individuals",
+    "category": "other",
+    "section": "**OPPOSITION ACTORS**",
+    "source": "decision_network_timeline.md"
+  },
+  {
+    "date": "2025-12-15",
+    "title": "Daisy Maldonado (Empower NM, public comment Sept 19)",
+    "category": "community",
+    "section": "**OPPOSITION ACTORS**",
+    "source": "decision_network_timeline.md"
+  },
+  {
+    "date": "2025-12-15",
+    "title": "Daisy Maldonado",
+    "category": "other",
+    "section": "**OPPOSITION ACTORS**",
+    "source": "decision_network_timeline.md"
+  },
+  {
+    "date": "2025-12-15",
+    "title": "José Saldaña Jr. (plaintiff)",
+    "category": "other",
+    "section": "**OPPOSITION ACTORS**",
+    "source": "decision_network_timeline.md"
+  },
+  {
+    "date": "2025-12-15",
+    "title": "José Saldaña Jr.",
+    "category": "other",
+    "section": "**OPPOSITION ACTORS**",
+    "source": "decision_network_timeline.md"
+  },
+  {
+    "date": "2025-12-15",
+    "title": "Vivian Fuller (plaintiff)",
+    "category": "other",
+    "section": "**OPPOSITION ACTORS**",
+    "source": "decision_network_timeline.md"
+  },
+  {
+    "date": "2025-12-15",
+    "title": "Vivian Fuller",
+    "category": "other",
+    "section": "**OPPOSITION ACTORS**",
+    "source": "decision_network_timeline.md"
+  },
+  {
+    "date": "2025-12-15",
+    "title": "Mayor Javier Perea (Sunland Park, requested delay)",
+    "category": "other",
+    "section": "**OPPOSITION ACTORS**",
+    "source": "decision_network_timeline.md"
+  },
+  {
+    "date": "2025-12-15",
+    "title": "Mayor Javier Perea",
+    "category": "other",
+    "section": "**OPPOSITION ACTORS**",
+    "source": "decision_network_timeline.md"
+  },
+  {
+    "date": "2025-12-15",
+    "title": "Heath Haussamen (journalist, IPRA requests, investigative coverage)",
+    "category": "other",
+    "section": "**OPPOSITION ACTORS**",
+    "source": "decision_network_timeline.md"
+  },
+  {
+    "date": "2025-12-15",
+    "title": "Heath Haussamen",
+    "category": "other",
+    "section": "**OPPOSITION ACTORS**",
+    "source": "decision_network_timeline.md"
+  },
+  {
+    "date": "2025-12-15",
+    "title": "Significance",
+    "category": "agreement",
+    "section": "**Pattern 1: State Pre-Commitment**",
+    "source": "decision_network_timeline.md"
+  },
+  {
+    "date": "2025-12-15",
+    "title": "Implication",
+    "category": "other",
+    "section": "**Pattern 1: State Pre-Commitment**",
+    "source": "decision_network_timeline.md"
+  },
+  {
+    "date": "2025-12-15",
+    "title": "Research Needed",
+    "category": "other",
+    "section": "**Pattern 3: Coordinated 4-1 Voting Bloc**",
+    "source": "decision_network_timeline.md"
+  },
+  {
+    "date": "2025-12-15",
+    "title": "Key Questions",
+    "category": "other",
+    "section": "Participation in Executive Sessions",
+    "source": "decision_network_timeline.md"
+  },
+  {
+    "date": "2025-12-15",
+    "title": "How many executive sessions were held during Project Jupiter timeline?",
+    "category": "other",
+    "section": "Participation in Executive Sessions",
+    "source": "decision_network_timeline.md"
+  },
+  {
+    "date": "2025-12-15",
+    "title": "What were the stated reasons (legal advice, real estate, personnel)?",
+    "category": "legal",
+    "section": "Participation in Executive Sessions",
+    "source": "decision_network_timeline.md"
+  },
+  {
+    "date": "2025-12-15",
+    "title": "Were executive session minutes properly sealed and logged?",
+    "category": "other",
+    "section": "Participation in Executive Sessions",
+    "source": "decision_network_timeline.md"
+  },
+  {
+    "date": "2025-12-15",
+    "title": "Was BorderPlex discussed in executive sessions? (May be disclosable under IPRA if discussions exceeded legal justification)",
+    "category": "meeting",
+    "section": "Participation in Executive Sessions",
+    "source": "decision_network_timeline.md"
+  },
+  {
+    "date": "2025-12-15",
+    "title": "Were any county staff hired from BorderPlex or affiliated companies?",
+    "category": "other",
+    "section": "Hiring Linkages",
+    "source": "decision_network_timeline.md"
+  },
+  {
+    "date": "2025-12-15",
+    "title": "Were any county staff hired to positions related to Project Jupiter after State MOU signed (Feb 25)?",
+    "category": "agreement",
+    "section": "Hiring Linkages",
+    "source": "decision_network_timeline.md"
+  },
+  {
+    "date": "2025-12-15",
+    "title": "Were any consultants hired to work on Project Jupiter? Who selected them? What were their connections?",
+    "category": "other",
+    "section": "Hiring Linkages",
+    "source": "decision_network_timeline.md"
+  },
+  {
+    "date": "2025-12-15",
+    "title": "Red Flag to watch for",
+    "category": "other",
+    "section": "Hiring Linkages",
+    "source": "decision_network_timeline.md"
+  },
+  {
+    "date": "2025-12-15",
+    "title": "Sept 17 (Fri) document release → Sept 19 (Sun) vote = weekend timing, minimal news cycle coverage",
+    "category": "vote",
+    "section": "Announcement Timing",
+    "source": "decision_network_timeline.md"
+  },
+  {
+    "date": "2025-12-15",
+    "title": "Check: Were other major local/state news events occurring Sept 17-19 that could distract media?",
+    "category": "other",
+    "section": "Announcement Timing",
+    "source": "decision_network_timeline.md"
+  },
+  {
+    "date": "2025-12-15",
+    "title": "State-Level Connections",
+    "category": "other",
+    "section": "Central Node: BorderPlex Digital Assets LLC",
+    "source": "decision_network_timeline.md"
+  },
+  {
+    "date": "2025-12-15",
+    "title": "Direct line to Governor's Office (MOU signed)",
+    "category": "agreement",
+    "section": "Central Node: BorderPlex Digital Assets LLC",
+    "source": "decision_network_timeline.md"
+  },
+  {
+    "date": "2025-12-15",
+    "title": "Indirect line to NMED (via Governor's MOU commitment)",
+    "category": "agreement",
+    "section": "Central Node: BorderPlex Digital Assets LLC",
+    "source": "decision_network_timeline.md"
+  },
+  {
+    "date": "2025-12-15",
+    "title": "Indirect line to State Engineer (via Governor's MOU commitment)",
+    "category": "agreement",
+    "section": "Central Node: BorderPlex Digital Assets LLC",
+    "source": "decision_network_timeline.md"
+  },
+  {
+    "date": "2025-12-15",
+    "title": "Indirect line to EDD (via Governor's MOU commitment)",
+    "category": "agreement",
+    "section": "Central Node: BorderPlex Digital Assets LLC",
+    "source": "decision_network_timeline.md"
+  },
+  {
+    "date": "2025-12-15",
+    "title": "County-Level Connections",
+    "category": "other",
+    "section": "Central Node: BorderPlex Digital Assets LLC",
+    "source": "decision_network_timeline.md"
+  },
+  {
+    "date": "2025-12-15",
+    "title": "Direct line to County Commission (NDA, private meetings)",
+    "category": "meeting",
+    "section": "Central Node: BorderPlex Digital Assets LLC",
+    "source": "decision_network_timeline.md"
+  },
+  {
+    "date": "2025-12-15",
+    "title": "Direct line to County Manager/Staff (negotiation of terms)",
+    "category": "other",
+    "section": "Central Node: BorderPlex Digital Assets LLC",
+    "source": "decision_network_timeline.md"
+  },
+  {
+    "date": "2025-12-15",
+    "title": "Contractual relationships (MOUs, leases, PPA)",
+    "category": "agreement",
+    "section": "Central Node: BorderPlex Digital Assets LLC",
+    "source": "decision_network_timeline.md"
+  },
+  {
+    "date": "2025-12-15",
+    "title": "Subsidiary Entities",
+    "category": "other",
+    "section": "Central Node: BorderPlex Digital Assets LLC",
+    "source": "decision_network_timeline.md"
+  },
+  {
+    "date": "2025-12-15",
+    "title": "Yucca Growth Infrastructure, LLC (Series 2025A)",
+    "category": "other",
+    "section": "Central Node: BorderPlex Digital Assets LLC",
+    "source": "decision_network_timeline.md"
+  },
+  {
+    "date": "2025-12-15",
+    "title": "Red Chiles [A/B/C/D], LLC (Series 2025B)",
+    "category": "other",
+    "section": "Central Node: BorderPlex Digital Assets LLC",
+    "source": "decision_network_timeline.md"
+  },
+  {
+    "date": "2025-12-15",
+    "title": "Green Chile Ventures LLC (Series 2025B)",
+    "category": "other",
+    "section": "Central Node: BorderPlex Digital Assets LLC",
+    "source": "decision_network_timeline.md"
+  },
+  {
+    "date": "2025-12-15",
+    "title": "[Series 2025C entities TBD]",
+    "category": "other",
+    "section": "Central Node: BorderPlex Digital Assets LLC",
+    "source": "decision_network_timeline.md"
+  },
+  {
+    "date": "2025-12-15",
+    "title": "Opposition Network",
+    "category": "other",
+    "section": "Secondary Nodes",
+    "source": "decision_network_timeline.md"
+  },
+  {
+    "date": "2025-12-15",
+    "title": "Empowerment Congress → NMELC (legal support)",
+    "category": "legal",
+    "section": "Secondary Nodes",
+    "source": "decision_network_timeline.md"
+  },
+  {
+    "date": "2025-12-15",
+    "title": "Empowerment Congress → Community members (organizing)",
+    "category": "community",
+    "section": "Secondary Nodes",
+    "source": "decision_network_timeline.md"
+  },
+  {
+    "date": "2025-12-15",
+    "title": "Empowerment Congress → Plaintiffs (lawsuit)",
+    "category": "legal",
+    "section": "Secondary Nodes",
+    "source": "decision_network_timeline.md"
+  },
+  {
+    "date": "2025-12-15",
+    "title": "NMELC → Regulatory agencies (advocacy letters)",
+    "category": "other",
+    "section": "Secondary Nodes",
+    "source": "decision_network_timeline.md"
+  },
+  {
+    "date": "2025-12-15",
+    "title": "Media Network",
+    "category": "other",
+    "section": "Secondary Nodes",
+    "source": "decision_network_timeline.md"
+  },
+  {
+    "date": "2025-12-15",
+    "title": "Journalists → IPRA requests → County (delayed/obstructed)",
+    "category": "other",
+    "section": "Secondary Nodes",
+    "source": "decision_network_timeline.md"
+  },
+  {
+    "date": "2025-12-15",
+    "title": "Commissioner (leak) → Journalists → Public (document disclosure)",
+    "category": "other",
+    "section": "Secondary Nodes",
+    "source": "decision_network_timeline.md"
+  },
+  {
+    "date": "2025-12-15",
+    "title": "Municipal Exclusion",
+    "category": "other",
+    "section": "Secondary Nodes",
+    "source": "decision_network_timeline.md"
+  },
+  {
+    "date": "2025-12-15",
+    "title": "Sunland Park Mayor Perea = Isolated node (excluded from decision network despite proximity to project)",
+    "category": "other",
+    "section": "Secondary Nodes",
+    "source": "decision_network_timeline.md"
+  },
+  {
+    "date": "2025-12-15",
+    "title": "Document Control",
+    "category": "other",
+    "section": "Investigative Journalism",
+    "source": "decision_network_timeline.md"
+  }
+]

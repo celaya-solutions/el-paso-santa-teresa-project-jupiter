@@ -1,0 +1,94 @@
+{
+  "site": {
+    "title": "Project Jupiter Evidence Portal"
+  },
+  "header": {
+    "lastUpdated": "Last Updated:"
+  },
+  "nav": {
+    "startHere": "★ START HERE",
+    "coreDeliverables": "Core Deliverables",
+    "actionCenter": "Action Center",
+    "research": "Research & Analysis",
+    "reference": "Reference",
+    "evidenceMatrix": "Evidence Matrix"
+  },
+  "docs": {
+    "consolidatedReport": "Consolidated Public Report",
+    "evidenceMatrix": "Evidence Matrix",
+    "contradictions": "Contradictions Analysis",
+    "accountabilityMap": "Accountability Map",
+    "messagingCampaign": "30-Day Messaging Campaign",
+    "publicComments": "Public Comment Scripts",
+    "talkingPoints": "Talking Points",
+    "timeline": "Decision Network Timeline",
+    "oppositionResearch": "Opposition Research",
+    "evidenceBriefing": "Evidence Briefing",
+    "executiveSummary": "Executive Summary",
+    "factSheet": "Fact Sheet",
+    "contacts": "Contact Information",
+    "readme": "Documentation"
+  },
+  "search": {
+    "placeholder": "Search documents...",
+    "searching": "Searching...",
+    "results": "Search Results",
+    "noResults": "No results found",
+    "resultsCount": "{count} results found"
+  },
+  "actions": {
+    "print": "Print",
+    "share": "Share",
+    "download": "Download",
+    "export": "Export",
+    "filter": "Filter",
+    "sort": "Sort",
+    "search": "Search",
+    "clear": "Clear"
+  },
+  "evidence": {
+    "title": "Evidence Matrix",
+    "filters": "Filters",
+    "showAll": "Show All",
+    "category": "Category",
+    "status": "Verification Status",
+    "searchTable": "Search in table...",
+    "rowsPerPage": "Rows per page:",
+    "showing": "Showing {start}-{end} of {total}",
+    "columns": {
+      "id": "ID",
+      "type": "Type",
+      "date": "Date",
+      "actor": "Actor",
+      "statement": "Statement/Action",
+      "source": "Source",
+      "status": "Status"
+    }
+  },
+  "timeline": {
+    "title": "Decision Network Timeline",
+    "controls": "Timeline Controls",
+    "zoomIn": "Zoom In",
+    "zoomOut": "Zoom Out",
+    "reset": "Reset View",
+    "legend": "Legend",
+    "categories": {
+      "vote": "Votes",
+      "meeting": "Meetings",
+      "legal": "Legal Actions",
+      "agreement": "Agreements",
+      "community": "Community Actions",
+      "violation": "Violations",
+      "other": "Other Events"
+    }
+  },
+  "footer": {
+    "about": "About This Project",
+    "aboutText": "Project Jupiter Evidence Portal provides comprehensive documentation and accountability tools for community organizers, legal teams, journalists, and residents opposing the unlawful approval of a $165 billion data center complex in Santa Teresa, New Mexico.",
+    "quickLinks": "Quick Links",
+    "resources": "Resources",
+    "license": "Public Domain for Community Use",
+    "updated": "Last Updated:",
+    "documentation": "Documentation"
+  }
+}
