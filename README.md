@@ -159,35 +159,6 @@ All deliverables follow strict accountability standards:
 
 ---
 
-##  Analytics (Multi-User)
-
-This repo includes a lightweight analytics collector so you can aggregate events across all users.
-
-**Start the collector (local or hosted):**
-- `node server/analytics-server.js`
-
-**Configure the site and dashboard to send/read remote analytics:**
-- Set `window.PJ_ANALYTICS_ENDPOINT` to your server base URL (example: `https://your-collector.example.com`)
-- (Optional) Set `ANALYTICS_API_KEY` on the server and `window.PJ_ANALYTICS_KEY` in the client
-
-The collector exposes:
-- `POST /collect` to receive events
-- `GET /analytics` to read aggregated data
-- `GET /health` for a quick status check
-
-If you’re hosting the Docsify site on GitHub Pages, deploy the collector separately (any Node host works), then point `PJ_ANALYTICS_ENDPOINT` to it.
-
-### Fly.io quick start
-
-This repo includes `Dockerfile` and `fly.toml` for Fly.io.
-
-1. Install and authenticate: `fly auth login`
-2. Create the app (replace name): `fly launch --name project-jupiter-analytics --no-deploy`
-3. Create a volume for persistence:
-   - `fly volumes create analytics_data --size 1`
-4. (Optional) Set API key: `fly secrets set ANALYTICS_API_KEY=your-secret`
-5. Deploy: `fly deploy`
-
 
 
 ## ️ The Legal Case
