@@ -1,3 +1,16 @@
-
+# OS files
 .DS_Store
+
+# Dependencies
 node_modules/
+
+# Analytics data
+/data/analytics-store.json
+
+# Test reports
+test-results/
+playwright-report/
+
+# Environment variables (if used in future)
+.env
+.env.local
