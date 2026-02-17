@@ -1,0 +1,299 @@
+/**
+ * Custom Theme for Project Jupiter Evidence Portal
+ * El Paso City Website Color Scheme
+ */
+
+:root {
+  /* El Paso Brand Colors */
+  --primary-color: #1d2754;      /* Navy blue */
+  --accent-color: #da532c;       /* Orange */
+  --primary-dark: #141b3d;
+  --accent-light: #e36b44;
+  
+  /* Theme colors */
+  --theme-color: var(--primary-color);
+  --theme-color-secondary: var(--accent-color);
+}
+
+/* Sidebar */
+.sidebar {
+  background-color: #f5f5f5;
+  border-right: 1px solid #e0e0e0;
+}
+
+.sidebar-nav > ul > li > a {
+  color: #333;
+  font-weight: 500;
+}
+
+.sidebar-nav > ul > li > a:hover {
+  color: var(--primary-color);
+}
+
+.sidebar-nav > ul > li.active > a {
+  color: var(--primary-color);
+  font-weight: 600;
+  border-right: 3px solid var(--accent-color);
+}
+
+/* App name in sidebar */
+.app-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  padding: 1rem;
+}
+
+.app-name a {
+  color: var(--primary-color);
+}
+
+/* Content area */
+.content {
+  padding-top: 40px;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+h1 {
+  border-bottom: 3px solid var(--accent-color);
+  padding-bottom: 0.5rem;
+}
+
+h2 {
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 0.3rem;
+}
+
+/* Links */
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--accent-color);
+  text-decoration: underline;
+}
+
+/* Blockquotes */
+blockquote {
+  border-left: 4px solid var(--accent-color);
+  background-color: #f9f9f9;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+/* Code blocks */
+pre {
+  background-color: #f5f5f5;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+}
+
+code {
+  background-color: #f5f5f5;
+  color: var(--primary-dark);
+  padding: 2px 6px;
+  border-radius: 3px;
+}
+
+/* Tables */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1rem 0;
+}
+
+thead {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+th, td {
+  padding: 0.75rem;
+  border: 1px solid #e0e0e0;
+}
+
+tr:hover {
+  background-color: #f9f9f9;
+}
+
+/* Badges/Labels */
+.badge {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-radius: 3px;
+  margin-right: 0.25rem;
+}
+
+.badge-primary {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.badge-accent {
+  background-color: var(--accent-color);
+  color: white;
+}
+
+.badge-success {
+  background-color: #27ae60;
+  color: white;
+}
+
+.badge-warning {
+  background-color: #f39c12;
+  color: white;
+}
+
+/* Search box */
+.search input {
+  border: 2px solid #e0e0e0;
+  border-radius: 4px;
+  padding: 0.5rem;
+}
+
+.search input:focus {
+  border-color: var(--accent-color);
+  outline: none;
+}
+
+/* Pagination */
+.pagination-item a {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.pagination-item a:hover {
+  background-color: var(--accent-color);
+}
+
+/* Cover page (if used) */
+.cover {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+}
+
+.cover h1 {
+  color: white;
+  border-bottom: none;
+}
+
+.cover h2 {
+  color: rgba(255, 255, 255, 0.9);
+  border-bottom: none;
+}
+
+/* Alert boxes */
+.alert {
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 4px;
+  border-left: 4px solid;
+}
+
+.alert-info {
+  background-color: #d1ecf1;
+  border-color: #3498db;
+  color: #0c5460;
+}
+
+.alert-warning {
+  background-color: #fff3cd;
+  border-color: #f39c12;
+  color: #856404;
+}
+
+.alert-error {
+  background-color: #f8d7da;
+  border-color: #e74c3c;
+  color: #721c24;
+}
+
+.alert-success {
+  background-color: #d4edda;
+  border-color: #27ae60;
+  color: #155724;
+}
+
+/* Stats/Cards */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.stat-card {
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.stat-value {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.stat-label {
+  font-size: 0.875rem;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Print styles */
+@media print {
+  .sidebar,
+  .sidebar-toggle,
+  .search,
+  .pagination-item {
+    display: none !important;
+  }
+  
+  .content {
+    max-width: 100%;
+  }
+  
+  a[href^="http"]:after {
+    content: " (" attr(href) ")";
+    font-size: 0.8em;
+  }
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .app-name {
+    font-size: 1.25rem;
+  }
+  
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  table {
+    font-size: 0.875rem;
+  }
+}
+
+/* Utility classes */
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+.mt-1 { margin-top: 1rem; }
+.mt-2 { margin-top: 2rem; }
+.mb-1 { margin-bottom: 1rem; }
+.mb-2 { margin-bottom: 2rem; }
