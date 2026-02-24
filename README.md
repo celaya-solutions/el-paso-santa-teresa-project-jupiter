@@ -1,283 +1,106 @@
-# Project Jupiter Evidence Portal
+# Project Jupiter: The Numbers Nobody Published
+
+Independent quantitative analysis of water and electrical grid pressure in the El Paso / Santa Teresa data center corridor.
 
-> Evidence-Grade Accountability System for Community Advocacy
+## What This Is
 
-**Generated**: January 22, 2026  
-**Method**: Manual evidence analysis following verdict system prompt  
-**Framework**: Evidence-grade documentation with strict citation standards
+Two analyses. One question each. Math instead of opinion.
 
----
+**Water:** Do we have enough water for the new data centers?
+**Electrical:** Does the grid have enough capacity?
 
-## Quick Stats
+Every number comes from a public source. Every calculation can be reproduced with a calculator and the cited documents. If any number is wrong, correct it publicly and cite your source.
 
-<div class="stats-grid">
-  <div class="stat-card">
-    <div class="stat-label">Documents: 18</div>
-  
-  </div>
-  <div class="stat-card">
-    <div class="stat-label">Evidence Items: 71</div>
-    
-  </div>
-  <div class="stat-card">
-    <div class="stat-label">Contradictions: 15</div>
-    
-  </div>
-  <div class="stat-card">
-    <div class="stat-label">Timeline Events: 82</div>
-    
-  </div>
-</div>
+## Documents
 
----
+| Document | Question | Key Finding |
+|----------|----------|-------------|
+| [Water Analysis](pj_numbers.html) | Is there enough water? | DC demand = 17.9% of supply surplus. Conclusion flips depending on which supply definition is used. No public document specifies which one decision-makers used. |
+| [Grid Analysis](pj_grid.html) | Is there enough power? | DC load = 197% of grid surplus. Stated power plant size (700-900 MW) does not match air quality permits (2,880 MW). Permitted microgrid is 125% the size of the regional utility. |
 
-##  START HERE
+## Who This Is For
 
-<div class="alert alert-info">
-<strong>New to this project?</strong> Begin with the <a href="#/CONSOLIDATED_PUBLIC_REPORT">Consolidated Public Report</a> - a complete 94-page analysis ready for distribution to community, media, and legal teams.
-</div>
+Each document has four tiers. Pick the one that fits you.
 
----
+| Tab | Audience | What You Get |
+|-----|----------|-------------|
+| Residents | Community members | Plain language, 6th grade reading level |
+| Journalists | Reporters, editors | Sourced data tables with full bibliography |
+| Technical | Engineers, professors, researchers | Full equations, input values, step-by-step calculations |
+| Español | Comunidad hispanohablante | Resumen en español claro |
 
-##  What's Inside
+## Key Numbers
 
-### Core Deliverables (Public Release Ready)
+### Water (pj_numbers.html)
 
-1. **[Consolidated Public Report](CONSOLIDATED_PUBLIC_REPORT.md)**
-   - Complete public-facing accountability report
-   - Executive summary + findings + action items
-   - Ready for distribution
+- Bureau of Reclamation allocation to El Paso: 60,000 acre-feet/year
+- Current demand: 130,498 acre-feet/year (2023)
+- Supply surplus: 8,702 acre-feet/year
+- Combined DC water demand at full build: 1.56 MGD (1,748 acre-feet/year)
+- DC demand as share of surplus: 17.9%
+- No public document specifies which supply definition was used in approvals
 
-2. **[Evidence Matrix](docs/markdown/evidence_matrix.csv)** 
-   - 71 evidence rows with atomic facts
-   - Sources, dates, verification status
-   - Foundation for all other deliverables
+### Electrical (pj_grid.html)
 
-3. **[Contradictions Analysis](contradictions.md)** ️
-   - 15 documented contradictions between sources
-   - Legal and political implications
-   - Citations to conflicting sources
+- EPE total generation capacity: ~2,300 MW
+- Record peak demand: 2,173 MW (July 2020)
+- Grid margin at peak: 127 MW (5.5%)
+- Combined DC load on EPE grid: 250 MW (Meta 100 MW + Wiwynn 150 MW)
+- DC load vs. grid margin: 197%
+- Project Jupiter stated to commissioners: 700-900 MW
+- Project Jupiter air quality permits: 2,880 MW
+- Jupiter microgrid vs. entire EPE system: 125%
+- EPE dividend extraction (2022-2024): $491.8 million
+- Proposed rate increase revenue: ~$123 million/year
+- Dividend extraction exceeds proposed rate increase by 33%
 
-4. **[Accountability Map](accountability_map.md)** ️
-   - Legal exposure (state officials, county commissioners)
-   - Political accountability (electoral targets)
-   - Enforcement pathways with statutory references
+## Sources
 
-### Action Tools
+### Water Analysis
+1. Texas Tribune, April 2025 (El Paso baseline demand)
+2. El Paso Water Conservation Plan, 2024 (2023 production data)
+3. Bureau of Reclamation, Rio Grande Project (supply and demand allocations)
+4. Dona Ana County MOU, September 24, 2025 (Jupiter water requirements)
+5. KVIA / Yahoo News (Meta El Paso water requirements)
+6. State MOU, February 25, 2025 (BorderPlex Digital Assets LLC)
+7. EPA inspection report, 2025 (arsenic treatment plant status)
+8. Legal complaint, Case D-307-CV-2025-02766
 
-5. **[30-Day Messaging Campaign](public_messaging_30_days.md)** 
-   - Bilingual (English/Spanish) social media posts
-   - Daily messages with source citations
-   - Ready for immediate deployment
+### Grid Analysis
+1. El Paso Matters, March 2025 (EPE capacity, Wiwynn 150 MW)
+2. EPE press release, July 2020 (record peak demand)
+3. EPE 2024 System Expansion Plan (load growth projections)
+4. EPE All-Source RFP, July 2025 (capacity need 650-850 MW)
+5. El Paso Matters, September 2025 (Meta 100 MW)
+6. Dona Ana County Commission meeting, September 19, 2025 (700-900 MW statement)
+7. NMED air quality permit applications, December 2025 (2,880 MW, emissions data)
+8. ABQ Journal, December 2025 (permit splitting analysis)
+9. IIF/EPE regulatory filings (dividend data, $491.8M)
+10. Fitch Ratings analysis (EPE $3.5B capital plan)
+11. El Paso Matters / Kelly Tomblin quotes (CEO statements on capacity need)
 
-6. **[Public Comment Scripts](public_comment_scripts.md)** 
-   - 6 time-bounded scripts (~2 minutes each)
-   - Fact-checked with citations
-   - Follow-up questions to expose evasions
+## Verification
 
-7. **[Opposition Research Profiles](opposition_research_profiles.md)** 
-   - Research framework for commissioners who voted YES
-   - Voting records and campaign finance priorities
-   - Documented contradictions
+### Water
+1. Obtain the source documents listed above
+2. Extract the stated values (demand, supply, DC water requirements)
+3. Compute: `P_water = (DC_demand + existing_demand) / available_supply`
+4. Compare your results to the document
 
-8. **[Decision Network Timeline](decision_network_timeline.md)** 
-   - Chronological: Feb 2025 - Dec 2025
-   - Network analysis of communications
-   - Pattern identification and IPRA requests
+### Electrical
+1. Obtain the source documents listed above
+2. Extract the stated values (capacity, peak demand, DC load)
+3. Compute: `P_grid = (DC_load + existing_peak_demand) / grid_capacity`
+4. Compare your results to the document
 
----
+If your numbers differ, publish the correction with your source.
 
-##  Usage Guide
+## Integrity
 
-### For Community Organizers
+Each document includes a SHA-256 hash computed before publication. If a Solana transaction signature is present, the hash was anchored to the blockchain before the document was made public. This proves the content existed at the stated time and has not been modified.
 
-**Start with**: [Consolidated Public Report](CONSOLIDATED_PUBLIC_REPORT.md)  
-**Then use**:
-- [30-Day Messaging Campaign](public_messaging_30_days.md) for social media
-- [Public Comment Scripts](public_comment_scripts.md) for meetings
-- [Contradictions Analysis](contradictions.md) for talking points
+To verify: compute `sha256sum` on the HTML file and compare to the hash printed in the document and recorded on-chain.
 
-**Distribute**: Share this entire portal link with community members
+## License
 
-### For Legal Teams
-
-**Start with**: [Evidence Matrix](docs/markdown/evidence_matrix.csv) + [Accountability Map](docs/markdown/accountability_map.md)  
-**Focus on**:
-- Open Meetings Act violations
-- Incomplete IRB application
-- Decision network timeline
-
-**Use**: Citations as foundation for legal briefs
-
-### For Journalists
-
-**Start with**: [Consolidated Report Executive Summary](CONSOLIDATED_PUBLIC_REPORT.md)  
-**Dig into**:
-- [Decision Network Timeline](decision_network_timeline.md) (investigative leads)
-- [Opposition Research](opposition_research_profiles.md) (campaign finance angles)
-- [Contradictions](contradictions.md) (headline-worthy discrepancies)
-
-**Verify**: All sources cited; follow up with IPRA requests
-
----
-
-##  Methodology
-
-All deliverables follow strict accountability standards:
-
-1. **No Speculation** - Every claim backed by verifiable source
-2. **Strict Citations** - Document name + date + page/section/line number
-3. **Contradiction Mapping** - Identify conflicts between sources
-4. **Accountability Assignment** - Legal, political, and administrative responsibility
-5. **Traceability** - All claims traceable to primary sources
-
-**Verification Statuses**:
-- <span class="badge badge-success">verified_primary</span> - From executed legal documents, court filings
-- <span class="badge badge-accent">verified_secondary</span> - From news coverage, requiring confirmation
-- <span class="badge badge-warning">needs_verification</span> - Requires additional IPRA requests
-
----
-
-##  Source Documentation
-
-### Primary Sources Analyzed
-
-- **State MOU**: BorderPlex Digital Assets LLC + NM Governor (2025-02-25)
-- **County MOU**: Doña Ana County + Project Jupiter entities (2025-09-24)
-- **IRB Ordinances**: 367-2025, 368-2025, 369-2025
-- **Lease Documents**: Series 2025A, 2025B, 2025C
-- **LEDA PPA**: Project Participation Agreement (2025-09-17)
-- **Legal Complaint**: Petition for Writ of Certiorari (Case D-307-CV-2025-02766)
-- **NMELC Letters**: Doxxing complaint, air permit advocacy
-- **News Coverage**: KFOX14, Haussamen, Courthouse News
-
-### Document Count
-
-- **2,647 total markdown files** analyzed
-- **71 evidence rows** in accountability matrix
-- **8 complete deliverables** generated
-
----
-
-
-
-## ️ The Legal Case
-
-**Filed**: October 17, 2025  
-**Court**: Third Judicial District Court, Doña Ana County, NM  
-**Plaintiffs**: Empowerment Congress, José Saldaña Jr., Vivian Fuller  
-**Legal Rep**: NM Environmental Law Center
-
-**Ordinances Challenged**:
-1. Ordinance 367-2025: $165 billion Industrial Revenue Bonds
-2. Ordinance 368-2025: LEDA funding for project development
-3. Related LEDA ordinance: Funding for permit fees
-
-**Legal Claims**: Violation of state/local laws requiring fully-informed decisions, procedurally deficient approval
-
----
-
-##  The Water Crisis
-
-> "How can we live without water? Water is life."  
-> — José Saldaña Jr., Sunland Park resident
-
-**Current Conditions**:
-- Santa Teresa and Sunland Park lack clean, safe, affordable drinking water for decades
-- **Arsenic contamination** above federal health standards
-- EPA inspection (2025): 3 of 4 arsenic treatment plants offline
-
-**Project Impact**:
-- Data centers require massive water consumption
-- Project includes desalination plant (enormous demand)
-- Immense additional strain on failing infrastructure
-
----
-
-##  Community Opposition
-
-**September 19, 2025 Vote**: 4-1 approval despite massive community protest
-
-**Key Voices**:
-
-**José Saldaña Jr.** (Plaintiff):
-> "We filed this lawsuit because the community's health is in danger. I'm protecting water rights for the community."
-
-**Vivian Fuller** (Plaintiff):
-> "Our voices were still not heard"
-
-**Daisy Maldonado** (Empowerment Congress Director):
-> "There's a missing economic analysis, there's a missing environmental analysis, and certainly, there's a missing community voice."
-
-**Commissioner Susana Chaparro** (Only NO vote):
-> Remained steadfast in her commitment to Doña Ana County constituents
-
----
-
-##  Contact Information
-
-### Community Leaders
-- **Daisy Maldonado**, Empowerment Congress: daisy@empowernm.org | (575) 642-5683
-- **José Saldaña Jr.**: saldanajose21@yahoo.com | (915) 204-9720
-- **Vivian Fuller**: vivian@empowernm.org | (915) 408-5102
-
-### Legal Representation
-- **Kacey Hovden**, NM Environmental Law Center: khovden@nmelc.org | (712) 540-2301
-- **NMELC**: www.nmelc.org
-
-Full contact list: [CONTACTS.md](CONTACTS.md)
-
----
-
-##  Next Steps
-
-### Immediate (Week 1)
-1. Distribute [Consolidated Report](CONSOLIDATED_PUBLIC_REPORT.md) to community
-2. Launch [30-day messaging campaign](public_messaging_30_days.md)
-3. Prepare speakers using [public comment scripts](public_comment_scripts.md)
-
-### Short-Term (Weeks 2-4)
-4. File IPRA requests (see [timeline recommendations](decision_network_timeline.md))
-5. Campaign finance investigation
-6. Media outreach with evidence package
-
-### Long-Term (Months 2-6)
-7. Support ongoing lawsuit
-8. Organize recall petition efforts (if community supports)
-9. Electoral strategy for next cycle
-10. Monitor project compliance
-
----
-
-##  License
-
-**Public Domain for Community Use**
-
-This evidence package is released for public benefit. You may:
-- Distribute freely
-- Adapt for local use
-- Translate into additional languages
-- Use in legal proceedings, advocacy, or journalism
-
-**Attribution appreciated but not required**
-
-One request: If you find errors, report them so we can correct the record.
-
----
-
-##  Acknowledgments
-
-**Sources of Evidence**:
-- Community members who attended meetings and documented the process
-- Journalists who filed IPRA requests
-- NMELC for legal advocacy
-- Empowerment Congress for organizing opposition
-- Commissioner Susana Chaparro for voting NO
-
-**This report stands on their work.**
-
----
-
-<div class="text-center">
-<p><strong>Water is life. The community's health is in danger. We must act now.</strong></p>
-</div>
+Public domain. See [LICENSE](LICENSE).
