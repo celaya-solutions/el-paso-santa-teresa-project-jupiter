@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<!-- SM was here. Security check 3 of 3. -->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Project Jupiter &amp; El Paso Power: The Numbers</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Source+Sans+3:wght@400;600;700&family=Source+Code+Pro:wght@400;600&display=swap');
+:root{--bg:#000;--surface:#0d0d0d;--surface2:#161616;--border:#252525;--text:#e8e8e8;--dim:#aaa;--bright:#fff;--blue:#4a9eff;--red:#e74c3c;--green:#2ecc71;--yellow:#f39c12;--orange:#e67e22;--serif:'Source Serif 4',Georgia,serif;--sans:'Source Sans 3',system-ui,sans-serif;--mono:'Source Code Pro',monospace}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--text);font-family:var(--sans);font-size:17px;line-height:1.7}
+.container{max-width:860px;margin:0 auto;padding:40px 20px 80px}
+.doc-header{border-bottom:3px solid var(--bright);padding-bottom:28px;margin-bottom:40px}
+.doc-header h1{font-family:var(--serif);font-size:clamp(26px,5vw,38px);font-weight:700;color:var(--bright);line-height:1.2;margin-bottom:10px}
+.doc-header .sub{font-size:17px;color:var(--dim);margin-bottom:12px}
+.doc-header .meta{font-family:var(--mono);font-size:12px;color:var(--dim)}
+.tier-nav{display:flex;gap:0;margin-bottom:36px;border:1px solid var(--border);border-radius:6px;overflow:hidden;flex-wrap:wrap}
+.tier-btn{flex:1;min-width:100px;padding:12px 12px;background:var(--surface);border:none;border-right:1px solid var(--border);color:var(--dim);font-family:var(--sans);font-size:13px;font-weight:600;cursor:pointer;text-align:center;transition:all .2s}
+.tier-btn:last-child{border-right:none}
+.tier-btn:hover{background:var(--surface2);color:var(--text)}
+.tier-btn.active{background:var(--surface2);color:var(--bright);border-bottom:2px solid var(--blue)}
+.tier-label{display:block;font-size:11px;color:var(--dim);margin-top:2px;font-weight:400}
+.tier{display:none}.tier.active{display:block}
+h2{font-family:var(--serif);font-size:24px;font-weight:700;color:var(--bright);margin:40px 0 16px;padding-top:20px;border-top:1px solid var(--border)}
+h2:first-child{border-top:none;margin-top:0;padding-top:0}
+h3{font-family:var(--sans);font-size:18px;font-weight:700;color:var(--bright);margin:28px 0 10px}
+p{margin-bottom:14px}
+.box{background:var(--surface);border-left:4px solid var(--blue);padding:18px 20px;margin:20px 0;border-radius:0 6px 6px 0}
+.box.red{border-left-color:var(--red)}.box.green{border-left-color:var(--green)}.box.yellow{border-left-color:var(--yellow)}.box.orange{border-left-color:var(--orange)}
+.box p:last-child{margin-bottom:0}
+.big{font-family:var(--mono);font-size:32px;font-weight:700;color:var(--blue);display:block;margin-bottom:6px}
+.big.red{color:var(--red)}.big.green{color:var(--green)}.big.yellow{color:var(--yellow)}.big.orange{color:var(--orange)}
+table{width:100%;border-collapse:collapse;margin:20px 0;font-size:14px}
+th{background:var(--surface2);color:var(--bright);font-weight:700;text-align:left;padding:10px 12px;border:1px solid var(--border);font-size:13px}
+td{padding:10px 12px;border:1px solid var(--border);color:var(--text)}
+tr:nth-child(even) td{background:var(--surface)}
+.math{background:var(--surface);border:1px solid var(--border);border-radius:6px;padding:18px 20px;margin:20px 0;font-family:var(--mono);font-size:14px;overflow-x:auto;color:var(--bright)}
+.math .label{display:block;font-size:11px;color:var(--dim);text-transform:uppercase;letter-spacing:2px;margin-bottom:8px;font-family:var(--sans)}
+.math .step{margin:6px 0;color:var(--text)}
+.math .result{color:var(--blue);font-weight:700;margin-top:10px;font-size:16px}
+.src{font-size:13px;color:var(--dim);font-style:italic;margin-top:4px}
+.src a{color:var(--blue);text-decoration:none}
+.src a:hover{text-decoration:underline}
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:20px 0}
+.compare>div{background:var(--surface);padding:16px;border-radius:6px;border:1px solid var(--border)}
+.hash{background:var(--surface);border:1px solid var(--border);border-radius:6px;padding:14px 18px;margin:20px 0;font-family:var(--mono);font-size:11px;color:var(--dim);word-break:break-all}
+.hash .label{font-family:var(--sans);font-size:11px;text-transform:uppercase;letter-spacing:2px;margin-bottom:4px;display:block}
+@media(max-width:640px){.compare{grid-template-columns:1fr}.tier-btn{min-width:70px;font-size:11px;padding:10px 6px}}
+@media print{body{background:#fff;color:#000;font-size:12pt}.tier-nav{display:none}.tier{display:block!important}th{background:#eee}}
+</style>
+</head>
+<body>
+<div class="container">
+
+<header class="doc-header">
+<h1>Project Jupiter &amp; El Paso Power: The Numbers Nobody Published</h1>
+<div class="sub">How much electricity do the new data centers need? How much does our grid have left? Who pays for the upgrades? And who profits?</div>
+<div class="meta">February 2026 &nbsp;|&nbsp; All sources are public records &nbsp;|&nbsp; Every number can be checked</div>
+</header>
+
+<nav class="tier-nav">
+<button class="tier-btn active" onclick="show('residents')">Residents<span class="tier-label">Plain language</span></button>
+<button class="tier-btn" onclick="show('journalists')">Journalists<span class="tier-label">Sourced data</span></button>
+<button class="tier-btn" onclick="show('technical')">Technical<span class="tier-label">Full math</span></button>
+<button class="tier-btn" onclick="show('espanol')">Espa&ntilde;ol<span class="tier-label">Resumen</span></button>
+</nav>
+
+<!-- ======================================== -->
+<!-- RESIDENTS: 6th grade reading level       -->
+<!-- ======================================== -->
+<div id="residents" class="tier active">
+
+<h2>What This Is About</h2>
+<p>Big data centers are coming to the El Paso area. Data centers are huge buildings full of computers. Those computers need a LOT of electricity. We looked at the public records to answer three questions:</p>
+<p><strong>1. How much power do they need?</strong><br><strong>2. How much power do we have left?</strong><br><strong>3. Who pays when the grid needs to grow?</strong></p>
+
+<h2>The Numbers That Matter</h2>
+
+<div class="box">
+<span class="big">2,300 MW</span>
+<p>That is how much electricity El Paso Electric can make right now. Think of it as the size of the engine that powers our whole region. Homes, schools, hospitals, businesses. Everything.</p>
+<p class="src">Source: EPE CEO Kelly Tomblin, El Paso Matters, March 2025</p>
+</div>
+
+<div class="box yellow">
+<span class="big yellow">2,173 MW</span>
+<p>That is the most electricity El Paso has ever used at one time. It happened on a 110-degree day in July 2020. Our engine was running at 94% that day. Only 127 megawatts of room left. And our city has grown since then.</p>
+<p class="src">Source: El Paso Electric press release, July 2020</p>
+</div>
+
+<div class="box red">
+<span class="big red">127 MW</span>
+<p>That was our safety cushion in 2020. The gap between what we can make and what we used on the hottest day. Just 127 megawatts. And the city uses about 92 megawatts MORE each year as it grows. That cushion may already be gone.</p>
+<p class="src">Source: Calculated from EPE data. Growth rate from EPE 2024 System Expansion Plan.</p>
+</div>
+
+<h2>What the Data Centers Need</h2>
+
+<p>Two big data centers are connecting to El Paso Electric's grid:</p>
+
+<div class="box orange">
+<span class="big orange">250 MW</span>
+<p>That is how much power Meta's El Paso data center (100 MW) and the Wiwynn facility in Socorro (150 MW) will pull from our grid. That is almost TWICE our safety cushion from 2020.</p>
+<p class="src">Sources: El Paso Matters, Sept 2025 and March 2025</p>
+</div>
+
+<h2>The Number That Changed</h2>
+
+<p>Project Jupiter in Santa Teresa is building its own private power plant so it does not use El Paso Electric's grid. Here is where it gets strange:</p>
+
+<div class="compare">
+<div>
+<p><strong>What they told the county</strong> (Sept 2025): Their power plant would make 700 to 900 megawatts.</p>
+</div>
+<div>
+<p><strong>What their permits say</strong> (Dec 2025): Their power plant would make <strong>2,880 megawatts.</strong></p>
+</div>
+</div>
+
+<p>For context: El Paso Electric's ENTIRE system is 2,300 megawatts. Project Jupiter's private power plant, based on their own permit papers, would be <strong>bigger than the utility that powers our whole region.</strong></p>
+
+<p>That power plant runs on natural gas. According to the same permits, it would release <strong>14 million tons of carbon dioxide into our air every year.</strong></p>
+
+<p class="src">Sources: Dona Ana County Commission meeting, Sept 19, 2025; NMED Air Quality Bureau permit applications, Acoma LLC, Dec 2025; ABQ Journal, Dec 2025</p>
+
+<h2>Who Pays?</h2>
+
+<p>El Paso Electric needs to upgrade the grid. Their CEO said it: "We need another 2.3 gigawatts." That means the grid needs to DOUBLE. That costs money.</p>
+
+<div class="box red">
+<span class="big red">$3.5 billion</span>
+<p>That is how much El Paso Electric plans to spend on grid upgrades through 2029. That money comes from somewhere. It comes from your electric bill.</p>
+<p class="src">Source: Fitch credit analysis, El Paso Matters, March 2025</p>
+</div>
+
+<p>El Paso Electric already tried to raise rates by more than $22 per month. City Council said no in June 2025. But the grid still needs to grow. More rate increases are coming.</p>
+
+<h2>Who Profits?</h2>
+
+<p>El Paso Electric is not owned by El Paso. It was bought in 2020 by an investment fund connected to J.P. Morgan, one of the biggest banks on Wall Street. Here is what the financial records show:</p>
+
+<div class="box red">
+<span class="big red">$491.8 million</span>
+<p>That is how much El Paso Electric paid to its Wall Street owner in dividends from 2022 to 2024. That works out to about $164 million per year. That money came from your electric bill.</p>
+<p class="src">Source: EPE regulatory filings, reported by El Paso Matters</p>
+</div>
+
+<p>Now think about this. The rate increase they wanted ($22/month) across all 465,000 customers would bring in about $123 million per year. The dividends they send to Wall Street are $164 million per year. Your rate increase is smaller than their profit check.</p>
+
+<h2>130 Years of History</h2>
+
+<p>In the 1890s, a man named Nikola Tesla invented the electrical system we all use today. He called it AC power. It is the reason electricity can travel from a power plant to your home. A banker named J.P. Morgan fought against Tesla's invention at first, then bought into it once it won. Tesla died poor. Morgan's bank got rich off the system Tesla built.</p>
+
+<p>130 years later, J.P. Morgan's bank owns the power company that serves El Paso. The grid Tesla's work made possible is now being pushed to its limit by data centers. The upgrades are paid by residents. The profits go to Wall Street. The pattern has not changed.</p>
+
+<h2>What You Can Do</h2>
+
+<p>Ask your city council member one question: <strong>"How much of the $3.5 billion in grid upgrades is being driven by data center demand, and how much of my rate increase pays for their power instead of mine?"</strong></p>
+
+<p>If they cannot answer with a source you can check, the decision was not based on math.</p>
+
+<div class="box green">
+<p><strong>Every number in this document comes from a public source.</strong> You can check them all. If any number is wrong, correct it and show your source. That is how math works.</p>
+</div>
+
+</div>
+
+<!-- ======================================== -->
+<!-- JOURNALISTS: Sourced findings            -->
+<!-- ======================================== -->
+<div id="journalists" class="tier">
+
+<h2>Key Findings</h2>
+
+<h3>Finding 1: Power plant size changed between vote and permits</h3>
+
+<table>
+<tr><th>What</th><th>Value</th><th>When</th><th>Source</th></tr>
+<tr><td>Stated to commissioners</td><td>700 to 900 MW</td><td>Sept 19, 2025</td><td>Developer presentation, DAC Commission meeting</td></tr>
+<tr><td>Air quality permits filed</td><td>2,880 MW (2.8 GW)</td><td>Dec 2025</td><td>NMED Air Quality Bureau, Acoma LLC applications</td></tr>
+<tr><td>El Paso Electric total system</td><td>~2,300 MW</td><td>Current</td><td>CEO Kelly Tomblin, El Paso Matters</td></tr>
+</table>
+
+<p>The permits were split into two applications ("east microgrid" and "west microgrid") filed as separate facilities on noncontiguous parcels. A senior attorney at the Center for Biological Diversity stated the split allows the project to avoid triggering higher EPA review thresholds.</p>
+<p class="src">Source: ABQ Journal, "Project Jupiter permit applications forecast massive carbon fuel use," Dec 2025</p>
+
+<h3>Finding 2: Emissions not available at time of vote</h3>
+
+<table>
+<tr><th>Pollutant</th><th>Projected Annual Emissions</th><th>Source</th></tr>
+<tr><td>Carbon dioxide (CO2)</td><td>14 million tons/year</td><td>NMED permit applications</td></tr>
+<tr><td>Sulfur dioxide (SO2)</td><td>54.85 tons/year</td><td>NMED permit applications</td></tr>
+</table>
+
+<p>The 4-1 bond approval vote occurred September 19, 2025. The air quality permit applications containing these emission figures were filed months later. Commissioners did not have this data when voting.</p>
+
+<h3>Finding 3: EPE grid margin may already be negative</h3>
+
+<table>
+<tr><th>Metric</th><th>Value</th><th>Source</th></tr>
+<tr><td>EPE generation capacity</td><td>~2,300 MW</td><td>CEO Kelly Tomblin</td></tr>
+<tr><td>Record peak demand (July 2020)</td><td>2,173 MW</td><td>EPE press release</td></tr>
+<tr><td>Margin at 2020 peak</td><td>127 MW</td><td>Calculated</td></tr>
+<tr><td>Average annual load growth</td><td>92 MW/year</td><td>EPE 2024 System Expansion Plan</td></tr>
+<tr><td>Estimated growth since 2020</td><td>~460 MW (5 years)</td><td>Calculated: 92 x 5</td></tr>
+<tr><td>Estimated 2025 peak demand</td><td>~2,633 MW</td><td>Calculated: 2,173 + 460</td></tr>
+<tr><td>Estimated 2025 margin</td><td style="color:var(--red)">NEGATIVE 333 MW</td><td>Calculated: 2,300 - 2,633</td></tr>
+</table>
+
+<p class="src">Note: The 2025 peak estimate assumes linear growth from the 2020 record. Actual 2025 peak data should be requested from EPE to validate or correct this projection. EPE's own RFP (July 2025) states they need 650 to 850 MW of new capacity by 2031.</p>
+
+<h3>Finding 4: Data center load vs grid margin</h3>
+
+<table>
+<tr><th>Facility</th><th>MW from EPE grid</th><th>Source</th></tr>
+<tr><td>Meta El Paso</td><td>100 MW</td><td>El Paso Matters, Sept 2025</td></tr>
+<tr><td>Wiwynn Socorro</td><td>150 MW</td><td>El Paso Matters, March 2025</td></tr>
+<tr><td><strong>Total new DC load on EPE</strong></td><td><strong>250 MW</strong></td><td></td></tr>
+<tr><td>EPE margin at 2020 peak</td><td>127 MW</td><td></td></tr>
+<tr><td><strong>DC load as % of margin</strong></td><td style="color:var(--red)"><strong>197%</strong></td><td>Calculated: 250 / 127</td></tr>
+</table>
+
+<p>For comparison: data center water demand represented 17.9% of the water supply surplus. Data center electrical demand represents 197% of the grid surplus. The electrical pressure is approximately ten times worse than the water pressure by the same measurement method.</p>
+
+<h3>Finding 5: Ownership and dividend extraction</h3>
+
+<table>
+<tr><th>Metric</th><th>Value</th><th>Source</th></tr>
+<tr><td>EPE owner</td><td>Infrastructure Investments Fund (J.P. Morgan)</td><td>Regulatory filings</td></tr>
+<tr><td>Acquisition price (2020)</td><td>$4.3 billion</td><td>Wikipedia, SEC filings</td></tr>
+<tr><td>Dividends to IIF (2022-2024)</td><td>$491.8 million</td><td>Regulatory filings, El Paso Matters</td></tr>
+<tr><td>Annual average dividend</td><td>~$164 million/year</td><td>Calculated</td></tr>
+<tr><td>Proposed rate increase</td><td>$22+/month per household</td><td>El Paso Matters, June 2025</td></tr>
+<tr><td>EPE customers</td><td>~465,000</td><td>EPE corporate data</td></tr>
+<tr><td>Revenue from proposed increase</td><td>~$123 million/year</td><td>Calculated: $22 x 465K x 12</td></tr>
+<tr><td>Planned capital spending</td><td>$3.5 billion through 2029</td><td>Fitch analysis</td></tr>
+</table>
+
+<p class="src">Investigative question: What portion of the $3.5B capital plan is attributable to data center interconnection vs organic residential/commercial growth? This determines how much of the rate increase is driven by serving data centers vs serving existing residents.</p>
+
+<h3>Finding 6: The Tesla/Morgan historical parallel</h3>
+
+<p>J.P. Morgan was directly involved in the financing of early American electrical infrastructure, initially backing Edison's DC system against Tesla's AC system. When AC won, Morgan's interests pivoted to financing the AC grid. El Paso Electric, the utility serving the region where these data center decisions are being made, is now owned by a J.P. Morgan-backed investment fund. The structural dynamic (infrastructure costs borne by ratepayers, profits extracted by financial owners) mirrors the pattern from 130 years ago in the same industry. This is verifiable through EPE's ownership records and publicly available history of early electrification financing.</p>
+
+<h3>Source Bibliography</h3>
+<table>
+<tr><th>#</th><th>Source</th><th>Data Used</th></tr>
+<tr><td>1</td><td>El Paso Matters, March 12, 2025</td><td>EPE CEO quotes, system capacity, Fitch analysis, Wiwynn 150 MW, dividend data</td></tr>
+<tr><td>2</td><td>El Paso Matters, June 30, 2025</td><td>Rate increase rejection, $3.5B capital plan</td></tr>
+<tr><td>3</td><td>El Paso Matters, Sept 2025</td><td>Meta 100 MW, PJ details, community opposition</td></tr>
+<tr><td>4</td><td>EPE press release, July 2020</td><td>Peak demand record (2,173 MW)</td></tr>
+<tr><td>5</td><td>EPE 2024 System Expansion Plan</td><td>92 MW/year average load growth</td></tr>
+<tr><td>6</td><td>EPE All-Source RFP, July 2025</td><td>650-850 MW capacity need, up to 1,650 MW with large loads</td></tr>
+<tr><td>7</td><td>NMED Air Quality Bureau, Dec 2025</td><td>Acoma LLC permit applications (2,880 MW, 14M tons CO2)</td></tr>
+<tr><td>8</td><td>ABQ Journal, Dec 2025</td><td>Permit analysis, split application concerns</td></tr>
+<tr><td>9</td><td>Santa Fe New Mexican, Feb 2026</td><td>"Data center gold rush" analysis</td></tr>
+<tr><td>10</td><td>DAC Commission meeting, Sept 19, 2025</td><td>700-900 MW stated, 4-1 vote</td></tr>
+<tr><td>11</td><td>EPE regulatory filings</td><td>Dividend payments, ownership structure</td></tr>
+</table>
+
+</div>
+
+<!-- ======================================== -->
+<!-- TECHNICAL: Full math                     -->
+<!-- ======================================== -->
+<div id="technical" class="tier">
+
+<h2>Equation: Grid Pressure Ratio</h2>
+
+<div class="math">
+<span class="label">Definition</span>
+P_grid = (DC_load + existing_peak_demand) / grid_capacity
+<div class="step">Where:</div>
+<div class="step">&nbsp;&nbsp;DC_load = data center electrical demand on EPE grid (MW)</div>
+<div class="step">&nbsp;&nbsp;existing_peak_demand = recorded system peak (MW)</div>
+<div class="step">&nbsp;&nbsp;grid_capacity = total generation capacity (MW)</div>
+<div class="step">&nbsp;</div>
+<div class="step">Interpretation:</div>
+<div class="step">&nbsp;&nbsp;P_grid &lt; 1.0: capacity exceeds demand (margin exists)</div>
+<div class="step">&nbsp;&nbsp;P_grid = 1.0: capacity exactly meets demand (no margin)</div>
+<div class="step">&nbsp;&nbsp;P_grid &gt; 1.0: demand exceeds capacity (shortfall)</div>
+</div>
+
+<h3>Input Values (All Sourced)</h3>
+<table>
+<tr><th>Variable</th><th>Value</th><th>Source</th></tr>
+<tr><td>EPE total generation capacity</td><td>~2,300 MW</td><td>CEO Kelly Tomblin, EP Matters, March 2025</td></tr>
+<tr><td>Record peak demand</td><td>2,173 MW</td><td>EPE press release, July 13, 2020</td></tr>
+<tr><td>Average annual load growth</td><td>92 MW/year</td><td>EPE 2024 System Expansion Plan (5-year avg)</td></tr>
+<tr><td>Meta El Paso (EPE grid)</td><td>100 MW</td><td>EP Matters, Sept 2025</td></tr>
+<tr><td>Wiwynn Socorro (EPE grid)</td><td>150 MW</td><td>EP Matters, March 2025</td></tr>
+<tr><td>DC_load (combined EPE grid)</td><td>250 MW</td><td>Calculated: 100 + 150</td></tr>
+<tr><td>PJ microgrid (stated)</td><td>700 to 900 MW</td><td>Developer presentation, Sept 2025</td></tr>
+<tr><td>PJ microgrid (permits)</td><td>2,880 MW</td><td>NMED air quality permits, Dec 2025</td></tr>
+<tr><td>PJ CO2 emissions</td><td>14M tons/year</td><td>NMED air quality permits</td></tr>
+<tr><td>PJ SO2 emissions</td><td>54.85 tons/year</td><td>NMED air quality permits</td></tr>
+</table>
+
+<h3>Calculation 1: Grid Margin at 2020 Peak</h3>
+<div class="math">
+<span class="label">Margin = capacity - peak demand</span>
+<div class="step">Margin = 2,300 - 2,173 = 127 MW</div>
+<div class="result">Grid headroom at 2020 peak: 127 MW (5.5% of capacity)</div>
+</div>
+
+<h3>Calculation 2: DC Load vs Margin</h3>
+<div class="math">
+<span class="label">DC load as fraction of grid margin</span>
+<div class="step">DC_load = 100 + 150 = 250 MW</div>
+<div class="step">Margin = 127 MW</div>
+<div class="step">DC_load / Margin = 250 / 127 = 1.969</div>
+<div class="result">DC demand is 197% of grid margin. Demand exceeds available headroom by nearly 2x.</div>
+</div>
+
+<p class="src">Compare to water analysis: DC water demand was 17.9% of supply surplus. Electrical pressure is 197%. Approximately 11x worse by the same ratio method.</p>
+
+<h3>Calculation 3: Growth-Adjusted Peak (2025 Estimate)</h3>
+<div class="math">
+<span class="label">Linear projection from 2020 peak</span>
+<div class="step">2020 peak:         2,173 MW</div>
+<div class="step">Growth (5 yr):     5 x 92 = 460 MW</div>
+<div class="step">Estimated 2025:    2,173 + 460 = 2,633 MW</div>
+<div class="step">Capacity:          2,300 MW</div>
+<div class="step">Margin:            2,300 - 2,633 = -333 MW</div>
+<div class="result">Estimated 2025 margin: NEGATIVE 333 MW. Grid may be oversubscribed BEFORE data centers connect.</div>
+</div>
+
+<p class="src">Caveat: This is a linear projection. Actual 2025 peak may differ due to weather variation, new generation coming online, or demand response programs. EPE's own RFP (July 2025) confirms capacity shortfall by requesting 650-850 MW of new capacity. The direction of the estimate is consistent with EPE's own assessment.</p>
+
+<h3>Calculation 4: P_grid Under Multiple Scenarios</h3>
+<table>
+<tr><th>Scenario</th><th>Total Demand (MW)</th><th>Capacity (MW)</th><th>P_grid</th><th>Status</th></tr>
+<tr><td>2020 peak only</td><td>2,173</td><td>2,300</td><td>0.945</td><td style="color:var(--yellow)">TIGHT</td></tr>
+<tr><td>2020 peak + DC load</td><td>2,423</td><td>2,300</td><td>1.053</td><td style="color:var(--red)">OVER</td></tr>
+<tr><td>Est. 2025 peak only</td><td>2,633</td><td>2,300</td><td>1.145</td><td style="color:var(--red)">OVER</td></tr>
+<tr><td>Est. 2025 peak + DC load</td><td>2,883</td><td>2,300</td><td>1.253</td><td style="color:var(--red)">OVER</td></tr>
+</table>
+
+<h3>Calculation 5: Jupiter Microgrid vs EPE System</h3>
+<div class="math">
+<span class="label">Scale comparison</span>
+<div class="step">PJ microgrid (permits):  2,880 MW</div>
+<div class="step">EPE total system:        2,300 MW</div>
+<div class="step">PJ / EPE = 2,880 / 2,300 = 1.252</div>
+<div class="result">Project Jupiter's private power plant is 125% the size of El Paso Electric's entire system.</div>
+</div>
+
+<h3>Calculation 6: Dividend Extraction vs Rate Increase</h3>
+<div class="math">
+<span class="label">Financial flow analysis</span>
+<div class="step">Dividends to IIF/JPM (2022-2024):  $491.8M total</div>
+<div class="step">Annual average:                     $491.8M / 3 = $163.9M/yr</div>
+<div class="step">&nbsp;</div>
+<div class="step">Proposed rate increase:              $22/mo per household</div>
+<div class="step">EPE customers:                      ~465,000</div>
+<div class="step">Annual revenue from increase:       $22 x 465,000 x 12 = $122.8M/yr</div>
+<div class="step">&nbsp;</div>
+<div class="step">Dividend / Rate increase revenue:    $163.9M / $122.8M = 1.334</div>
+<div class="result">Annual dividend extraction exceeds the proposed rate increase revenue by 33%.</div>
+</div>
+
+<h3>Structural Analog: Ohm's Law</h3>
+
+<div class="math">
+<span class="label">V = I / R applied to regional economics</span>
+<div class="step">V (Voltage)    = Property value / livability</div>
+<div class="step">I (Current)    = Demand flow (population, investment, development)</div>
+<div class="step">R (Resistance) = Resource friction the community absorbs</div>
+<div class="step">&nbsp;</div>
+<div class="step">R_total = R_water + R_electric + R_gas</div>
+<div class="step">&nbsp;</div>
+<div class="step">As R increases and I holds constant, V decreases.</div>
+<div class="step">&nbsp;</div>
+<div class="step">Residents absorb all three R components (water rates, electric rates, air quality).</div>
+<div class="step">Data centers bypass R (tax exempt IRBs, private microgrid, closed-loop water).</div>
+<div class="step">Value concentrates where resistance is lowest.</div>
+<div class="step">Value drains from where resistance is highest.</div>
+<div class="result">Same current. Same circuit. Unequal resistance paths. Predictable voltage drop.</div>
+</div>
+
+<h3>How to Verify This Analysis</h3>
+<ol style="margin:16px 0;padding-left:24px;">
+<li>Obtain EPE's stated capacity and peak demand figures from the sources listed.</li>
+<li>Compute margin: capacity minus peak demand.</li>
+<li>Add data center loads (Meta 100 MW, Wiwynn 150 MW) to peak demand.</li>
+<li>Compute P_grid for each scenario.</li>
+<li>Compare Jupiter's permit figures (NMED) to what was stated at the Sept 2025 commission meeting.</li>
+<li>Compare dividend payments to proposed rate increase revenue.</li>
+</ol>
+<p>If your numbers differ, publish the correction with your source.</p>
+
+</div>
+
+<!-- ======================================== -->
+<!-- ESPANOL                                  -->
+<!-- ======================================== -->
+<div id="espanol" class="tier">
+
+<h2>De Que Se Trata</h2>
+<p>Quieren construir grandes centros de datos cerca de El Paso. Los centros de datos necesitan MUCHA electricidad. Miramos los documentos publicos para responder tres preguntas: ¿cuanta electricidad necesitan? ¿cuanta nos queda? ¿quien paga?</p>
+
+<h2>Los Numeros Que Importan</h2>
+
+<div class="box">
+<span class="big">2,300 MW</span>
+<p>Esa es toda la electricidad que El Paso Electric puede producir. Es el motor que mueve toda nuestra region.</p>
+<p class="src">Fuente: CEO de EPE, El Paso Matters, marzo 2025</p>
+</div>
+
+<div class="box yellow">
+<span class="big yellow">2,173 MW</span>
+<p>Eso es lo maximo que hemos usado. Paso un dia de 110 grados en julio 2020. Solo quedaban 127 megawatts de espacio. Y la ciudad ha crecido desde entonces.</p>
+<p class="src">Fuente: El Paso Electric, julio 2020</p>
+</div>
+
+<div class="box red">
+<span class="big red">250 MW</span>
+<p>Eso es lo que los nuevos centros de datos necesitan de nuestra red electrica. Meta El Paso (100 MW) y Wiwynn en Socorro (150 MW). Eso es casi el doble de nuestro colchon de seguridad.</p>
+<p class="src">Fuentes: El Paso Matters, sept y marzo 2025</p>
+</div>
+
+<h2>El Numero Que Cambio</h2>
+
+<p>Project Jupiter en Santa Teresa va a construir su propia planta de electricidad. Pero los numeros no son iguales:</p>
+
+<div class="compare">
+<div>
+<p><strong>Lo que dijeron al condado</strong> (sept 2025): 700 a 900 megawatts.</p>
+</div>
+<div>
+<p><strong>Lo que dicen sus permisos</strong> (dic 2025): <strong>2,880 megawatts.</strong></p>
+</div>
+</div>
+
+<p>El Paso Electric produce 2,300 megawatts. La planta privada de Project Jupiter seria MAS GRANDE que toda nuestra compania de electricidad. Y esa planta usa gas natural. Segun los permisos, va a producir <strong>14 millones de toneladas de CO2 al ano</strong> en nuestro aire.</p>
+
+<h2>Quien Paga</h2>
+
+<div class="box red">
+<span class="big red">$3.5 mil millones</span>
+<p>Eso es lo que El Paso Electric planea gastar para mejorar la red electrica. Ese dinero sale de tu recibo de luz.</p>
+</div>
+
+<p>Ya trataron de subir las tarifas mas de $22 al mes. El Concejo dijo que no en junio 2025. Pero la red necesita crecer. Van a intentar otra vez.</p>
+
+<h2>Quien Se Beneficia</h2>
+
+<div class="box red">
+<span class="big red">$491.8 millones</span>
+<p>Eso es lo que El Paso Electric le pago a su dueno de Wall Street (J.P. Morgan) en dividendos de 2022 a 2024. Eso sale de tu recibo de luz. El aumento de tarifa que querian ($22/mes) generaria $123 millones al ano. Los dividendos a Wall Street son $164 millones al ano. Tu aumento es mas chico que su cheque de ganancias.</p>
+<p class="src">Fuente: Documentos regulatorios, El Paso Matters</p>
+</div>
+
+<h2>130 Anos de Historia</h2>
+
+<p>En los 1890s, Nikola Tesla invento el sistema electrico que todos usamos hoy. Un banquero llamado J.P. Morgan peleo contra Tesla, despues compro el sistema cuando gano. Tesla murio pobre. El banco se hizo rico con lo que Tesla construyo.</p>
+
+<p>130 anos despues, el banco de J.P. Morgan es dueno de la compania de electricidad de El Paso. La red que Tesla hizo posible esta siendo empujada al limite. Las mejoras las pagan los residentes. Las ganancias van a Wall Street.</p>
+
+<h2>Que Puedes Hacer</h2>
+
+<p>Preguntale a tu representante: <strong>"¿Cuanto del aumento en mi recibo de luz paga por electricidad para centros de datos en vez de para mi?"</strong></p>
+
+<p>Si no te pueden responder con numeros, la decision no se baso en matematicas.</p>
+
+</div>
+
+<!-- ======================================== -->
+<!-- DOCUMENT INTEGRITY                       -->
+<!-- ======================================== -->
+<div style="margin-top:60px;padding-top:24px;border-top:1px solid var(--border)">
+<h2 style="border:none;padding:0;margin-top:0">Document Integrity</h2>
+<p style="font-size:14px;color:var(--dim)">This document contains no proprietary methods. Every number comes from a public source. Every calculation can be reproduced with a calculator and the cited documents. If any number is wrong, correct it publicly and cite your source.</p>
+<p style="font-size:14px;color:var(--dim)">See also: <a href="pj_numbers.html" style="color:var(--blue);text-decoration:none">Project Jupiter Water Analysis</a></p>
+<div class="hash">
+<span class="label">SHA-256</span>
+662ac50b9631c5f314e00463148077a90196f55fc2721a2768dfd563d236f9e0
+</div>
+<div class="hash">
+<span class="label">Solana Blockchain Anchor</span>
+Block: 402,502,148<br>
+Blockhash: 9a5oyqpxCZ1RqAxVV3HqWwtdAXTAEMRegvtr1VoLLHkg<br>
+Signature: <a href="https://solscan.io/tx/4QeesAfu8mUFUo6NqibShAntZLGedQ7nP55G1pfHZMdXQDAkTXALoXJDVM1bBTQDXKiLqf74iZR9C4nB995YbCWc" style="color:var(--blue);text-decoration:none">4QeesAfu8mUFUo6NqibShAntZLGedQ7nP55G1pfHZMdXQDAkTXALoXJDVM1bBTQDXKiLqf74iZR9C4nB995YbCWc</a><br>
+Memo: CS:662ac50b9631c5f314e00463148077a90196f55fc2721a2768dfd563d236f9e0<br>
+Timestamp: February 24, 2026
+</div>
+<p style="font-size:13px;color:var(--dim)">To verify: compute <code style="background:var(--surface2);padding:2px 6px;border-radius:3px;font-size:12px">sha256sum pj_grid.html</code> on the pre-anchor version and compare to the hash above and the memo recorded on-chain.</p>
+<p style="font-size:13px;color:var(--dim)">February 2026. Public domain. No attribution required. Corrections welcome.</p>
+</div>
+
+</div>
+
+<script>
+function show(id){
+document.querySelectorAll('.tier').forEach(t=>t.classList.remove('active'));
+document.querySelectorAll('.tier-btn').forEach(b=>b.classList.remove('active'));
+document.getElementById(id).classList.add('active');
+event.target.closest('.tier-btn').classList.add('active');
+}
+</script>
+</body>
+</html>

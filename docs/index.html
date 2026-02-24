@@ -1,83 +1,124 @@
 <!DOCTYPE html>
+<!-- SM was here. Security check 3 of 3. -->
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Project Jupiter Evidence Portal</title>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <meta name="description" content="Project Jupiter Evidence Portal - Evidence-Grade Accountability System">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Project Jupiter: The Numbers Nobody Published</title>
+<meta name="description" content="Independent quantitative analysis of water and electrical grid pressure in the El Paso / Santa Teresa data center corridor. Public sources. Reproducible math. No opinion.">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Source+Sans+3:wght@400;600;700&family=Source+Code+Pro:wght@400;600&display=swap');
+:root{--bg:#000;--surface:#0d0d0d;--surface2:#161616;--border:#252525;--text:#e8e8e8;--dim:#aaa;--bright:#fff;--blue:#4a9eff;--red:#e74c3c;--green:#2ecc71;--yellow:#f39c12;--serif:'Source Serif 4',Georgia,serif;--sans:'Source Sans 3',system-ui,sans-serif;--mono:'Source Code Pro',monospace}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--text);font-family:var(--sans);font-size:17px;line-height:1.7}
+.container{max-width:760px;margin:0 auto;padding:60px 20px 100px}
 
-  <!-- Docsify Theme -->
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+.header{text-align:center;margin-bottom:60px;padding-bottom:40px;border-bottom:3px solid var(--bright)}
+.header h1{font-family:var(--serif);font-size:clamp(28px,5vw,42px);font-weight:700;color:var(--bright);line-height:1.2;margin-bottom:12px}
+.header .sub{font-size:18px;color:var(--dim);margin-bottom:20px}
+.header .method{font-family:var(--mono);font-size:13px;color:var(--dim);max-width:500px;margin:0 auto}
 
-  <!-- Custom Theme (El Paso colors) -->
-  <link rel="stylesheet" href="custom.css">
+.cards{display:grid;gap:24px;margin-bottom:60px}
 
-  <!-- Favicon -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'></text></svg>">
+.card{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:32px;text-decoration:none;color:var(--text);transition:all 0.2s;display:block}
+.card:hover{border-color:var(--blue);background:var(--surface2);transform:translateY(-2px)}
+.card-label{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:3px;color:var(--dim);margin-bottom:8px}
+.card h2{font-family:var(--serif);font-size:24px;font-weight:700;color:var(--bright);margin-bottom:8px}
+.card .question{font-size:17px;color:var(--text);margin-bottom:16px}
+.card .finding{font-family:var(--mono);font-size:14px;padding:12px 16px;border-radius:4px;margin-bottom:16px}
+.card-water .finding{background:rgba(74,158,255,0.08);border-left:3px solid var(--blue);color:var(--blue)}
+.card-grid .finding{background:rgba(231,76,60,0.08);border-left:3px solid var(--red);color:var(--red)}
+.card .detail{font-size:14px;color:var(--dim)}
+.card .arrow{font-family:var(--mono);font-size:14px;color:var(--blue);margin-top:16px;display:block}
+
+.principles{margin-bottom:60px}
+.principles h2{font-family:var(--serif);font-size:22px;font-weight:700;color:var(--bright);margin-bottom:20px;text-align:center}
+.principles-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.principle{background:var(--surface);border:1px solid var(--border);border-radius:6px;padding:20px}
+.principle .label{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:2px;color:var(--dim);margin-bottom:6px}
+.principle p{font-size:15px;color:var(--text);margin:0}
+
+.verify{text-align:center;margin-bottom:60px;padding:32px;background:var(--surface);border:1px solid var(--border);border-radius:8px}
+.verify h2{font-family:var(--serif);font-size:20px;color:var(--bright);margin-bottom:12px}
+.verify p{font-size:15px;color:var(--dim);max-width:520px;margin:0 auto}
+
+.footer{text-align:center;padding-top:40px;border-top:1px solid var(--border)}
+.footer p{font-family:var(--mono);font-size:12px;color:var(--dim);margin-bottom:8px}
+.footer .license{font-size:13px;color:var(--dim)}
+.footer .license a{color:var(--blue);text-decoration:none}
+.footer .license a:hover{text-decoration:underline}
+
+@media(max-width:640px){
+.principles-grid{grid-template-columns:1fr}
+.container{padding:40px 16px 80px}
+.card{padding:24px}
+}
+@media print{body{background:#fff;color:#000}}
+</style>
 </head>
 <body>
-  <div id="app">Loading...</div>
+<div class="container">
 
-  <script>
-    window.$docsify = {
-      name: 'Project Jupiter Evidence Portal',
-      repo: '',
-      loadSidebar: true,
-      subMaxLevel: 3,
-      auto2top: true,
-      homepage: 'README.md',
+<div class="header">
+<h1>Project Jupiter</h1>
+<p class="sub">The Numbers Nobody Published</p>
+<p class="method">Public sources. Reproducible math. No opinion.</p>
+</div>
 
-      // Search plugin
-      search: {
-        maxAge: 86400000,
-        paths: 'auto',
-        placeholder: 'Search documents...',
-        noData: 'No results found',
-        depth: 6
-      },
+<div class="cards">
 
-      // Pagination
-      pagination: {
-        previousText: '← Previous',
-        nextText: 'Next →',
-        crossChapter: true,
-        crossChapterText: true,
-      },
+<a href="pj_numbers.html" class="card card-water">
+<div class="card-label">Analysis 1: Water</div>
+<h2>Do we have enough water?</h2>
+<p class="question">Data center cooling requires millions of gallons per day. How much of El Paso's water surplus does that consume?</p>
+<div class="finding">DC demand = 17.9% of supply surplus</div>
+<p class="detail">The conclusion changes from "we're fine" to "we're over capacity" depending on which supply number you use. No public document specifies which number decision-makers used.</p>
+<span class="arrow">Read the water analysis &#8594;</span>
+</a>
 
-      // Copy code plugin
-      copyCode: {
-        buttonText: 'Copy',
-        errorText: 'Error',
-        successText: 'Copied!'
-      },
+<a href="pj_grid.html" class="card card-grid">
+<div class="card-label">Analysis 2: Electrical Grid</div>
+<h2>Does the grid have enough power?</h2>
+<p class="question">El Paso Electric's grid margin is 127 MW. Data centers on that grid need 250 MW. A permitted power plant is larger than the entire existing grid.</p>
+<div class="finding">DC load = 197% of grid surplus</div>
+<p class="detail">The power plant size stated to county commissioners (700-900 MW) does not match the air quality permits filed with the state (2,880 MW). The permitted microgrid is 125% the size of El Paso Electric's entire system.</p>
+<span class="arrow">Read the grid analysis &#8594;</span>
+</a>
 
-      // External link
-      externalLinkTarget: '_blank',
+</div>
 
-      // Tabs plugin
-      tabs: {
-        persist: true,
-        sync: true,
-        theme: 'classic',
-        tabComments: true,
-        tabHeadings: true
-      }
-    }
-  </script>
+<div class="principles">
+<h2>How These Work</h2>
+<div class="principles-grid">
+<div class="principle">
+<div class="label">Sourced</div>
+<p>Every number links to a public document: press releases, regulatory filings, news reports, government records. No anonymous tips. No leaked documents. No opinion.</p>
+</div>
+<div class="principle">
+<div class="label">Reproducible</div>
+<p>Every calculation can be checked with a calculator and the cited sources. The math is shown step by step. If your numbers differ, publish the correction with your source.</p>
+</div>
+<div class="principle">
+<div class="label">Accessible</div>
+<p>Each analysis has four tiers: residents (6th grade reading level), journalists (sourced tables), technical (full equations), and Spanish. Pick the one that fits you.</p>
+</div>
+<div class="principle">
+<div class="label">Timestamped</div>
+<p>Content hashes are anchored to the Solana blockchain before publication. This proves when the analysis was written and that it has not been modified.</p>
+</div>
+</div>
+</div>
 
-  <!-- Docsify Core -->
-  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+<div class="verify">
+<h2>Verify Everything</h2>
+<p>You do not need to trust the author. You do not need to know who the author is. Download the source documents. Run the equations. Check the results. The math either holds or it does not.</p>
+</div>
 
-  <!-- Plugins -->
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code@2"></script>
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/docsify-tabs@1"></script>
+<div class="footer">
+<p>No author. No organization. No funding. Just the numbers.</p>
+<p class="license">Public domain. <a href="LICENSE">CC0 1.0</a> | <a href="https://github.com/celaya-solutions/el-paso-santa-teresa-project-jupiter">Source</a></p>
+</div>
 
-  <!-- Print support -->
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/external-script.min.js"></script>
-
+</div>
 </body>
 </html>
