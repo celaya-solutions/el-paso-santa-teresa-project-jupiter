@@ -120,5 +120,19 @@ body{background:var(--bg);color:var(--text);font-family:var(--sans);font-size:17
 </div>
 
 </div>
+<script>
+(function(){
+try{
+var v=parseInt(localStorage.getItem('pj_v')||'0');
+localStorage.setItem('pj_v',v+1);
+var cards=document.querySelector('.cards');
+var water=document.querySelector('.card-water');
+var grid=document.querySelector('.card-grid');
+if(v>0&&cards&&water&&grid){
+cards.insertBefore(grid,water);
+}
+}catch(e){}
+})();
+</script>
 </body>
 </html>
