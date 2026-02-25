@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Project Jupiter Water Analysis: The Numbers</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Source+Sans+3:wght@400;600;700&family=Source+Code+Pro:wght@400;600&display=swap');
+:root{--bg:#000;--surface:#0d0d0d;--surface2:#161616;--border:#252525;--text:#e8e8e8;--dim:#aaa;--bright:#fff;--blue:#4a9eff;--red:#e74c3c;--green:#2ecc71;--yellow:#f39c12;--serif:'Source Serif 4',Georgia,serif;--sans:'Source Sans 3',system-ui,sans-serif;--mono:'Source Code Pro',monospace}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--text);font-family:var(--sans);font-size:17px;line-height:1.7}
+.container{max-width:860px;margin:0 auto;padding:40px 20px 80px}
+.doc-header{border-bottom:3px solid var(--bright);padding-bottom:28px;margin-bottom:40px}
+.doc-header h1{font-family:var(--serif);font-size:clamp(26px,5vw,38px);font-weight:700;color:var(--bright);line-height:1.2;margin-bottom:10px}
+.doc-header .sub{font-size:17px;color:var(--dim);margin-bottom:12px}
+.doc-header .meta{font-family:var(--mono);font-size:12px;color:var(--dim)}
+.tier-nav{display:flex;gap:0;margin-bottom:36px;border:1px solid var(--border);border-radius:6px;overflow:hidden;flex-wrap:wrap}
+.tier-btn{flex:1;min-width:100px;padding:12px 12px;background:var(--surface);border:none;border-right:1px solid var(--border);color:var(--dim);font-family:var(--sans);font-size:13px;font-weight:600;cursor:pointer;text-align:center;transition:all .2s}
+.tier-btn:last-child{border-right:none}
+.tier-btn:hover{background:var(--surface2);color:var(--text)}
+.tier-btn.active{background:var(--surface2);color:var(--bright);border-bottom:2px solid var(--blue)}
+.tier-label{display:block;font-size:11px;color:var(--dim);margin-top:2px;font-weight:400}
+.tier{display:none}.tier.active{display:block}
+h2{font-family:var(--serif);font-size:24px;font-weight:700;color:var(--bright);margin:40px 0 16px;padding-top:20px;border-top:1px solid var(--border)}
+h2:first-child{border-top:none;margin-top:0;padding-top:0}
+h3{font-family:var(--sans);font-size:18px;font-weight:700;color:var(--bright);margin:28px 0 10px}
+p{margin-bottom:14px}
+.box{background:var(--surface);border-left:4px solid var(--blue);padding:18px 20px;margin:20px 0;border-radius:0 6px 6px 0}
+.box.red{border-left-color:var(--red)}.box.green{border-left-color:var(--green)}.box.yellow{border-left-color:var(--yellow)}
+.box p:last-child{margin-bottom:0}
+.big{font-family:var(--mono);font-size:32px;font-weight:700;color:var(--blue);display:block;margin-bottom:6px}
+.big.red{color:var(--red)}.big.green{color:var(--green)}.big.yellow{color:var(--yellow)}
+table{width:100%;border-collapse:collapse;margin:20px 0;font-size:14px}
+th{background:var(--surface2);color:var(--bright);font-weight:700;text-align:left;padding:10px 12px;border:1px solid var(--border);font-size:13px}
+td{padding:10px 12px;border:1px solid var(--border);color:var(--text)}
+tr:nth-child(even) td{background:var(--surface)}
+.math{background:var(--surface);border:1px solid var(--border);border-radius:6px;padding:18px 20px;margin:20px 0;font-family:var(--mono);font-size:14px;overflow-x:auto;color:var(--bright)}
+.math .label{display:block;font-size:11px;color:var(--dim);text-transform:uppercase;letter-spacing:2px;margin-bottom:8px;font-family:var(--sans)}
+.math .step{margin:6px 0;color:var(--text)}
+.math .result{color:var(--blue);font-weight:700;margin-top:10px;font-size:16px}
+.src{font-size:13px;color:var(--dim);font-style:italic;margin-top:4px}
+.src a{color:var(--blue);text-decoration:none}
+.src a:hover{text-decoration:underline}
+sup a{color:var(--blue);text-decoration:none;font-size:11px}
+.fn{margin-top:48px;padding-top:20px;border-top:1px solid var(--border);font-size:13px;color:var(--dim)}
+.fn ol{padding-left:20px}.fn li{margin-bottom:6px}.fn a{color:var(--blue);text-decoration:none}
+.hash{background:var(--surface);border:1px solid var(--border);border-radius:6px;padding:14px 18px;margin:20px 0;font-family:var(--mono);font-size:11px;color:var(--dim);word-break:break-all}
+.hash .label{font-family:var(--sans);font-size:11px;text-transform:uppercase;letter-spacing:2px;margin-bottom:4px;display:block}
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:20px 0}
+.compare>div{background:var(--surface);padding:16px;border-radius:6px;border:1px solid var(--border)}
+.verify-section{background:var(--surface);border:1px solid var(--border);border-radius:6px;padding:20px;margin:20px 0}
+.verify-section h4{font-family:var(--sans);font-size:15px;font-weight:700;color:var(--bright);margin-bottom:10px}
+.verify-section p{font-size:13px;color:var(--dim);margin-bottom:8px}
+.verify-section ol{font-size:13px;color:var(--dim);padding-left:20px;margin:10px 0}
+.verify-section li{margin-bottom:6px}
+.verify-section a{color:var(--blue);text-decoration:none}
+.verify-section a:hover{text-decoration:underline}
+@media(max-width:640px){.compare{grid-template-columns:1fr}.tier-btn{min-width:70px;font-size:11px;padding:10px 6px}}
+@media print{body{background:#fff;color:#000;font-size:12pt}.tier-nav{display:none}.tier{display:block!important}th{background:#eee}}
+</style>
+</head>
+<body>
+<div class="container">
+<header class="doc-header">
+<h1>Project Jupiter &amp; El Paso Water: The Numbers Nobody Published</h1>
+<div class="sub">How much water do the new data centers need? How much do we have left? Here are the numbers, the sources, and the math. Check it yourself.</div>
+<div class="meta">February 2026 &nbsp;|&nbsp; All sources are public records &nbsp;|&nbsp; Every number can be checked</div>
+</header>
+<nav class="tier-nav">
+<button class="tier-btn active" onclick="show('residents')">Residents<span class="tier-label">Plain language</span></button>
+<button class="tier-btn" onclick="show('journalists')">Journalists<span class="tier-label">Sourced data</span></button>
+<button class="tier-btn" onclick="show('technical')">Technical<span class="tier-label">Full math</span></button>
+<button class="tier-btn" onclick="show('espanol')">Español<span class="tier-label">Resumen</span></button>
+</nav>
+<!-- ======================================== -->
+<!-- RESIDENTS: 6th grade reading level       -->
+<!-- ======================================== -->
+<div id="residents" class="tier active">
+<h2>What This Is About</h2>
+<p>Big companies want to build data centers near El Paso and Santa Teresa. Data centers are huge buildings full of computers. Those computers get very hot. To cool them down, they need a lot of water.</p>
+<p>We looked at the numbers to answer one simple question: <strong>do we have enough water for this?</strong></p>
+<h2>The Three Numbers That Matter</h2>
+<div class="box">
+<span class="big">105 million</span>
+<p>Gallons of water El Paso uses <em>every single day</em>. That is how much water our city needs right now for homes, businesses, parks, and everything else.</p>
+<p class="src">Source: Texas Tribune, April 2025</p>
+</div>
+<div class="box yellow">
+<span class="big yellow">1.56 million</span>
+<p>Gallons per day the new data centers could need at full size. That is Project Jupiter (up to 60,000 gallons/day) plus the Meta data center in El Paso (up to 1.5 million gallons/day).</p>
+<p class="src">Sources: Doña Ana County MOU, Sept 2025; KVIA News / Yahoo News</p>
+</div>
+<div class="box red">
+<span class="big red">8.7 million</span>
+<p>Gallons per day. That is our safety cushion. It is the difference between how much water we can get and how much we already use. Think of it like the money left over after you pay all your bills. This is our water "savings."</p>
+<p class="src">Source: Bureau of Reclamation, Rio Grande Project data</p>
+</div>
+<h2>Why This Matters</h2>
+<p>The data centers only need about 1.5% of the water we use now. That sounds small. But look at it another way:</p>
+<div class="box red">
+<span class="big red">17.9%</span>
+<p>That is how much of our safety cushion the data centers would use. Almost one fifth of what we have left over. Our "savings" shrinks by almost a fifth.</p>
+</div>
+<p>Imagine you bring home $1,000 a month. After rent, food, electricity, and gas, you have $87 left. Now someone says "I just need $16 from you." That is only 1.6% of your income. Sounds tiny. But it is 18% of the money you have left. That is the difference between making it to the end of the month and not.</p>
+<h2>The Big Question Nobody Answered</h2>
+<p>When officials talked about water for these projects, they never said which number they were using for "how much water we have." This matters a lot. Look:</p>
+<div class="compare">
+<div>
+<p><strong>If we use the big number</strong> (137 million gallons/day, the total water supply), everything looks fine. We are using about 77% of our water. Plenty of room.</p>
+</div>
+<div>
+<p><strong>If we use the real number</strong> (105 million gallons/day, what we actually pump and treat every day), we are already at the limit. Adding data centers pushes us over.</p>
+</div>
+</div>
+<p><strong>Nobody has told the public which number they are using.</strong> The answer changes everything. We deserve to know.</p>
+<h2>Who Owns Project Jupiter?</h2>
+<p>The company behind Project Jupiter is called BorderPlex Digital Assets LLC. It was created in 2025. We do not know who the real owners are. The chain of who benefits from this project is not fully public.</p>
+<p>This is a problem. If we cannot see who is making money from our water, we cannot hold anyone responsible if something goes wrong.</p>
+<h2>What You Can Do</h2>
+<p>Ask your city council member and your county commissioner one question: <strong>"Which water supply number are you using when you say we have enough water for data centers, and where is it published?"</strong></p>
+<p>If they cannot answer that question with a source you can check yourself, the decision was not based on math. It was based on trust. Trust is not a water source.</p>
+<div class="box green">
+<p><strong>Every number in this document comes from a public source.</strong> You can check them all. The sources are listed below. If any number is wrong, it should be corrected. That is how math works.</p>
+</div>
+</div>
+<!-- ======================================== -->
+<!-- JOURNALISTS: Sourced findings            -->
+<!-- ======================================== -->
+<div id="journalists" class="tier">
+<h2>Key Findings</h2>
+<div class="box">
+<span class="big">17.9%</span>
+<p>Data center water additions (at full build-out, 1.56 MGD combined) represent 17.9% of the Bureau of Reclamation's calculated supply surplus over demand (8.71 MGD). The adds are small in absolute terms (0.7% to 1.5% of existing demand) but large relative to the remaining margin.</p>
+</div>
+<h3>Finding 1: The answer depends on which supply number you use</h3>
+<p>The ratio of total demand (existing + data center) to available supply produces fundamentally different conclusions depending on which "available supply" figure is used. No public document from El Paso Water, Doña Ana County, or the State of New Mexico specifies which supply definition applies to data center approval decisions.</p>
+<table>
+<tr><th>Supply definition</th><th>Source</th><th>MGD</th><th>Ratio</th><th>Reading</th></tr>
+<tr><td>Demand baseline only</td><td>Texas Tribune, April 2025</td><td>105.00</td><td>1.007 to 1.015</td><td style="color:var(--red)">Over capacity</td></tr>
+<tr><td>2023 actual production</td><td>EP Water Conservation Plan, 2024</td><td>110.41</td><td>0.958 to 0.965</td><td style="color:var(--yellow)">Marginal</td></tr>
+<tr><td>Bureau of Reclamation total supply</td><td>BuRec Rio Grande Project</td><td>137.26</td><td>0.771 to 0.776</td><td style="color:var(--green)">Buffer exists</td></tr>
+</table>
+<p class="src">Investigative question: Which of these definitions did decision-makers use? Where is it documented? If undocumented, on what basis were approvals granted?</p>
+<h3>Finding 2: The supply surplus is smaller than it appears</h3>
+<table>
+<tr><th>Metric</th><th>Value</th><th>Source</th></tr>
+<tr><td>BuRec total supply</td><td>153,754 AF/yr (137.26 MGD)</td><td>Bureau of Reclamation</td></tr>
+<tr><td>BuRec regional demand</td><td>144,000 AF/yr (128.55 MGD)</td><td>Bureau of Reclamation</td></tr>
+<tr><td>Supply surplus</td><td>9,754 AF/yr (8.71 MGD)</td><td>Calculated: supply minus demand</td></tr>
+<tr><td>DC full build-out demand</td><td>1.56 MGD</td><td>Doña Ana County MOU + KVIA</td></tr>
+<tr><td>DC demand as % of surplus</td><td style="color:var(--red)">17.9%</td><td>Calculated: 1.56 / 8.71</td></tr>
+</table>
+<h3>Finding 3: Project Jupiter ownership chain is incomplete</h3>
+<p>BorderPlex Digital Assets LLC was formed in 2025. The State MOU (signed Feb 25, 2025) identifies the entity but the full beneficial ownership chain, from LLC to ultimate controlling persons, has not been published. IPRA requests for ownership disclosure may be warranted under New Mexico's public interest standard.</p>
+<h3>Finding 4: Santa Teresa water infrastructure is already failing</h3>
+<p>EPA inspection (2025) found 3 of 4 arsenic treatment plants offline in Santa Teresa/Sunland Park. Federal health standard violations for arsenic contamination have been documented for years. Project Jupiter proposes to add water demand in a service area where existing treatment capacity is degraded.</p>
+<p class="src">Source: EPA inspection report, 2025; NMELC letters to Doña Ana County</p>
+<h3>Data Center Water Demand Breakdown</h3>
+<table>
+<tr><th>Facility</th><th>Average (GPD)</th><th>Peak (GPD)</th><th>Source</th></tr>
+<tr><td>Project Jupiter</td><td>20,000</td><td>60,000</td><td>Doña Ana County MOU, Sept 2025</td></tr>
+<tr><td>Meta El Paso</td><td>750,000</td><td>1,500,000</td><td>KVIA / Yahoo News</td></tr>
+<tr><td><strong>Combined</strong></td><td><strong>770,000</strong></td><td><strong>1,560,000</strong></td><td></td></tr>
+</table>
+<h3>Source Bibliography</h3>
+<table>
+<tr><th>#</th><th>Source</th><th>Data Used</th></tr>
+<tr><td>1</td><td>Texas Tribune, April 2025</td><td>El Paso baseline demand (105 MGD)</td></tr>
+<tr><td>2</td><td>EP Water Conservation Plan, 2024</td><td>2023 production (40.3 billion gal/yr = 110.4 MGD)</td></tr>
+<tr><td>3</td><td>Bureau of Reclamation, Rio Grande Project</td><td>Supply (153,754 AF/yr), demand (144,000 AF/yr)</td></tr>
+<tr><td>4</td><td>Doña Ana County MOU, Sept 24, 2025</td><td>Jupiter water demand (20k avg, 60k peak GPD)</td></tr>
+<tr><td>5</td><td>KVIA / Yahoo News</td><td>Meta El Paso water demand (750k initial, 1.5M full GPD)</td></tr>
+<tr><td>6</td><td>State MOU, Feb 25, 2025</td><td>BorderPlex Digital Assets LLC identification</td></tr>
+<tr><td>7</td><td>EPA inspection, 2025</td><td>Arsenic treatment plant status</td></tr>
+<tr><td>8</td><td>Legal complaint, Case D-307-CV-2025-02766</td><td>Ordinances challenged, procedural claims</td></tr>
+</table>
+</div>
+<!-- ======================================== -->
+<!-- TECHNICAL: Full math                     -->
+<!-- ======================================== -->
+<div id="technical" class="tier">
+<h2>Equation: Water Pressure Ratio</h2>
+<div class="math">
+<span class="label">Definition</span>
+P_water = (W_DC_total + W_existing_demand) / R_available
+<div class="step">Where:</div>
+<div class="step">&nbsp;&nbsp;W_DC_total = combined data center water demand (GPD)</div>
+<div class="step">&nbsp;&nbsp;W_existing_demand = current regional water demand (GPD)</div>
+<div class="step">&nbsp;&nbsp;R_available = available water supply (GPD), sourced to a specific supply mechanism</div>
+<div class="step">&nbsp;</div>
+<div class="step">Interpretation:</div>
+<div class="step">&nbsp;&nbsp;P_water &lt; 1.0 &rarr; supply exceeds total demand (buffer exists)</div>
+<div class="step">&nbsp;&nbsp;P_water = 1.0 &rarr; supply exactly meets total demand (no margin)</div>
+<div class="step">&nbsp;&nbsp;P_water &gt; 1.0 &rarr; total demand exceeds supply (pressure state)</div>
+</div>
+<h3>Input Values (All Sourced)</h3>
+<table>
+<tr><th>Variable</th><th>Value</th><th>Conversion</th><th>Source</th></tr>
+<tr><td>W_existing_demand</td><td>105,000,000 GPD</td><td>105.0 MGD</td><td>Texas Tribune, April 2025</td></tr>
+<tr><td>EPW 2023 production</td><td>40.3 billion gal/yr</td><td>110.41 MGD</td><td>EP Water Conservation Plan 2024</td></tr>
+<tr><td>BuRec supply</td><td>153,754 AF/yr</td><td>137.26 MGD</td><td>Bureau of Reclamation</td></tr>
+<tr><td>BuRec demand</td><td>144,000 AF/yr</td><td>128.55 MGD</td><td>Bureau of Reclamation</td></tr>
+<tr><td>Jupiter average</td><td>20,000 GPD</td><td>0.02 MGD</td><td>Doña Ana County MOU</td></tr>
+<tr><td>Jupiter peak</td><td>60,000 GPD</td><td>0.06 MGD</td><td>Doña Ana County MOU</td></tr>
+<tr><td>Meta initial</td><td>750,000 GPD</td><td>0.75 MGD</td><td>KVIA / Yahoo News</td></tr>
+<tr><td>Meta full</td><td>1,500,000 GPD</td><td>1.50 MGD</td><td>KVIA / Yahoo News</td></tr>
+<tr><td>W_DC_total (low)</td><td>770,000 GPD</td><td>0.770 MGD</td><td>Calculated: Jupiter avg + Meta initial</td></tr>
+<tr><td>W_DC_total (high)</td><td>1,560,000 GPD</td><td>1.560 MGD</td><td>Calculated: Jupiter peak + Meta full</td></tr>
+</table>
+<p class="src">Conversion factor: 1 acre-foot = 325,851 gallons</p>
+<h3>P_water Under Three Supply Definitions</h3>
+<div class="math">
+<span class="label">Proxy A: Demand baseline (R = 105.0 MGD)</span>
+<div class="step">P_low  = (105.0 + 0.770) / 105.0 = <strong>1.0073</strong></div>
+<div class="step">P_high = (105.0 + 1.560) / 105.0 = <strong>1.0149</strong></div>
+<div class="result">Result: OVER CAPACITY. Total demand exceeds supply at any DC build level.</div>
+</div>
+<div class="math">
+<span class="label">Proxy B: 2023 actual production (R = 110.41 MGD)</span>
+<div class="step">P_low  = (105.0 + 0.770) / 110.41 = <strong>0.9580</strong></div>
+<div class="step">P_high = (105.0 + 1.560) / 110.41 = <strong>0.9651</strong></div>
+<div class="result">Result: MARGINAL. Less than 4% margin at full build. No drought buffer.</div>
+</div>
+<div class="math">
+<span class="label">Proxy C: Bureau of Reclamation total supply (R = 137.26 MGD)</span>
+<div class="step">P_low  = (105.0 + 0.770) / 137.26 = <strong>0.7706</strong></div>
+<div class="step">P_high = (105.0 + 1.560) / 137.26 = <strong>0.7763</strong></div>
+<div class="result">Result: BUFFER EXISTS. ~23% margin. But only if full BuRec allocation is deliverable.</div>
+</div>
+<h3>Sensitivity Table</h3>
+<table>
+<tr><th>R_available definition</th><th>MGD</th><th>P_low</th><th>P_high</th><th>Status</th></tr>
+<tr><td>Demand baseline</td><td>105.00</td><td>1.0073</td><td>1.0149</td><td style="color:var(--red)">PRESSURE</td></tr>
+<tr><td>2023 production</td><td>110.41</td><td>0.9580</td><td>0.9651</td><td style="color:var(--yellow)">MARGINAL</td></tr>
+<tr><td>BuRec demand converted</td><td>128.55</td><td>0.8228</td><td>0.8289</td><td style="color:var(--green)">BUFFER</td></tr>
+<tr><td>BuRec total supply</td><td>137.26</td><td>0.7706</td><td>0.7763</td><td style="color:var(--green)">BUFFER</td></tr>
+<tr><td>Production + 10 MGD expansion</td><td>120.41</td><td>0.8784</td><td>0.8850</td><td style="color:var(--green)">BUFFER</td></tr>
+</table>
+<h3>Supply Surplus Analysis</h3>
+<div class="math">
+<span class="label">Surplus calculation</span>
+<div class="step">BuRec supply:  137.26 MGD</div>
+<div class="step">BuRec demand:  128.55 MGD</div>
+<div class="step">Surplus:         8.71 MGD</div>
+<div class="step">&nbsp;</div>
+<div class="step">DC full build-out: 1.560 MGD</div>
+<div class="result">DC demand / surplus = 1.560 / 8.71 = 17.9% of surplus consumed</div>
+</div>
+<h3>Critical Constraint</h3>
+<p>P_water is only meaningful when R_available is defined as a <em>sourced supply mechanism</em>, meaning a physical system that delivers water (wells, treatment plants, river allocation). If R_available is defined as theoretical allocation that is not fully developed into deliverable capacity, P_water overstates the available margin.</p>
+<p>The gap between Proxy B (what El Paso actually pumped in 2023: 110.41 MGD) and Proxy C (what BuRec says is allocated: 137.26 MGD) is 26.85 MGD. That gap represents supply that is allocated but not yet built into deliverable production. Any P_water calculation using Proxy C assumes that gap is convertible to real water on demand. That assumption should be stated and defended.</p>
+<h3>Ownership Traceability Problem</h3>
+<p>The entity behind Project Jupiter is BorderPlex Digital Assets LLC (State MOU, Feb 25, 2025). The beneficial ownership chain (who ultimately controls and profits from this entity) is not fully public. In any accountability framework, when the controlling parties of a resource-consuming entity cannot be independently verified, responsibility assignment becomes non-computable. You cannot hold someone accountable if you cannot identify them.</p>
+<h3>How To Verify This Analysis</h3>
+<p>Every input value is sourced. To reproduce:</p>
+<ol style="margin:16px 0;padding-left:24px;">
+<li>Obtain the source documents listed in the journalist tab.</li>
+<li>Extract the stated values (demand, supply, DC water requirements).</li>
+<li>Compute P_water = (W_DC_total + W_existing_demand) / R_available for each supply definition.</li>
+<li>Compare your results to the table above.</li>
+</ol>
+<p>If any number is wrong, correct it and publish the correction with your source. That is how verification works.</p>
+</div>
+<!-- ======================================== -->
+<!-- ESPAÑOL                                  -->
+<!-- ======================================== -->
+<div id="espanol" class="tier">
+<h2>De Qué Se Trata</h2>
+<p>Quieren construir centros de datos grandes cerca de El Paso y Santa Teresa. Los centros de datos son edificios llenos de computadoras. Esas computadoras se calientan mucho. Para enfriarlas, necesitan mucha agua.</p>
+<p>Miramos los números para responder una pregunta simple: <strong>¿tenemos suficiente agua para esto?</strong></p>
+<h2>Los Tres Números Que Importan</h2>
+<div class="box">
+<span class="big">105 millones</span>
+<p>Galones de agua que El Paso usa <em>cada día</em>. Eso es lo que nuestra ciudad necesita ahora para casas, negocios, parques y todo lo demás.</p>
+<p class="src">Fuente: Texas Tribune, abril 2025</p>
+</div>
+<div class="box yellow">
+<span class="big yellow">1.56 millones</span>
+<p>Galones por día que los nuevos centros de datos podrían necesitar a tamaño completo. Eso es Project Jupiter (hasta 60,000 galones/día) más el centro de datos de Meta en El Paso (hasta 1.5 millones de galones/día).</p>
+<p class="src">Fuentes: MOU del Condado de Doña Ana, sept 2025; KVIA / Yahoo News</p>
+</div>
+<div class="box red">
+<span class="big red">8.7 millones</span>
+<p>Galones por día. Ese es nuestro colchón de seguridad. Es la diferencia entre cuánta agua podemos obtener y cuánta ya usamos. Piénsalo como el dinero que te sobra después de pagar todas tus cuentas.</p>
+<p class="src">Fuente: Bureau of Reclamation, datos del Rio Grande</p>
+</div>
+<h2>Por Qué Importa</h2>
+<div class="box red">
+<span class="big red">17.9%</span>
+<p>Eso es cuánto de nuestro colchón de seguridad usarían los centros de datos. Casi una quinta parte de lo que nos sobra.</p>
+</div>
+<p>Imagina que ganas $1,000 al mes. Después de renta, comida, luz y gasolina, te quedan $87. Ahora alguien dice "solo necesito $16." Solo es 1.6% de tu ingreso. Suena poco. Pero es 18% de lo que te sobra. Esa es la diferencia entre llegar a fin de mes y no llegar.</p>
+<h2>La Pregunta Grande</h2>
+<p>Cuando los funcionarios hablaron sobre el agua para estos proyectos, nunca dijeron cuál número estaban usando para "cuánta agua tenemos." Esto importa mucho:</p>
+<div class="compare">
+<div>
+<p><strong>Si usan el número grande</strong> (137 millones de galones/día), todo se ve bien. Usamos como 77% de nuestra agua.</p>
+</div>
+<div>
+<p><strong>Si usan el número real</strong> (105 millones de galones/día, lo que realmente bombeamos cada día), ya estamos al límite.</p>
+</div>
+</div>
+<p><strong>Nadie le ha dicho al público cuál número están usando.</strong> La respuesta cambia todo. Merecemos saber.</p>
+<h2>Qué Puedes Hacer</h2>
+<p>Pregúntale a tu representante del concejo o comisionado: <strong>"¿Cuál número de suministro de agua están usando cuando dicen que tenemos suficiente agua para los centros de datos, y dónde está publicado?"</strong></p>
+<p>Si no pueden responder esa pregunta con una fuente que puedas verificar, la decisión no se basó en matemáticas. Se basó en confianza. La confianza no es una fuente de agua.</p>
+</div>
+<!-- ======================================== -->
+<!-- DOCUMENT INTEGRITY                       -->
+<!-- ======================================== -->
+<div style="margin-top:60px;padding-top:24px;border-top:1px solid var(--border)">
+<h2 style="border:none;padding:0;margin-top:0">Document Integrity</h2>
+<p style="font-size:14px;color:var(--dim)">This document contains no proprietary methods. Every number comes from a public source. Every calculation can be reproduced with a calculator and the cited documents. If any number is wrong, correct it publicly and cite your source.</p>
+<div class="hash">
+<span class="label">SHA-256</span>
+662ac50b9631c5f314e00463148077a90196f55fc2721a2768dfd563d236f9e0
+</div>
+<div class="hash">
+<span class="label">Solana Blockchain Anchor</span>
+<strong style="color:var(--bright)">Block:</strong> <a href="https://solscan.io/block/402502148" style="color:var(--blue)" target="_blank" rel="noopener">402,502,148</a><br>
+<strong style="color:var(--bright)">Blockhash:</strong> 9a5oyqpxCZ1RqAxVV3HqWwtdAXTAEMRegvtr1VoLLHkg<br>
+<strong style="color:var(--bright)">Signature:</strong> <a href="https://solscan.io/tx/4QeesAfu8mUFUo6NqibShAntZLGedQ7nP55G1pfHZMdXQDAkTXALoXJDVM1bBTQDXKiLqf74iZR9C4nB995YbCWc" style="color:var(--blue)" target="_blank" rel="noopener">4QeesAfu8mUFUo6NqibShAntZLGedQ7nP55G1pfHZMdXQDAkTXALoXJDVM1bBTQDXKiLqf74iZR9C4nB995YbCWc</a><br>
+<strong style="color:var(--bright)">Memo:</strong> CS:662ac50b9631c5f314e00463148077a90196f55fc2721a2768dfd563d236f9e0<br>
+<strong style="color:var(--bright)">Timestamp:</strong> February 24, 2026
+</div>
+<div class="verify-section">
+<h4>How to verify this document has not been modified</h4>
+<p>When this document was published, a unique fingerprint (called a "hash") of its contents was recorded on the Solana blockchain &mdash; a public, permanent ledger that nobody can edit or delete. Think of it like a notary stamp, but digital and permanent.</p>
+<p><strong>What this means in plain language:</strong> if even a single character of this document were changed after publication, the fingerprint would no longer match. The blockchain record proves the content existed in this exact form at the time it was recorded.</p>
+<p><strong>To verify yourself:</strong></p>
+<ol>
+<li>Visit the transaction at <a href="https://solscan.io/tx/4QeesAfu8mUFUo6NqibShAntZLGedQ7nP55G1pfHZMdXQDAkTXALoXJDVM1bBTQDXKiLqf74iZR9C4nB995YbCWc" target="_blank" rel="noopener">solscan.io</a> &mdash; this is a public block explorer anyone can use, no account needed.</li>
+<li>Confirm the memo contains: <span style="font-family:var(--mono);font-size:12px;color:var(--bright)">CS:662ac50b9631c5f314e00463148077a90196f55fc2721a2768dfd563d236f9e0</span></li>
+<li>Compute <code style="background:var(--surface2);padding:2px 6px;border-radius:3px;font-size:12px">sha256sum</code> on the pre-anchor version of this file and compare to the hash above.</li>
+<li>The block timestamp proves the content existed in this exact form at the time it was recorded.</li>
+</ol>
+<p><strong>No cryptocurrency knowledge is needed.</strong> The blockchain is simply being used here as a public, tamper-proof timestamp &mdash; the same way you might use a postmark to prove when a letter was mailed.</p>
+</div>
+<p style="font-size:13px;color:var(--dim)">February 2026. Public domain. No attribution required. Corrections welcome.</p>
+</div>
+</div>
+<script>
+function show(id){
+document.querySelectorAll('.tier').forEach(t=>t.classList.remove('active'));
+document.querySelectorAll('.tier-btn').forEach(b=>b.classList.remove('active'));
+document.getElementById(id).classList.add('active');
+event.target.closest('.tier-btn').classList.add('active');
+}
+</script>
+</body>
+</html>
